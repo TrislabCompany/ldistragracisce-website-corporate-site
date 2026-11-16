@@ -204,6 +204,7 @@ main.full {
 
 .nav-mobile nav {
   position: absolute;
+  z-index: 1;
   right: 0;
   top: calc(100% + 0.5rem);
   width: min(18rem, calc(100vw - 2.5rem));
@@ -307,15 +308,28 @@ main.full {
   }
 }
 
-/* On the home page the header lies over the hero photo: white text on the
-   photo's dark gradient. */
+/* On the home page the header lies over the top of the hero: white text on
+   the dark photo shade, which fades into the photo below it. Solid under the
+   text, so it is readable on any photo and axe can measure its contrast. */
 .site-header.overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   border-bottom: 0;
-  background: transparent;
+  background: var(--photo-shade);
+}
+
+/* An empty element, not a pseudo-element: axe can't measure text whose
+   element has a pseudo-element with a background. */
+.header-fade {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  background: linear-gradient(180deg, var(--photo-shade), transparent);
+  pointer-events: none;
 }
 
 .site-header.overlay .brand,
@@ -487,35 +501,44 @@ main.full {
 }
 
 /* Photos with text: the hero, the photo head of a page, the photo cards. The
-   text sits on a dark gradient, and the element under it has a dark
-   background colour of its own, so the text stays readable before the photo
-   loads and on any photo. */
+   frame is a column: the photo fills the space above, the text sits below it
+   on a solid dark panel (.photo-text), and a fade (.photo-fade) lies over the
+   photo's lower edge so it runs into the panel. Nothing lies under or over the
+   text but the panel, so it stays readable on any photo and before the photo
+   loads, and axe can measure its contrast. The fade and the shade are real
+   elements and a filter, not pseudo-elements, which axe would count as lying
+   under the text (docs/quality-checks.md). */
 
 .photo-frame {
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
   background: var(--photo-shade);
   color: var(--band-text);
+  --photo-fade: 6rem;
 }
 
 .photo-frame > img {
-  position: absolute;
-  inset: 0;
+  flex: 1 1 0;
+  min-height: 8rem;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
+  filter: brightness(0.85);
 }
 
-.photo-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgb(11 22 16 / 0.55) 0%, rgb(11 22 16 / 0.25) 35%, rgb(11 22 16 / 0.85) 100%);
+.photo-fade {
+  flex: none;
+  height: var(--photo-fade);
+  margin-top: calc(-1 * var(--photo-fade));
+  background: linear-gradient(180deg, transparent, var(--photo-shade));
 }
 
-.photo-frame > .photo-content {
-  position: relative;
-  z-index: 1;
+.photo-text {
+  flex: none;
+  padding-top: 0.75rem;
+  background: var(--photo-shade);
 }
 
 .photo-frame :is(h1, h2, h3) {
@@ -527,13 +550,16 @@ main.full {
 }
 
 .hero {
+  --photo-fade: 10rem;
   min-height: 100svh;
-  display: flex;
-  align-items: flex-end;
+}
+
+/* Room for the header that lies over the top of the photo. */
+.hero > img {
+  min-height: 18rem;
 }
 
 .hero .photo-content {
-  padding-top: 9rem;
   padding-bottom: 4rem;
 }
 
@@ -551,12 +577,9 @@ main.full {
 
 .page-head {
   min-height: 22rem;
-  display: flex;
-  align-items: flex-end;
 }
 
 .page-head .photo-content {
-  padding-top: 5rem;
   padding-bottom: 2.5rem;
 }
 
@@ -725,18 +748,19 @@ main.full {
 
 .photo-card {
   min-height: 22rem;
-  display: flex;
-  align-items: flex-end;
   border-radius: var(--radius);
 }
 
 .photo-card .photo-content {
-  padding: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
 }
 
 .photo-card h3 {
   margin: 0 0 0.5rem;
   font-size: 1.5rem;
+  /* At least the height of the link's text box, or axe reads the link as
+     partly hidden and can't measure its contrast. */
+  line-height: 1.4;
 }
 
 .photo-card h3 a {
@@ -762,6 +786,7 @@ main.full {
 }
 
 .photo-card img {
+  transform-origin: bottom center;
   transition: transform 0.4s ease;
 }
 

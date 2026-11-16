@@ -1,5 +1,5 @@
 ---
-// A way in: a photo card with its title and one sentence on a dark gradient.
+// A way in: a photo card with its title and one sentence on a dark panel that the photo fades into.
 // The whole card is the link's target.
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
@@ -17,7 +17,8 @@ const { photo, alt, title, text, href } = Astro.props;
 
 <li class="photo-frame photo-card">
   <Image src={photo} alt={alt} widths={[480, 800]} sizes="(min-width: 52rem) 33vw, 100vw" format="avif" loading="lazy" />
-  <div class="photo-content">
+  <div class="photo-fade" aria-hidden="true"></div>
+  <div class="photo-text photo-content">
     <h3><a href={href}>{title}</a></h3>
     <p>{text}</p>
   </div>
