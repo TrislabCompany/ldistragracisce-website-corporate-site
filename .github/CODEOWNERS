@@ -1,4 +1,4 @@
 * @TrislabCompany/ldistragracisce-corporate-site
 /.github/ @TrislabCompany/ldistragracisce-corporate-site @TrislabCompany/devops
-/platform.yaml @TrislabCompany/ldistragracisce-corporate-site @TrislabCompany/devops
-/.trivyignore @TrislabCompany/ldistragracisce-corporate-site @TrislabCompany/devops
+/public/_headers @TrislabCompany/ldistragracisce-corporate-site @TrislabCompany/devops
+/scripts/write-config.mjs @TrislabCompany/ldistragracisce-corporate-site @TrislabCompany/devops

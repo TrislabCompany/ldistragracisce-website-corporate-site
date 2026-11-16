@@ -19,7 +19,7 @@ export const defaultLanguage: Lang = site.defaultLanguage;
 
 /** Add a file to ui/ and a line here for each new language. A language not in
  * src/site.config.ts may stay here; it is never used. */
-const ui: Record<Lang, UiStrings> & Record<string, UiStrings> = { en, sl, hr, it, sr, de };
+const ui: Record<Lang, UiStrings> & Record<string, UiStrings> = { en, sl, hr, sr, it, de };
 
 /** True when the URLs carry a language prefix. */
 export const prefixed = languages.length > 1;
