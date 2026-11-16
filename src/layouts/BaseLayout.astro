@@ -11,6 +11,7 @@ import "../styles/tokens.css";
 import "../styles/global.css";
 // The Latin subset of the font in src/styles/tokens.css, loaded early so text is drawn once, in it.
 import interLatin from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+import serifLatinExt from "@fontsource-variable/source-serif-4/files/source-serif-4-latin-ext-wght-normal.woff2?url";
 
 interface Props {
   title: string;
@@ -22,9 +23,13 @@ interface Props {
   noindex?: boolean;
   /** The picture shown when the page is shared; by default the site's shareImage. */
   image?: ShareImage;
+  /** The page is built from full-width bands that set their own width (home, the topic pages). */
+  full?: boolean;
+  /** The header lies over the page's first photo (the home page's hero). */
+  overlay?: boolean;
 }
 
-const { title, description, lang, available = languages, noindex, image } = Astro.props;
+const { title, description, lang, available = languages, noindex, image, full = false, overlay = false } = Astro.props;
 
 // The page without its language prefix, for the language switch.
 const path = unlocalizedPath(Astro.url.pathname);
@@ -36,7 +41,9 @@ const path = unlocalizedPath(Astro.url.pathname);
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- The headings' font: every language's headings use letters of the Latin Extended subset (č, š, ž, ä). -->
+    <link rel="preload" href={serifLatinExt} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <SeoHead title={title} description={description} lang={lang} available={available} noindex={noindex} image={image} />
     <meta name="theme-color" content={site.themeColor} />
     <StructuredData />
@@ -44,8 +51,8 @@ const path = unlocalizedPath(Astro.url.pathname);
   </head>
   <body>
     <a class="skip-link" href="#main">{t(lang, "nav.skip")}</a>
-    <Header lang={lang} path={path} available={available} />
-    <main id="main" tabindex="-1">
+    <Header lang={lang} path={path} available={available} overlay={overlay} />
+    <main id="main" tabindex="-1" class:list={{ full }}>
       <slot />
     </main>
     <Footer lang={lang} />

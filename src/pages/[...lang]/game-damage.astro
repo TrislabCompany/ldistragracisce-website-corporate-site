@@ -1,0 +1,41 @@
+---
+// Game damage: how to report it, step by step, and how to protect fields.
+import ContactCta from "../../components/ContactCta.astro";
+import PhotoHead from "../../components/PhotoHead.astro";
+import StepList from "../../components/StepList.astro";
+import { languagePaths, t, type Lang } from "../../i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pageTexts } from "../../lib/pages";
+import { photos } from "../../lib/photos";
+
+export const getStaticPaths = languagePaths;
+
+const { lang } = Astro.props as { lang: Lang };
+const { gameDamage, alt } = await pageTexts(lang);
+---
+
+<BaseLayout title={t(lang, "nav.gameDamage")} description={gameDamage.lead} lang={lang} full>
+  <PhotoHead photo={photos.gameDamage} alt={alt.gameDamage} title={t(lang, "nav.gameDamage")} lead={gameDamage.lead} />
+
+  <section class="section" aria-labelledby="report">
+    <div class="wrap prose">
+      <h2 id="report">{gameDamage.reportHeading}</h2>
+      <p>{gameDamage.reportIntro}</p>
+      <StepList steps={gameDamage.steps} />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="protect">
+    <div class="wrap prose">
+      <h2 id="protect">{gameDamage.protectHeading}</h2>
+      <p>{gameDamage.protectIntro}</p>
+      <ul class="checklist">
+        {gameDamage.measures.map((measure) => <li>{measure}</li>)}
+      </ul>
+      <p>{gameDamage.maintenance}</p>
+    </div>
+    <div class="wrap">
+      <ContactCta lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

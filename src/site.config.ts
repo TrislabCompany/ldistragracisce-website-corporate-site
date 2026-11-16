@@ -6,6 +6,7 @@
 // First written by `pnpm init-site` from site.yaml; from then on it is the
 // site's own.
 
+import shareImage from "./assets/photos/share.jpg";
 import type { SiteSettings } from "./lib/site-settings";
 
 /** The site's languages. With one language, the URLs have no language prefix. */
@@ -25,7 +26,19 @@ const site: SiteSettings<Lang> = {
   },
   languages: languages,
   defaultLanguage: "sl",
-  themeColor: "#ffffff",
+  // A placeholder until a photo of the hunting ground is chosen (docs/brief.md, Assets).
+  shareImage: {
+    src: shareImage,
+    alt: {
+      sl: "Začasna slika: risba gričev slovenske Istre ob mraku",
+      en: "Temporary image: a drawing of the hills of Slovenian Istria at dusk",
+      hr: "Privremena slika: crtež brežuljaka slovenske Istre u sumrak",
+      sr: "Privremena slika: crtež brežuljaka slovenačke Istre u sumrak",
+      it: "Immagine provvisoria: disegno delle colline dell'Istria slovena al tramonto",
+      de: "Vorläufiges Bild: Zeichnung der Hügel des slowenischen Istrien in der Abenddämmerung"
+    }
+  },
+  themeColor: "#004720",
   collections: [
     {
       id: "hunting-tourism",
@@ -45,8 +58,9 @@ const site: SiteSettings<Lang> = {
         it: "Caccia al capriolo e al cinghiale nell'Istria slovena, accompagnati dai cacciatori della nostra società.",
         de: "Jagd auf Rehwild und Schwarzwild im slowenischen Istrien, begleitet von den Jägern unserer Gesellschaft."
       },
-      nav: true,
-      home: true
+      // The header and the home page link it themselves (src/components/Header.astro, src/pages/[...lang]/index.astro).
+      nav: false,
+      home: false
     }
   ],
   company: {
@@ -58,7 +72,7 @@ const site: SiteSettings<Lang> = {
       city: "Gračišče",
       country: "SI"
     },
-    logo: "/favicon.svg",
+    logo: "/logo.png",
     profiles: []
   },
   contact: {
@@ -80,8 +94,8 @@ const site: SiteSettings<Lang> = {
   legalPages: {
     imprint: true,
     privacy: true,
-    accessibility: false,
-    sustainability: true
+    accessibility: true,
+    sustainability: false
   },
   structuredData: "Organization",
   securityTxt: {

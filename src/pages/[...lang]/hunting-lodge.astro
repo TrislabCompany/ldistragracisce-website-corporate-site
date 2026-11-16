@@ -1,0 +1,39 @@
+---
+// The hunting lodge: photos and what it offers. The lodge's details wait for
+// the club (a placeholder box until then).
+import { Image } from "astro:assets";
+import ContactCta from "../../components/ContactCta.astro";
+import PhotoHead from "../../components/PhotoHead.astro";
+import Placeholder from "../../components/Placeholder.astro";
+import TextSections from "../../components/TextSections.astro";
+import { languagePaths, t, type Lang } from "../../i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pageTexts } from "../../lib/pages";
+import { photos } from "../../lib/photos";
+
+export const getStaticPaths = languagePaths;
+
+const { lang } = Astro.props as { lang: Lang };
+const { huntingLodge, alt, pendingLabel } = await pageTexts(lang);
+---
+
+<BaseLayout title={t(lang, "nav.huntingLodge")} description={huntingLodge.lead} lang={lang} full>
+  <PhotoHead photo={photos.huntingLodge} alt={alt.huntingLodge} title={t(lang, "nav.huntingLodge")} lead={huntingLodge.lead} />
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <TextSections sections={huntingLodge.sections} />
+        <h2>{huntingLodge.featuresHeading}</h2>
+        <ul class="checklist">
+          {huntingLodge.features.map((feature) => <li>{feature}</li>)}
+        </ul>
+        <Placeholder label={pendingLabel} text={huntingLodge.pending} />
+      </div>
+      <Image src={photos.lodgeInterior} alt={alt.lodgeInterior} widths={[480, 800]} sizes="(min-width: 52rem) 50vw, 100vw" format="avif" loading="lazy" />
+    </div>
+    <div class="wrap">
+      <ContactCta lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

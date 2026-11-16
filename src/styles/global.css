@@ -1,6 +1,7 @@
-/* The layout and components of the site. Colours, radius and font come from
+/* The layout and components of the site. Colours, radius and fonts come from
    tokens.css (the brand): this file uses their names and holds no colour of
-   its own. */
+   its own. Mobile first: the base rules are for a phone, the media queries
+   widen the layout. */
 
 :root {
   color-scheme: light;
@@ -22,12 +23,20 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   color: var(--accent-text);
+  text-underline-offset: 0.2em;
 }
 
 a:focus-visible,
-.button:focus-visible {
+.button:focus-visible,
+summary:focus-visible,
+.table-frame:focus-visible {
   outline: 2px solid var(--accent-text);
   outline-offset: 3px;
 }
@@ -35,17 +44,28 @@ a:focus-visible,
 h1,
 h2,
 h3 {
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  font-family: var(--font-heading);
+  color: var(--heading);
+  line-height: 1.15;
+  font-weight: 650;
+  /* Long words (Jagdtourismus, Lovačko) break at 320 px instead of pushing the page wider. */
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 h1 {
-  font-size: clamp(2rem, 4vw + 1rem, 3.25rem);
+  font-size: clamp(2.1rem, 5vw + 1rem, 3.75rem);
   margin: 0 0 1rem;
 }
 
 h2 {
-  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  font-size: clamp(1.6rem, 2.5vw + 1rem, 2.4rem);
+  margin: 0 0 0.75rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem;
 }
 
 .wrap {
@@ -63,88 +83,191 @@ main {
   padding: 2.5rem 1.25rem 4rem;
 }
 
+/* Pages built from full-width bands (home, the topic pages): each band sets its own width. */
+main.full {
+  max-width: none;
+  padding: 0;
+}
+
 /* Text pages (legal, imprint, detail pages) read better narrow. */
 .prose {
   max-width: 46rem;
 }
 
+/* A narrow text block inside a full-width band: aligned with the band's left edge, not centred. */
+.wrap.prose {
+  max-width: 72rem;
+}
+
+.wrap.prose > * {
+  max-width: 46rem;
+}
+
 .lead {
-  font-size: 1.125rem;
+  font-size: 1.175rem;
   color: var(--muted);
   max-width: 46rem;
 }
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: var(--accent-text);
+  color: var(--earth);
   font-size: 0.875rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-weight: 650;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 /* Header */
 
 .site-header {
+  position: relative;
+  z-index: 20;
   border-bottom: 1px solid var(--border);
   background: var(--background);
 }
 
 .header-row {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 0.75rem 1.5rem;
-  padding-top: 0.875rem;
-  padding-bottom: 0.875rem;
+  gap: 0.75rem 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 0.625rem;
-  color: var(--text);
-  font-size: 1.125rem;
+  min-width: 0;
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
   font-weight: 650;
+  line-height: 1.2;
   text-decoration: none;
 }
 
-.main-nav {
+.brand img {
+  flex: none;
+}
+
+.header-tools {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1.25rem;
+  align-items: center;
+  gap: 0.75rem;
   margin-left: auto;
 }
 
-.main-nav a {
-  color: var(--text);
-  text-decoration: none;
-  padding: 0.25rem 0;
+/* Two menus: a row of links on a wide screen, a folding menu on a phone. The
+   folding one is a <details>, so it opens without JavaScript. Only one is
+   shown (and in the accessibility tree) at a time. */
+.nav-desktop {
+  display: none;
 }
 
-.main-nav a:hover,
-.main-nav a[aria-current="page"] {
+.nav-mobile {
+  position: relative;
+}
+
+.nav-mobile summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-mobile summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-mobile summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.nav-mobile[open] summary::after {
+  transform: translateY(2px) rotate(-135deg);
+}
+
+.nav-mobile nav {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5rem);
+  width: min(18rem, calc(100vw - 2.5rem));
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 12px 32px rgb(0 0 0 / 0.18);
+}
+
+.nav-mobile nav a {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-mobile nav a:hover,
+.nav-mobile nav a[aria-current="page"] {
+  background: var(--surface-strong);
   color: var(--accent-text);
 }
 
-.main-nav a[aria-current="page"] {
+.nav-mobile nav a[aria-current="page"] {
+  font-weight: 650;
+}
+
+.nav-desktop a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  font-weight: 500;
+}
+
+.nav-desktop a:hover,
+.nav-desktop a[aria-current="page"] {
+  color: var(--accent-text);
+}
+
+.nav-desktop a[aria-current="page"] {
   text-decoration: underline;
-  text-underline-offset: 0.35em;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45em;
 }
 
 .language-switch {
   display: flex;
-  gap: 0.5rem;
-  font-size: 0.875rem;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  font-size: 0.8125rem;
 }
 
-.language-switch a {
+.language-switch a,
+.language-switch span {
   /* At least 24 × 24 px to tap (WCAG 2.2, 2.5.8 Target Size). */
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 24px;
   min-height: 24px;
+}
+
+.language-switch a {
   color: var(--muted);
   text-decoration: none;
 }
@@ -155,63 +278,147 @@ main {
 
 .language-switch [aria-current] {
   color: var(--text);
-  font-weight: 650;
+  font-weight: 700;
 }
 
-@media (max-width: 52rem) {
-  .main-nav {
-    order: 3;
-    width: 100%;
-    margin-left: 0;
+/* On a phone the language switch gets its own row under the name. */
+.header-languages {
+  padding-bottom: 0.6rem;
+}
+
+@media (min-width: 64rem) {
+  .nav-mobile {
+    display: none;
   }
 
-  .language-switch {
-    margin-left: auto;
+  /* The menu takes the room left by the language switch and wraps inside it,
+     so the switch stays at the right end of the row in every language. */
+  .nav-desktop {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    min-width: 0;
+    gap: 0.25rem 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .header-nav-row {
+    padding-bottom: 0.75rem;
   }
 }
 
-/* Footer */
+/* On the home page the header lies over the hero photo: white text on the
+   photo's dark gradient. */
+.site-header.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 0;
+  background: transparent;
+}
+
+.site-header.overlay .brand,
+.site-header.overlay .nav-desktop a,
+.site-header.overlay .language-switch a,
+.site-header.overlay .language-switch [aria-current] {
+  color: var(--band-text);
+}
+
+.site-header.overlay .nav-desktop a:hover,
+.site-header.overlay .nav-desktop a[aria-current="page"] {
+  color: var(--band-highlight);
+}
+
+.site-header.overlay a:focus-visible,
+.site-header.overlay summary:focus-visible {
+  outline-color: var(--band-highlight);
+}
+
+/* Footer: the dark forest band */
 
 .site-footer {
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-size: 0.875rem;
+  margin-top: auto;
+  border-top: 1px solid rgb(255 255 255 / 0.12);
+  background: var(--band);
+  color: var(--band-muted);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--band-text);
+}
+
+.site-footer a:hover {
+  color: var(--band-highlight);
+}
+
+.site-footer a:focus-visible {
+  outline-color: var(--band-highlight);
+}
+
+.site-footer .brand {
+  color: var(--band-text);
 }
 
 .footer-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem 2rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  display: grid;
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
 }
 
-.footer-about {
-  max-width: 28rem;
+@media (min-width: 48rem) {
+  .footer-row {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.footer-about address {
+  margin-top: 0.75rem;
+  font-style: normal;
 }
 
 .footer-about p {
-  margin: 0.5rem 0 0;
+  margin: 0.75rem 0 0;
+  max-width: 28rem;
 }
 
-.legal-links {
+.footer-heading {
+  margin: 0 0 0.75rem;
+  color: var(--band-highlight);
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer-links {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.legal-links a {
-  color: var(--muted);
+.footer-links a {
+  text-decoration: none;
 }
 
-.legal-links a:hover {
-  color: var(--text);
+.footer-links a:hover {
+  text-decoration: underline;
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid rgb(255 255 255 / 0.15);
 }
 
 /* Buttons */
@@ -225,7 +432,7 @@ main {
 
 .button {
   display: inline-block;
-  padding: 0.7rem 1.25rem;
+  padding: 0.75rem 1.4rem;
   border-radius: 999px;
   border: 1px solid var(--accent);
   background: var(--accent);
@@ -235,34 +442,350 @@ main {
 }
 
 .button:hover {
-  background: var(--accent-text);
+  background: var(--band);
+  border-color: var(--band);
 }
 
 .button.secondary {
-  background: transparent;
-  color: var(--text);
-  border-color: var(--border);
+  background: var(--earth);
+  border-color: var(--earth);
+  color: var(--earth-contrast);
 }
 
 .button.secondary:hover {
+  background: var(--text);
   border-color: var(--text);
 }
 
-/* Sections and cards */
+/* A button on a photo or the dark band. */
+.button.light {
+  background: var(--band-text);
+  border-color: var(--band-text);
+  color: var(--accent-text);
+}
+
+.button.light:hover {
+  background: var(--band-highlight);
+  border-color: var(--band-highlight);
+  color: var(--band);
+}
+
+.button.outline-light {
+  background: transparent;
+  border-color: var(--band-text);
+  color: var(--band-text);
+}
+
+.button.outline-light:hover {
+  background: var(--band-text);
+  color: var(--band);
+}
+
+.on-dark a:focus-visible,
+.on-dark .button:focus-visible {
+  outline-color: var(--band-highlight);
+}
+
+/* Photos with text: the hero, the photo head of a page, the photo cards. The
+   text sits on a dark gradient, and the element under it has a dark
+   background colour of its own, so the text stays readable before the photo
+   loads and on any photo. */
+
+.photo-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--photo-shade);
+  color: var(--band-text);
+}
+
+.photo-frame > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(11 22 16 / 0.55) 0%, rgb(11 22 16 / 0.25) 35%, rgb(11 22 16 / 0.85) 100%);
+}
+
+.photo-frame > .photo-content {
+  position: relative;
+  z-index: 1;
+}
+
+.photo-frame :is(h1, h2, h3) {
+  color: var(--band-text);
+}
+
+.photo-frame a:not(.button) {
+  color: var(--band-text);
+}
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero .photo-content {
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+}
+
+.hero h1 {
+  max-width: 48rem;
+  font-size: clamp(2.3rem, 6vw + 1rem, 4.5rem);
+}
+
+.hero p {
+  max-width: 40rem;
+  margin: 0;
+  font-size: clamp(1.1rem, 1vw + 0.9rem, 1.35rem);
+  color: var(--band-text);
+}
+
+.page-head {
+  min-height: 22rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.page-head .photo-content {
+  padding-top: 5rem;
+  padding-bottom: 2.5rem;
+}
+
+.page-head p {
+  max-width: 42rem;
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+/* Sections and bands */
 
 .section {
-  margin-top: 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-.section > h2 {
-  margin: 0 0 0.5rem;
+/* Two plain sections in a row share one gap; a coloured band keeps its own padding. */
+:where(.section) + .section:where(:not(.section-band, .section-alt)) {
+  padding-top: 0;
 }
+
+.section-alt {
+  background: var(--surface-strong);
+}
+
+.section-alt + .section {
+  padding-top: 4rem;
+}
+
+.section-band {
+  background: var(--band);
+  color: var(--band-text);
+}
+
+.section-band :is(h2, h3) {
+  color: var(--band-text);
+}
+
+.section-band .eyebrow {
+  color: var(--band-highlight);
+}
+
+.section-band p {
+  color: var(--band-muted);
+}
+
+.section-band a:not(.button) {
+  color: var(--band-highlight);
+}
+
+.section-band + .section {
+  padding-top: 4rem;
+}
+
+.section-head {
+  max-width: 46rem;
+  margin-bottom: 2rem;
+}
+
+.section-head p {
+  margin: 0;
+}
+
+/* A wide photo between sections. */
+.photo-band {
+  height: clamp(12rem, 35vw, 26rem);
+}
+
+.photo-band + .section {
+  padding-top: 4rem;
+}
+
+/* Text beside a photo, stacked on a phone. */
+.split {
+  display: grid;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 52rem) {
+  .split {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.split img {
+  width: 100%;
+  border-radius: var(--radius);
+}
+
+.text-block p {
+  margin: 0 0 1rem;
+}
+
+.text-block h2,
+.text-block h3 {
+  margin-top: 2rem;
+}
+
+.text-block > :first-child {
+  margin-top: 0;
+}
+
+/* The numbers band: the hunting ground in four figures. */
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 48rem) {
+  .numbers {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.numbers div {
+  padding-top: 1rem;
+  border-top: 3px solid var(--earth);
+}
+
+.numbers dt {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.numbers dd {
+  margin: 0 0 0.25rem;
+  color: var(--heading);
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw + 1rem, 2.6rem);
+  font-weight: 650;
+  line-height: 1.1;
+}
+
+/* dd first in the source order would break the dl; flex puts the figure on top. */
+.numbers div {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+.source {
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* Photo cards: three ways in. */
+.photo-cards {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 52rem) {
+  .photo-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.photo-card {
+  min-height: 22rem;
+  display: flex;
+  align-items: flex-end;
+  border-radius: var(--radius);
+}
+
+.photo-card .photo-content {
+  padding: 1.5rem;
+}
+
+.photo-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.photo-card h3 a {
+  text-decoration: none;
+}
+
+/* The whole card is the link's target. */
+.photo-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.photo-card:hover h3 a,
+.photo-card h3 a:focus-visible {
+  text-decoration: underline;
+}
+
+.photo-card p {
+  margin: 0;
+  color: var(--band-text);
+}
+
+.photo-card img {
+  transition: transform 0.4s ease;
+}
+
+.photo-card:hover img {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-card img {
+    transition: none;
+  }
+
+  .photo-card:hover img {
+    transform: none;
+  }
+}
+
+/* Plain cards */
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(17rem, 100%), 1fr));
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin: 1.5rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -280,25 +803,21 @@ main {
 
 .card :is(h2, h3) {
   margin: 0.25rem 0 0;
-  font-size: 1.125rem;
+  font-size: 1.3rem;
 }
 
 .card :is(h2, h3) a {
-  color: var(--text);
+  color: var(--heading);
   text-decoration: none;
 }
 
 .card :is(h2, h3) a:hover {
-  color: var(--accent-text);
+  text-decoration: underline;
 }
 
 .card p {
   margin: 0;
   color: var(--muted);
-}
-
-.card .icon {
-  color: var(--accent);
 }
 
 .card .more {
@@ -328,39 +847,309 @@ main {
   padding-left: 1.25rem;
 }
 
+.checklist li {
+  margin-bottom: 0.4rem;
+}
+
 .checklist li::marker {
-  color: var(--accent);
+  color: var(--earth);
 }
 
-
-
-
-.hero {
-  padding: 2.5rem 0 1rem;
-  max-width: 52rem;
+.section-band .checklist li::marker {
+  color: var(--band-highlight);
 }
 
-.cta-box {
-  margin-top: 4rem;
-  padding: 2rem;
+/* The season table: readable on a phone, scrolling inside its own frame. */
+.table-frame {
+  max-width: 100%;
+  overflow-x: auto;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
 }
 
+.table-frame table {
+  width: 100%;
+  min-width: 28rem;
+  margin: 0;
+  border-collapse: collapse;
+}
+
+.table-frame caption {
+  padding: 0.75rem 1rem 0;
+  text-align: left;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.table-frame th,
+.table-frame td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  color: var(--text);
+}
+
+.table-frame thead th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.table-frame tbody th {
+  font-weight: 600;
+}
+
+.table-frame tr:last-child > * {
+  border-bottom: 0;
+}
+
+/* Game species: one section each, with a photo. */
+.species {
+  display: grid;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48rem) {
+  .species {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.species-item {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.species-item img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--surface-strong);
+}
+
+.species-item div {
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.species-item h3 {
+  margin: 0;
+}
+
+.species-item .latin {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.species-item p {
+  margin: 0;
+}
+
+/* The steps to report game damage. */
+.steps {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  position: relative;
+  padding: 1.25rem 1.25rem 1.25rem 4.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 1.25rem;
+  top: 1.1rem;
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 700;
+}
+
+/* The document list: title, file type and size, language. */
+.documents {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.documents li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.documents .meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* The gallery: the club's photos in a grid. */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+/* Content that is still missing, shown on dev and staging for the review:
+   a dashed box that says what is to come. */
+.placeholder {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 2px dashed var(--earth);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.placeholder strong {
+  color: var(--earth);
+}
+
+.section-band .placeholder {
+  color: var(--text);
+}
+
+/* Two short cards for local people. */
+.duo {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48rem) {
+  .duo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.duo .card {
+  border-left: 4px solid var(--earth);
+}
+
+/* Contact */
+
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 52rem) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-details h2 {
+  font-size: 1.3rem;
+  margin-top: 1.75rem;
+}
+
+.contact-details h2:first-child {
+  margin-top: 0;
+}
+
+.contact-details address {
+  font-style: normal;
+}
+
+.contact-band {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 52rem) {
+  .contact-band {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+  }
+}
+
+.contact-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-list a {
+  overflow-wrap: anywhere;
+}
+
+.cta-box {
+  margin-top: 4rem;
+  padding: 2rem;
+  border-radius: var(--radius);
+  background: var(--band);
+  color: var(--band-text);
+}
+
 .cta-box h2 {
   margin: 0 0 0.5rem;
+  color: var(--band-text);
 }
 
 .cta-box p {
   margin: 0;
-  color: var(--muted);
+  color: var(--band-muted);
 }
 
+.cta-box .button {
+  background: var(--band-text);
+  border-color: var(--band-text);
+  color: var(--accent-text);
+}
 
+.cta-box .button:hover {
+  background: var(--band-highlight);
+  border-color: var(--band-highlight);
+  color: var(--band);
+}
 
-
-
+.cta-box .button:focus-visible {
+  outline-color: var(--band-highlight);
+}
 
 .facts,
 .imprint {
@@ -429,23 +1218,39 @@ main:focus {
   outline: none;
 }
 
-/* Tables in Markdown content, such as the figures on the sustainability page. */
-main table {
+/* Tables in Markdown content. */
+.prose table,
+article > table {
   width: 100%;
   max-width: 46rem;
   margin: 1.5rem 0;
   border-collapse: collapse;
 }
 
-main th,
-main td {
+.prose :is(th, td),
+article > table :is(th, td) {
   padding: 0.6rem 0.75rem;
   border-bottom: 1px solid var(--border);
   text-align: left;
   vertical-align: top;
 }
 
-main th {
+.prose th,
+article > table th {
   color: var(--muted);
   font-weight: 600;
+}
+
+.prose blockquote,
+article > blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 2px dashed var(--earth);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.prose blockquote p,
+article > blockquote p {
+  margin: 0;
 }

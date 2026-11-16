@@ -1,0 +1,21 @@
+---
+// The hunting ground in four figures, with their source under them.
+interface Props {
+  numbers: { value: string; label: string }[];
+  source: string;
+}
+
+const { numbers, source } = Astro.props;
+---
+
+<dl class="numbers">
+  {
+    numbers.map(({ value, label }) => (
+      <div>
+        <dt>{label}</dt>
+        <dd>{value}</dd>
+      </div>
+    ))
+  }
+</dl>
+<p class="source">{source}</p>

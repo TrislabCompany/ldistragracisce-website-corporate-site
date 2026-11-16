@@ -1,0 +1,9 @@
+# The addresses of the earlier site (an Angular app), moved for good to the
+# new pages in Slovenian. Cloudflare Pages answers these before it serves a
+# file; astro.config.mjs puts the "/" line above them at build.
+/about /sl/about 301
+/hunting-grounds /sl/hunting-ground 301
+/hunting-tourism /sl/hunting-tourism 301
+/damages /sl/game-damage 301
+/membership /sl/membership 301
+/contact /sl/contact 301

@@ -39,7 +39,7 @@ pa11y-ci is a machine check. It finds missing alt text, low contrast, missing la
 
 **Lighthouse CI (LHCI)** runs on the GitHub runner only. Lighthouse timings depend on the machine, so the limits are set for the runner and are checked only there. On a busy laptop the same page scores lower, which would make local results misleading.
 
-**Pages:** the list in `lighthouserc.json` (`ci.collect.url`): the home page in English and Slovenian, about, the sample list and its first item, contact and sustainability. Change the list when the site has other pages. Each page runs 3 times, and the limits apply to the median run. Lighthouse uses its mobile defaults: a mid-range phone on a slow 4G connection, simulated.
+**Pages:** the list in `lighthouserc.json` (`ci.collect.url`): the home page in every language, and in Slovenian about, contact, the hunting ground, hunting tourism, game damage and membership. Change the list when the site has other pages. Each page runs 3 times, and the limits apply to the median run. Lighthouse uses its mobile defaults: a mid-range phone on a slow 4G connection, simulated.
 
 | Limit | Value | Why |
 | --- | --- | --- |

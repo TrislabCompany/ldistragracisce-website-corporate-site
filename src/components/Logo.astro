@@ -1,15 +1,16 @@
 ---
-// The site's logo mark: a neutral sample, replace it with the brand's. One of
-// the two brand files with public/favicon.svg. Decorative: the name next to it
-// carries the meaning, so it is hidden from assistive technology.
+// The club's badge (the partridge in the green ring), taken from today's site
+// and resized. Decorative: the club's name next to it carries the meaning.
+// To replace: an SVG drawn from the badge (docs/brief.md, Assets), then this
+// file, public/favicon.png and public/logo.png (the logo in the structured data).
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
+
 interface Props {
   size?: number;
 }
 
-const { size = 36 } = Astro.props;
+const { size = 48 } = Astro.props;
 ---
 
-<svg width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
-  <rect width="32" height="32" rx="6" fill="#2457c5"></rect>
-  <path d="M8 10h16v3h-6.5v11h-3V13H8z" fill="#ffffff"></path>
-</svg>
+<Image src={logo} width={size} height={size} densities={[1, 2]} alt="" loading="eager" />

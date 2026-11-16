@@ -1,0 +1,53 @@
+---
+// The hunting ground and its game: the area and its terrain in figures, one
+// section per game species with a photo, and how the ground is managed.
+import ContactCta from "../../components/ContactCta.astro";
+import NumbersBand from "../../components/NumbersBand.astro";
+import PhotoBand from "../../components/PhotoBand.astro";
+import PhotoHead from "../../components/PhotoHead.astro";
+import SpeciesList from "../../components/SpeciesList.astro";
+import TextSections from "../../components/TextSections.astro";
+import { languagePaths, t, type Lang } from "../../i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pageTexts } from "../../lib/pages";
+import { photos } from "../../lib/photos";
+
+export const getStaticPaths = languagePaths;
+
+const { lang } = Astro.props as { lang: Lang };
+const { huntingGround, home, alt } = await pageTexts(lang);
+---
+
+<BaseLayout title={t(lang, "nav.huntingGround")} description={huntingGround.lead} lang={lang} full>
+  <PhotoHead photo={photos.huntingGround} alt={alt.huntingGround} title={t(lang, "nav.huntingGround")} lead={huntingGround.lead} />
+
+  <section class="section">
+    <div class="wrap">
+      <div class="prose">
+        <TextSections sections={huntingGround.sections} />
+      </div>
+      <NumbersBand numbers={home.numbers} source={home.numbersSource} />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="species">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="species">{huntingGround.speciesHeading}</h2>
+        <p>{huntingGround.speciesIntro}</p>
+      </div>
+      <SpeciesList species={huntingGround.species} />
+    </div>
+  </section>
+
+  <PhotoBand photo={photos.bandKarst} alt={alt.bandKarst} />
+
+  <section class="section">
+    <div class="wrap prose">
+      <TextSections sections={[huntingGround.management]} />
+    </div>
+    <div class="wrap">
+      <ContactCta lang={lang} />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,218 @@
+# Tekstovi stranica na srpskom, latinica (šema: src/content.config.ts, zbirka pages).
+# Izvor: dosadašnja stranica ldistragracisce.si (14. 11. 2026). Novi jezik: prevod se pregleda pre objave.
+
+alt:
+  hero: "Privremena slika: crtež brežuljaka slovenačke Istre u sumrak"
+  about: "Privremena slika: crtež kraškog pejzaža"
+  huntingGround: "Privremena slika: crtež šumovitih brežuljaka lovišta"
+  huntingTourism: "Privremena slika: crtež šume uveče"
+  huntingLodge: "Privremena slika: crtež lovačkog doma pored šume"
+  lodgeInterior: "Privremena slika: crtež lovačkog doma u jesenjem pejzažu"
+  gameDamage: "Privremena slika: crtež njiva ispod brežuljaka"
+  membership: "Privremena slika: crtež šume u jutarnjoj magli"
+  bandForest: "Privremena slika: crtež šume na padini"
+  bandKarst: "Privremena slika: crtež Kraškog ruba"
+
+pendingLabel: "Sadržaj sledi"
+
+home:
+  heroText: "Dobrovoljno, neprofitno udruženje lovaca koje od 1947. brine o divljači i lovištu na Kraškom rubu u slovenačkoj Istri."
+  numbersHeading: "Lovište u brojkama"
+  numbers:
+    - value: "6.503 ha"
+      label: "površina lovišta"
+    - value: "200–800 m"
+      label: "nadmorska visina"
+    - value: "8"
+      label: "vrsta divljači"
+    - value: "1947."
+      label: "godina osnivanja"
+  numbersSource: "Izvor: dosadašnja stranica ldistragracisce.si (14. 11. 2026). Podatke pre objave potvrđuje društvo."
+  waysHeading: "Upoznajte društvo"
+  ways:
+    huntingGround: "Kraški pašnjaci, šume i polja, i osam vrsta divljači."
+    huntingTourism: "Lov na srndaća i divlju svinju uz vođenje naših lovaca."
+    huntingLodge: "Mesto okupljanja članova i gostiju društva."
+  tourismHeading: "Lov u slovenačkoj Istri"
+  tourismText: "Lovcima iz inostranstva nudimo lov u raznovrsnom lovištu između Kraškog ruba i istarskih brežuljaka, u pratnji iskusnih lovaca našeg društva."
+  tourismSeasons: "Lovne sezone"
+  localHeading: "Za meštane"
+  local:
+    gameDamage: "Da li je divljač oštetila vašu njivu ili vinograd? Kako da prijavite štetu i zaštitite površine."
+    membership: "Uslovi za učlanjenje i put do lovačkog ispita."
+  contactHeading: "Pišite nam"
+  contactText: "Za pitanja o lovnom turizmu, članstvu ili šteti od divljači pišite na imejl adresu društva."
+
+about:
+  lead: "Lovačko društvo Istra Gračišče deo je lokalne zajednice od 1947. Lovačku tradiciju spajamo sa savremenim gazdovanjem divljači i zaštitom prirode."
+  sections:
+    - heading: "Ko smo"
+      paragraphs:
+        - "Lovačko društvo (lovska družina) je dobrovoljno, samostalno i neprofitno udruženje ljudi koji su se povezali radi zaštite, gajenja i lova divljači, gazdovanja lovištem i drugih delatnosti povezanih sa lovstvom."
+        - "Aktivna smo zajednica koja spaja iskustvo starijih i energiju mlađih članova. Pored lova organizujemo obuke i društvene događaje i učestvujemo u ekološkim projektima lokalne zajednice."
+    - heading: "Istorija"
+      paragraphs:
+        - "Društvo je osnovano 1947. kao mala grupa posvećenih lovaca. Kroz decenije je raslo, čuvajući ravnotežu između lovačke tradicije i savremenog gazdovanja divljači."
+    - heading: "Misija"
+      paragraphs:
+        - "Naša misija je održivo gazdovanje lovištem i divljači i poučavanje članova i javnosti o važnosti zaštite prirode. Zalažemo se za odgovoran lov zasnovan na poštovanju prirode i životinja i na očuvanju biodiverziteta."
+    - heading: "Vrednosti"
+      paragraphs:
+        - "Temelj našeg rada su lovačka etika, odgovornost prema prirodi i divljači, saradnja sa lokalnom zajednicom i prenošenje znanja mlađim generacijama."
+  officersHeading: "Organizacija"
+  officersText: "Društvo vode izabrani funkcioneri. Navodimo ih po funkcijama; za kontakt koristite imejl adresu društva."
+  officers:
+    - "Predsednik društva (starešina)"
+    - "Lovočuvar-upravnik (gospodar)"
+    - "Sekretar (tajnik)"
+  clubHeading: "Više o društvu"
+
+huntingGround:
+  lead: "Lovište se prostire na raznovrsnom terenu slovenačke Istre, gde se prepliću kraški pašnjaci, šume i poljoprivredne površine."
+  sections:
+    - heading: "Područje lovišta"
+      paragraphs:
+        - "Lovište leži na Kraškom rubu i obuhvata teren od nizijskih delova do viših kraških visoravni. Posebnost lovišta je preplitanje staništa: kraških pašnjaka, šumovitih padina i tradicionalnih poljoprivrednih površina."
+        - "Ovaj raznovrsni prostor pruža dobre uslove za mnoge vrste divljači i omogućava održivo gazdovanje lovištem."
+  speciesHeading: "Divljač u lovištu"
+  speciesIntro: "U lovištu živi divljač tipična za kraško područje. Posebnu pažnju posvećujemo srnama i divljim svinjama, dvema najvažnijim vrstama lovišta."
+  species:
+    - id: red-deer
+      name: "Jelen"
+      latin: "Cervus elaphus"
+      text: "Naša najveća vrsta divljači, koja se zadržava u šumovitim delovima lovišta."
+      alt: "Jelen sa razgranatim rogovima na livadi"
+    - id: roe-deer
+      name: "Srna"
+      latin: "Capreolus capreolus"
+      text: "Jedna od dve najvažnije vrste lovišta, kod kuće na ivici šume i na livadama."
+      alt: "Privremena slika: crtež livade ispod brežuljaka"
+    - id: wild-boar
+      name: "Divlja svinja"
+      latin: "Sus scrofa"
+      text: "Druga najvažnija vrsta lovišta; njome gazdujemo u saradnji sa lokalnim poljoprivrednicima."
+      alt: "Privremena slika: crtež šume"
+    - id: hare
+      name: "Zec"
+      latin: "Lepus europaeus"
+      text: "Sitna divljač otvorenih livada i polja."
+      alt: "Privremena slika: crtež travnatih brežuljaka ujutru"
+    - id: fox
+      name: "Lisica"
+      latin: "Vulpes vulpes"
+      text: "Prilagodljiva zver koja živi u svim delovima lovišta."
+      alt: "Privremena slika: crtež jesenjeg pejzaža"
+    - id: badger
+      name: "Jazavac"
+      latin: "Meles meles"
+      text: "Noćna životinja šumovitih padina."
+      alt: "Privremena slika: crtež brežuljaka uveče"
+    - id: partridge
+      name: "Jarebica"
+      latin: "Perdix perdix"
+      text: "Pernata divljač kraških pašnjaka i polja."
+      alt: "Privremena slika: crtež kraškog pašnjaka"
+    - id: pheasant
+      name: "Fazan"
+      latin: "Phasianus colchicus"
+      text: "Pernata divljač polja i živica."
+      alt: "Privremena slika: crtež pejzaža u magli"
+  management:
+    heading: "Gazdovanje lovištem"
+    paragraphs:
+      - "Gazdovanje se zasniva na načelima održivog lovstva i zaštite prirode. Redovno pratimo stanje populacija divljači, brinemo o hranilištima i solištima i održavamo lovačke čeke i druge objekte."
+      - "Posebnu pažnju posvećujemo sprečavanju šteta na poljoprivrednim površinama i saradnji sa lokalnim poljoprivrednicima."
+
+huntingTourism:
+  offersHeading: "Naša ponuda"
+  seasonsHeading: "Lovne sezone"
+  seasonsIntro: "Lovne sezone zavise od vrste divljači."
+  seasonColumns:
+    species: "Vrsta"
+    season: "Lovna sezona"
+  seasons:
+    - species: "Srndać"
+      season: "maj–oktobar"
+    - species: "Divlja svinja"
+      season: "cele godine"
+  seasonsPending: "Navedene sezone su sa dosadašnje stranice. Tačne datume i sezone ostalih vrsta društvo potvrđuje pre objave."
+  needsHeading: "Šta je potrebno lovcu gostu"
+  needs:
+    - "važeća lovačka dozvola svoje zemlje"
+    - "evropska propusnica za vatreno oružje ako donosi svoje oružje"
+    - "osiguranje od odgovornosti"
+    - "unapred dogovoren termin lova"
+  needsPending: "Spisak je nacrt. Šta je tačno potrebno lovcu gostu, društvo potvrđuje pre objave."
+  enquireHeading: "Upit"
+  enquireText: "Napišite nam koja vas divljač i koji termin zanimaju. Odgovorićemo vam sa uslovima i ponudom."
+
+huntingLodge:
+  lead: "Lovački dom je mesto okupljanja članova društva i polazište zajedničkih lovova."
+  sections:
+    - heading: "Lovački dom"
+      paragraphs:
+        - "U lovačkom domu se članovi sastaju na sastancima, pre zajedničkih lovova i na društvenim događajima. U njemu dočekujemo i lovce goste."
+  featuresHeading: "Šta nudi"
+  features:
+    - "prostor za sastanke članova"
+    - "polazište zajedničkih lovova"
+    - "doček lovaca gostiju"
+  pending: "Fotografije lovačkog doma, njegov položaj i opis onoga što nudi priprema društvo."
+
+gameDamage:
+  lead: "Kako da prijavite štetu koju je divljač napravila na poljoprivrednim površinama i kako da zaštitite površine."
+  reportHeading: "Kako prijaviti štetu"
+  reportIntro: "Ako ste na svojim površinama primetili štetu koju je napravila divljač, sledite ove korake:"
+  steps:
+    - "Čim primetite štetu, obavestite lovačko društvo. Kontakt je na stranici Kontakt."
+    - "Pripremite podatke o lokaciji, obimu i vrsti štete, kao i fotografije ili druge dokaze."
+    - "Sarađujte sa lovačkim društvom pri pregledu i dokumentovanju štete i popunite potrebne obrasce."
+  protectHeading: "Zaštita poljoprivrednih površina"
+  protectIntro: "Delotvorna zaštita od divljači zahteva više mera i redovno održavanje. Preporučujemo:"
+  measures:
+    - "električne ili obične ograde oko najugroženijih površina"
+    - "sredstva za odvraćanje (vizuelna, zvučna ili mirisna)"
+    - "saradnju sa lovačkim društvom na hranilištima koja odvraćaju divljač od polja"
+    - "blagovremenu žetvu i uklanjanje ostataka useva koji privlače divljač"
+    - "zaštitne mreže ili folije na voćkama i u vinogradima"
+  maintenance: "Redovno proveravajte zaštitu, popravljajte oštećenja i obnavljajte sredstva za odvraćanje, kako bi mere bile delotvorne celu sezonu."
+
+membership:
+  lead: "Pozivamo nove članove koji žele da učestvuju u gazdovanju lovištem i zaštiti prirode."
+  requirementsHeading: "Uslovi za članstvo"
+  requirementsIntro: "Kandidat za člana mora da ispunjava ove uslove:"
+  requirements:
+    - "najmanje 18 godina starosti"
+    - "državljanstvo Republike Slovenije"
+    - "položen lovački ispit"
+    - "neosuđivanost za krivična dela iz oblasti lovstva"
+    - "spremnost na aktivno učešće u društvu"
+    - "poštovanje lovačke etike i tradicije"
+  examHeading: "Put do lovačkog ispita"
+  examIntro: "Put do lovačkog ispita obuhvata teorijsku i praktičnu obuku:"
+  examSteps:
+    - "Teorijska obuka (40 časova)."
+    - "Praktična obuka u lovištu uz mentora."
+    - "Upoznavanje sa lovačkim oružjem i bezbednim rukovanjem njime."
+    - "Lovački ispit pred ispitnom komisijom."
+  applyHeading: "Kako se učlaniti"
+  applyText: "Ako vas zanima članstvo, pišite nam. Rado ćemo vam predstaviti društvo i odgovoriti na vaša pitanja."
+
+gallery:
+  lead: "Trenuci iz života društva i lovišta."
+  pending: "Fotografije za galeriju priprema društvo. Slike ispod su privremene i pokazuju samo izgled stranice."
+
+documents:
+  lead: "Pravni akti i drugi dokumenti društva za preuzimanje."
+  pending: "Dokumente priprema društvo. Do tada su navedeni bez linka."
+  items:
+    - title: "Statut Lovačkog društva Istra Gračišče"
+      meta: "PDF · slovenački · datoteka još nije dostupna"
+    - title: "Pravilnici društva"
+      meta: "PDF · slovenački · datoteka još nije dostupna"
+
+contact:
+  lead: "Za pitanja o lovnom turizmu, članstvu ili šteti od divljači pišite nam."
+  officersHeading: "Funkcioneri"
+  officersText: "Društvo vode izabrani funkcioneri. Za kontakt sa njima koristite imejl adresu društva."
+  phonePending: "Broj telefona koji će biti objavljen potvrđuje društvo."

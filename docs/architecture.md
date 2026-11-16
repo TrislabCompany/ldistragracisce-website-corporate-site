@@ -52,7 +52,8 @@ The build holds nothing that differs between Environments. Each deploy writes `/
 | `src/styles/` | `global.css`, the layout and components, and `tokens.css`, the brand's colours and font |
 | `src/components/` | Reusable parts of pages |
 | `src/content/<collection>/<language>/` | Markdown items of the lists in `collections` of `src/site.config.ts`, described in `src/content.config.ts` |
-| `src/content/legal/<language>/` | The privacy policy, the accessibility statement and the sustainability page |
+| `src/content/legal/<language>/` | The privacy policy and the accessibility statement (the sustainability page is off) |
+| `src/content/pages/<language>/site.yaml` | The texts of the site's own pages, one file per language |
 | `src/i18n/` | The interface strings per language, and the helpers for language URLs |
 | `src/lib/config.ts` | The one place that reads `/config.json` |
 | `public/` | Files copied as they are: the favicon (with `src/components/Logo.astro`, the brand's logo) and `_headers` |

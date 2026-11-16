@@ -1,0 +1,49 @@
+---
+// Membership: the requirements and the path to the hunting exam.
+import PhotoHead from "../../components/PhotoHead.astro";
+import StepList from "../../components/StepList.astro";
+import { languagePaths, localizedPath, t, type Lang } from "../../i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pageTexts } from "../../lib/pages";
+import { photos } from "../../lib/photos";
+import site from "../../site.config";
+
+export const getStaticPaths = languagePaths;
+
+const { lang } = Astro.props as { lang: Lang };
+const { membership, alt } = await pageTexts(lang);
+---
+
+<BaseLayout title={t(lang, "nav.membership")} description={membership.lead} lang={lang} full>
+  <PhotoHead photo={photos.membership} alt={alt.membership} title={t(lang, "nav.membership")} lead={membership.lead} />
+
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2>{membership.requirementsHeading}</h2>
+        <p>{membership.requirementsIntro}</p>
+        <ul class="checklist">
+          {membership.requirements.map((requirement) => <li>{requirement}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h2>{membership.examHeading}</h2>
+        <p>{membership.examIntro}</p>
+        <StepList steps={membership.examSteps} />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta-box on-dark">
+        <h2>{membership.applyHeading}</h2>
+        <p>{membership.applyText}</p>
+        <div class="actions">
+          {site.contact.topics.map(({ email }) => <a class="button" href={`mailto:${email}`}>{t(lang, "cta.writeUs")}</a>)}
+          <a class="button" href={localizedPath(lang, "/contact")}>{t(lang, "nav.contact")}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,31 @@
+---
+// The gallery: the club's own photos, which the club supplies. Until then a
+// placeholder box and placeholder photos that show the layout.
+import { Image } from "astro:assets";
+import Placeholder from "../../components/Placeholder.astro";
+import { languagePaths, t, type Lang } from "../../i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pageTexts } from "../../lib/pages";
+import { photos, type PhotoKey } from "../../lib/photos";
+
+export const getStaticPaths = languagePaths;
+
+const { lang } = Astro.props as { lang: Lang };
+const { gallery, alt, pendingLabel } = await pageTexts(lang);
+const shown: PhotoKey[] = ["bandForest", "bandKarst", "lodgeInterior", "about", "membership", "gameDamage"];
+---
+
+<BaseLayout title={t(lang, "nav.gallery")} description={gallery.lead} lang={lang}>
+  <h1>{t(lang, "nav.gallery")}</h1>
+  <p class="lead">{gallery.lead}</p>
+  <Placeholder label={pendingLabel} text={gallery.pending} />
+  <ul class="gallery">
+    {
+      shown.map((key) => (
+        <li>
+          <Image src={photos[key]} alt={alt[key]} widths={[400, 640]} sizes="(min-width: 48rem) 33vw, 100vw" format="avif" loading="lazy" />
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>

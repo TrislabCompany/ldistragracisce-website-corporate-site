@@ -5,8 +5,8 @@ import { languages, prefixed, type Lang } from "../i18n";
 import site from "../site.config";
 import { entryLang, entryLanguages, entrySlug, getEntries } from "./content";
 
-/** The collections that hold items: every content collection except the legal texts. */
-export type ItemCollection = Exclude<CollectionKey, "legal">;
+/** The collections that hold items: every content collection except the legal texts and the page texts. */
+export type ItemCollection = Exclude<CollectionKey, "legal" | "pages">;
 
 /** The settings of a list of items, or a build error that names the missing piece. */
 export function collectionSettings(id: string) {

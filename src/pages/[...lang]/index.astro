@@ -1,46 +1,146 @@
 ---
-import ContactCta from "../../components/ContactCta.astro";
-import ItemCard from "../../components/ItemCard.astro";
+// The home page, top to bottom as in docs/brief.md: the hero, the hunting
+// ground in numbers, three ways in, hunting tourism in the dark band, two cards
+// for local people, and the contact.
+import NumbersBand from "../../components/NumbersBand.astro";
+import PhotoCard from "../../components/PhotoCard.astro";
+import PhotoHead from "../../components/PhotoHead.astro";
 import { languagePaths, localizedPath, t, type Lang } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { sortedItems, type ItemCollection } from "../../lib/items";
+import { pageTexts } from "../../lib/pages";
+import { photos } from "../../lib/photos";
 import site from "../../site.config";
 
 export const getStaticPaths = languagePaths;
 
 const { lang } = Astro.props as { lang: Lang };
-// A section for every list of items marked home in src/site.config.ts.
-const sections = await Promise.all(
-  site.collections
-    .filter((collection) => collection.home)
-    .map(async (collection) => ({ ...collection, items: await sortedItems(collection.id as ItemCollection, lang) })),
-);
+const texts = await pageTexts(lang);
+const { home, alt, huntingTourism } = texts;
+const tourismLead = site.collections.find((collection) => collection.id === "hunting-tourism")?.lead[lang];
+const { contact, company } = site;
 ---
 
-<BaseLayout title={site.name} lang={lang}>
-  <section class="hero">
-    <h1>{site.name}</h1>
-    <p class="lead">{site.description[lang]}</p>
-    <div class="actions">
-      <a class="button" href={localizedPath(lang, "/contact")}>{t(lang, "cta.contact")}</a>
+<BaseLayout title={site.name} lang={lang} full overlay>
+  <PhotoHead photo={photos.hero} alt={alt.hero} title={site.name} lead={home.heroText} hero>
+    <div class="actions on-dark">
+      <a class="button light" href={localizedPath(lang, "/hunting-tourism")}>{t(lang, "nav.huntingTourism")}</a>
+      <a class="button outline-light" href={localizedPath(lang, "/about")}>{t(lang, "nav.about")}</a>
+    </div>
+  </PhotoHead>
+
+  <section class="section" aria-labelledby="numbers">
+    <div class="wrap">
+      <h2 id="numbers">{home.numbersHeading}</h2>
+      <NumbersBand numbers={home.numbers} source={home.numbersSource} />
     </div>
   </section>
 
-  {
-    sections.map((section) => (
-      <section class="section" aria-labelledby={section.id}>
-        <h2 id={section.id}>
-          <a href={localizedPath(lang, `/${section.id}`)}>{section.title[lang]}</a>
-        </h2>
-        <p class="lead">{section.lead[lang]}</p>
-        <ul class="grid">
-          {section.items.map((entry) => (
-            <ItemCard entry={entry} collection={section.id as ItemCollection} lang={lang} />
-          ))}
-        </ul>
-      </section>
-    ))
-  }
+  <section class="section" aria-labelledby="ways">
+    <div class="wrap">
+      <h2 id="ways">{home.waysHeading}</h2>
+      <ul class="photo-cards">
+        <PhotoCard
+          photo={photos.huntingGround}
+          alt={alt.huntingGround}
+          title={t(lang, "nav.huntingGround")}
+          text={home.ways.huntingGround}
+          href={localizedPath(lang, "/hunting-ground")}
+        />
+        <PhotoCard
+          photo={photos.huntingTourism}
+          alt={alt.huntingTourism}
+          title={t(lang, "nav.huntingTourism")}
+          text={home.ways.huntingTourism}
+          href={localizedPath(lang, "/hunting-tourism")}
+        />
+        <PhotoCard
+          photo={photos.huntingLodge}
+          alt={alt.huntingLodge}
+          title={t(lang, "nav.huntingLodge")}
+          text={home.ways.huntingLodge}
+          href={localizedPath(lang, "/hunting-lodge")}
+        />
+      </ul>
+    </div>
+  </section>
 
-  <ContactCta lang={lang} />
+  <section class="section section-band on-dark" aria-labelledby="tourism">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">{t(lang, "nav.huntingTourism")}</p>
+        <h2 id="tourism">{home.tourismHeading}</h2>
+        <p>{home.tourismText}</p>
+        {tourismLead && <p>{tourismLead}</p>}
+        <div class="actions">
+          <a class="button light" href={localizedPath(lang, "/hunting-tourism")}>{t(lang, "cta.readMore")}</a>
+          <a class="button outline-light" href={localizedPath(lang, "/contact")}>{t(lang, "cta.enquire")}</a>
+        </div>
+      </div>
+      <div>
+        <h3>{home.tourismSeasons}</h3>
+        <ul class="checklist">
+          {
+            huntingTourism.seasons.map(({ species, season }) => (
+              <li>
+                <strong>{species}:</strong> {season}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="local">
+    <div class="wrap">
+      <h2 id="local">{home.localHeading}</h2>
+      <ul class="duo">
+        <li>
+          <article class="card">
+            <h3><a href={localizedPath(lang, "/game-damage")}>{t(lang, "nav.gameDamage")}</a></h3>
+            <p>{home.local.gameDamage}</p>
+          </article>
+        </li>
+        <li>
+          <article class="card">
+            <h3><a href={localizedPath(lang, "/membership")}>{t(lang, "nav.membership")}</a></h3>
+            <p>{home.local.membership}</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="contact">
+    <div class="wrap contact-band">
+      <div>
+        <h2 id="contact">{home.contactHeading}</h2>
+        <p>{home.contactText}</p>
+      </div>
+      <ul class="contact-list">
+        {
+          contact.topics.map(({ email }) => (
+            <li>
+              {t(lang, "contact.email")}: <a href={`mailto:${email}`}>{email}</a>
+            </li>
+          ))
+        }
+        {
+          contact.phone && (
+            <li>
+              {t(lang, "contact.phone")}: <a href={`tel:${contact.phone.replace(/\s/g, "")}`}>{contact.phone}</a>
+            </li>
+          )
+        }
+        <li>{`${company.address.street}, ${company.address.postalCode} ${company.address.city}`}</li>
+        {
+          contact.mapUrl && (
+            <li>
+              <a href={contact.mapUrl} rel="noopener noreferrer">{t(lang, "contact.map")}</a>
+            </li>
+          )
+        }
+      </ul>
+    </div>
+  </section>
 </BaseLayout>

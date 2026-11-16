@@ -1,0 +1,20 @@
+---
+// The club's documents: title, then file type, size and language. An entry
+// without a file (href) is listed as a placeholder until the club supplies it.
+interface Props {
+  documents: { title: string; meta: string; href?: string }[];
+}
+
+const { documents } = Astro.props;
+---
+
+<ul class="documents">
+  {
+    documents.map(({ title, meta, href }) => (
+      <li>
+        {href ? <a href={href}>{title}</a> : <span>{title}</span>}
+        <span class="meta">{meta}</span>
+      </li>
+    ))
+  }
+</ul>

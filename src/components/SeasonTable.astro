@@ -1,0 +1,33 @@
+---
+// The hunting seasons per species. On a phone the table scrolls inside its own
+// frame, which can take keyboard focus so the scrolling works without a mouse.
+interface Props {
+  caption: string;
+  columns: { species: string; season: string };
+  seasons: { species: string; season: string }[];
+}
+
+const { caption, columns, seasons } = Astro.props;
+---
+
+<div class="table-frame" tabindex="0" role="region" aria-label={caption}>
+  <table>
+    <caption>{caption}</caption>
+    <thead>
+      <tr>
+        <th scope="col">{columns.species}</th>
+        <th scope="col">{columns.season}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        seasons.map(({ species, season }) => (
+          <tr>
+            <th scope="row">{species}</th>
+            <td>{season}</td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+</div>

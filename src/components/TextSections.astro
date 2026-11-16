@@ -1,0 +1,21 @@
+---
+// Sections of plain text: a heading and its paragraphs each.
+interface Props {
+  sections: { heading: string; paragraphs: string[] }[];
+}
+
+const { sections } = Astro.props;
+---
+
+<div class="text-block">
+  {
+    sections.map(({ heading, paragraphs }) => (
+      <>
+        <h2>{heading}</h2>
+        {paragraphs.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </>
+    ))
+  }
+</div>

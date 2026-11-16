@@ -1,0 +1,23 @@
+---
+// The club's documents to download (the statute, the rules). The club supplies
+// the files; until then they are listed without a link, under a placeholder box.
+import DocumentList from "../../components/DocumentList.astro";
+import Placeholder from "../../components/Placeholder.astro";
+import { languagePaths, t, type Lang } from "../../i18n";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { pageTexts } from "../../lib/pages";
+
+export const getStaticPaths = languagePaths;
+
+const { lang } = Astro.props as { lang: Lang };
+const { documents, pendingLabel } = await pageTexts(lang);
+---
+
+<BaseLayout title={t(lang, "nav.documents")} description={documents.lead} lang={lang}>
+  <div class="prose">
+    <h1>{t(lang, "nav.documents")}</h1>
+    <p class="lead">{documents.lead}</p>
+    <Placeholder label={pendingLabel} text={documents.pending} />
+    <DocumentList documents={documents.items} />
+  </div>
+</BaseLayout>

@@ -1,5 +1,8 @@
 ---
+// The footer, in the dark forest band: the club, its pages (Gallery and
+// Documents are linked here), the contact and the legal pages.
 import { localizedPath, t, type Lang } from "../i18n";
+import { clubLinks } from "../lib/navigation";
 import site from "../site.config";
 import EnvironmentBadge from "./EnvironmentBadge.astro";
 import Logo from "./Logo.astro";
@@ -16,6 +19,8 @@ const legal = [
   { on: site.legalPages.sustainability, href: "/sustainability", label: t(lang, "legal.sustainability") },
   { on: true, href: "/sitemap", label: t(lang, "legal.sitemap") },
 ].filter((link) => link.on);
+const club = clubLinks(lang);
+const { company, contact } = site;
 const year = new Date().getFullYear();
 ---
 
@@ -23,24 +28,43 @@ const year = new Date().getFullYear();
   <div class="wrap footer-row">
     <div class="footer-about">
       <a class="brand" href={localizedPath(lang)}>
-        <Logo size={28} />
+        <Logo size={40} />
         <span>{site.name}</span>
       </a>
       <p>{site.description[lang]}</p>
+      <address>
+        {`${company.address.street}, ${company.address.postalCode} ${company.address.city}`}<br />
+        {contact.topics.map(({ email }) => <a href={`mailto:${email}`}>{email}</a>)}
+      </address>
       <p>{t(lang, "footer.noCookies")}</p>
     </div>
-    {
-      legal.length > 0 && (
-        <nav class="legal-links" aria-label={t(lang, "legal.nav")}>
-          {legal.map(({ href, label }) => (
-            <a href={localizedPath(lang, href)}>{label}</a>
-          ))}
-        </nav>
-      )
-    }
+    <nav aria-label={t(lang, "footer.club")}>
+      <p class="footer-heading">{t(lang, "footer.club")}</p>
+      <ul class="footer-links">
+        {
+          club.map(({ href, label }) => (
+            <li>
+              <a href={localizedPath(lang, href)}>{label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <nav aria-label={t(lang, "legal.nav")}>
+      <p class="footer-heading">{t(lang, "legal.nav")}</p>
+      <ul class="footer-links">
+        {
+          legal.map(({ href, label }) => (
+            <li>
+              <a href={localizedPath(lang, href)}>{label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
   </div>
-  <div class="wrap footer-row footer-bottom">
-    <span>© {year} {site.company.legalName}. {t(lang, "footer.rights")}</span>
+  <div class="wrap footer-bottom">
+    <span>© {year} {company.legalName}. {t(lang, "footer.rights")}</span>
     <EnvironmentBadge />
   </div>
 </footer>

@@ -1,0 +1,218 @@
+# Seitentexte auf Deutsch (Schema: src/content.config.ts, Sammlung pages).
+# Quelle: die bisherige Website ldistragracisce.si (14.11.2026). Neue Sprache: die Übersetzung wird vor der Veröffentlichung geprüft.
+
+alt:
+  hero: "Vorläufiges Bild: Zeichnung der Hügel des slowenischen Istrien in der Abenddämmerung"
+  about: "Vorläufiges Bild: Zeichnung einer Karstlandschaft"
+  huntingGround: "Vorläufiges Bild: Zeichnung der bewaldeten Hügel des Reviers"
+  huntingTourism: "Vorläufiges Bild: Zeichnung eines Waldes am Abend"
+  huntingLodge: "Vorläufiges Bild: Zeichnung der Jagdhütte am Waldrand"
+  lodgeInterior: "Vorläufiges Bild: Zeichnung der Jagdhütte in einer Herbstlandschaft"
+  gameDamage: "Vorläufiges Bild: Zeichnung von Feldern unter den Hügeln"
+  membership: "Vorläufiges Bild: Zeichnung eines Waldes im Morgennebel"
+  bandForest: "Vorläufiges Bild: Zeichnung eines Waldes am Hang"
+  bandKarst: "Vorläufiges Bild: Zeichnung des Karstrands"
+
+pendingLabel: "Inhalt folgt"
+
+home:
+  heroText: "Ein ehrenamtlicher, gemeinnütziger Verein von Jägern, der seit 1947 für das Wild und das Revier am Karstrand im slowenischen Istrien sorgt."
+  numbersHeading: "Das Revier in Zahlen"
+  numbers:
+    - value: "6.503 ha"
+      label: "Fläche des Reviers"
+    - value: "200–800 m"
+      label: "über dem Meeresspiegel"
+    - value: "8"
+      label: "Wildarten"
+    - value: "1947"
+      label: "Gründungsjahr"
+  numbersSource: "Quelle: die bisherige Website ldistragracisce.si (14.11.2026). Der Verein bestätigt die Angaben vor der Veröffentlichung."
+  waysHeading: "Lernen Sie den Verein kennen"
+  ways:
+    huntingGround: "Karstweiden, Wälder und Felder und acht Wildarten."
+    huntingTourism: "Jagd auf Rehbock und Schwarzwild, geführt von unseren Jägern."
+    huntingLodge: "Treffpunkt der Mitglieder und Gäste des Vereins."
+  tourismHeading: "Jagen im slowenischen Istrien"
+  tourismText: "Jägern aus dem Ausland bieten wir die Jagd in einem abwechslungsreichen Revier zwischen dem Karstrand und den istrischen Hügeln, begleitet von erfahrenen Jägern des Vereins."
+  tourismSeasons: "Jagdzeiten"
+  localHeading: "Für die Menschen vor Ort"
+  local:
+    gameDamage: "Hat Wild Ihr Feld oder Ihren Weinberg beschädigt? So melden Sie den Schaden und so schützen Sie Ihre Flächen."
+    membership: "Die Voraussetzungen für die Aufnahme und der Weg zur Jägerprüfung."
+  contactHeading: "Schreiben Sie uns"
+  contactText: "Bei Fragen zum Jagdtourismus, zur Mitgliedschaft oder zu Wildschäden schreiben Sie an die E-Mail-Adresse des Vereins."
+
+about:
+  lead: "Die Jagdgesellschaft Istra Gračišče gehört seit 1947 zur örtlichen Gemeinschaft. Wir verbinden die jagdliche Tradition mit moderner Wildbewirtschaftung und Naturschutz."
+  sections:
+    - heading: "Wer wir sind"
+      paragraphs:
+        - "Eine Jagdgesellschaft (lovska družina) ist ein ehrenamtlicher, unabhängiger und gemeinnütziger Zusammenschluss von Menschen, die sich für den Schutz, die Hege und die Jagd des Wildes, die Bewirtschaftung des Reviers und andere jagdliche Aufgaben zusammengetan haben."
+        - "Wir sind eine aktive Gemeinschaft, in der sich die Erfahrung der älteren und die Energie der jüngeren Mitglieder verbinden. Neben der Jagd organisieren wir Schulungen und gesellige Veranstaltungen und beteiligen uns an Umweltprojekten der Gemeinde."
+    - heading: "Geschichte"
+      paragraphs:
+        - "Der Verein wurde 1947 von einer kleinen Gruppe engagierter Jäger gegründet. Über die Jahrzehnte ist er gewachsen und hat dabei das Gleichgewicht zwischen jagdlicher Tradition und moderner Wildbewirtschaftung bewahrt."
+    - heading: "Auftrag"
+      paragraphs:
+        - "Unser Auftrag ist die nachhaltige Bewirtschaftung des Reviers und seines Wildes und die Aufklärung der Mitglieder und der Öffentlichkeit über die Bedeutung des Naturschutzes. Wir stehen für eine verantwortungsvolle Jagd, die auf Respekt vor Natur und Tier und auf dem Erhalt der Artenvielfalt beruht."
+    - heading: "Werte"
+      paragraphs:
+        - "Grundlage unserer Arbeit sind die Waidgerechtigkeit, die Verantwortung für Natur und Wild, die Zusammenarbeit mit der örtlichen Gemeinschaft und die Weitergabe von Wissen an die jüngeren Generationen."
+  officersHeading: "Organisation"
+  officersText: "Der Verein wird von gewählten Funktionsträgern geleitet. Wir nennen sie nach ihrer Funktion; erreichen Sie sie über die E-Mail-Adresse des Vereins."
+  officers:
+    - "Vorsitzender (starešina)"
+    - "Revierverwalter (gospodar)"
+    - "Schriftführer (tajnik)"
+  clubHeading: "Mehr über den Verein"
+
+huntingGround:
+  lead: "Das Revier erstreckt sich über das abwechslungsreiche Gelände des slowenischen Istrien, wo sich Karstweiden, Wälder und Ackerland abwechseln."
+  sections:
+    - heading: "Das Gebiet"
+      paragraphs:
+        - "Das Revier liegt am Karstrand und reicht von tiefer gelegenen Flächen bis zu den höheren Karsthochflächen. Besonders ist das Nebeneinander der Lebensräume: Karstweiden, bewaldete Hänge und traditionelles Ackerland."
+        - "Dieses vielfältige Gelände bietet vielen Wildarten gute Bedingungen und erlaubt eine nachhaltige Bewirtschaftung des Reviers."
+  speciesHeading: "Das Wild im Revier"
+  speciesIntro: "Im Revier lebt das für den Karst typische Wild. Besondere Aufmerksamkeit gilt dem Rehwild und dem Schwarzwild, den beiden wichtigsten Arten."
+  species:
+    - id: red-deer
+      name: "Rotwild"
+      latin: "Cervus elaphus"
+      text: "Unsere größte Wildart, in den bewaldeten Teilen des Reviers zu Hause."
+      alt: "Ein Rothirsch mit verzweigtem Geweih auf einer Wiese"
+    - id: roe-deer
+      name: "Rehwild"
+      latin: "Capreolus capreolus"
+      text: "Eine der beiden wichtigsten Arten des Reviers, zu Hause am Waldrand und auf Wiesen."
+      alt: "Vorläufiges Bild: Zeichnung einer Wiese unter den Hügeln"
+    - id: wild-boar
+      name: "Schwarzwild"
+      latin: "Sus scrofa"
+      text: "Die andere wichtige Art des Reviers; wir bewirtschaften sie gemeinsam mit den Landwirten vor Ort."
+      alt: "Vorläufiges Bild: Zeichnung eines Waldes"
+    - id: hare
+      name: "Feldhase"
+      latin: "Lepus europaeus"
+      text: "Niederwild offener Wiesen und Felder."
+      alt: "Vorläufiges Bild: Zeichnung grasbewachsener Hügel am Morgen"
+    - id: fox
+      name: "Rotfuchs"
+      latin: "Vulpes vulpes"
+      text: "Ein anpassungsfähiges Raubwild in allen Teilen des Reviers."
+      alt: "Vorläufiges Bild: Zeichnung einer Herbstlandschaft"
+    - id: badger
+      name: "Dachs"
+      latin: "Meles meles"
+      text: "Ein nachtaktives Tier der bewaldeten Hänge."
+      alt: "Vorläufiges Bild: Zeichnung von Hügeln am Abend"
+    - id: partridge
+      name: "Rebhuhn"
+      latin: "Perdix perdix"
+      text: "Federwild der Karstweiden und Felder."
+      alt: "Vorläufiges Bild: Zeichnung einer Karstweide"
+    - id: pheasant
+      name: "Fasan"
+      latin: "Phasianus colchicus"
+      text: "Federwild der Felder und Hecken."
+      alt: "Vorläufiges Bild: Zeichnung einer Landschaft im Nebel"
+  management:
+    heading: "Die Bewirtschaftung des Reviers"
+    paragraphs:
+      - "Die Bewirtschaftung folgt den Grundsätzen nachhaltiger Jagd und des Naturschutzes. Wir beobachten die Wildbestände regelmäßig, betreuen Fütterungen und Salzlecken und halten Hochsitze und andere Einrichtungen instand."
+      - "Besonders achten wir darauf, Schäden an landwirtschaftlichen Flächen zu verhindern, und arbeiten mit den Landwirten vor Ort zusammen."
+
+huntingTourism:
+  offersHeading: "Unser Angebot"
+  seasonsHeading: "Jagdzeiten"
+  seasonsIntro: "Die Jagdzeiten hängen von der Wildart ab."
+  seasonColumns:
+    species: "Wildart"
+    season: "Jagdzeit"
+  seasons:
+    - species: "Rehbock"
+      season: "Mai–Oktober"
+    - species: "Schwarzwild"
+      season: "ganzjährig"
+  seasonsPending: "Die beiden Jagdzeiten stammen von der bisherigen Website. Die genauen Daten und die Jagdzeiten der anderen Arten bestätigt der Verein vor der Veröffentlichung."
+  needsHeading: "Was ein Jagdgast braucht"
+  needs:
+    - "einen gültigen Jagdschein seines Landes"
+    - "den Europäischen Feuerwaffenpass, wenn er seine eigene Waffe mitbringt"
+    - "eine Haftpflichtversicherung"
+    - "einen im Voraus vereinbarten Termin"
+  needsPending: "Die Liste ist ein Entwurf. Was ein Jagdgast genau braucht, bestätigt der Verein vor der Veröffentlichung."
+  enquireHeading: "Anfragen"
+  enquireText: "Schreiben Sie uns, welches Wild und welche Termine Sie interessieren. Wir antworten mit den Bedingungen und einem Angebot."
+
+huntingLodge:
+  lead: "Die Jagdhütte ist der Treffpunkt der Mitglieder und der Ausgangspunkt gemeinsamer Jagden."
+  sections:
+    - heading: "Die Jagdhütte"
+      paragraphs:
+        - "In der Jagdhütte treffen sich die Mitglieder zu Versammlungen, vor gemeinsamen Jagden und bei geselligen Anlässen. Dort empfangen wir auch Jagdgäste."
+  featuresHeading: "Was sie bietet"
+  features:
+    - "einen Raum für Versammlungen der Mitglieder"
+    - "den Ausgangspunkt gemeinsamer Jagden"
+    - "den Empfang von Jagdgästen"
+  pending: "Fotos der Jagdhütte, ihre Lage und was sie bietet, liefert der Verein."
+
+gameDamage:
+  lead: "Wie Sie Schäden melden, die Wild an landwirtschaftlichen Flächen verursacht hat, und wie Sie Ihre Flächen schützen."
+  reportHeading: "So melden Sie einen Schaden"
+  reportIntro: "Wenn Sie auf Ihren Flächen einen Wildschaden bemerken, gehen Sie so vor:"
+  steps:
+    - "Benachrichtigen Sie die Jagdgesellschaft, sobald Sie den Schaden bemerken. Die Kontaktdaten finden Sie auf der Seite Kontakt."
+    - "Notieren Sie Ort, Umfang und Art des Schadens und machen Sie Fotos oder sichern Sie andere Nachweise."
+    - "Arbeiten Sie bei der Besichtigung und Dokumentation des Schadens mit der Jagdgesellschaft zusammen und füllen Sie die nötigen Formulare aus."
+  protectHeading: "Landwirtschaftliche Flächen schützen"
+  protectIntro: "Wirksamer Schutz vor Wild braucht mehrere Maßnahmen und regelmäßige Pflege. Wir empfehlen:"
+  measures:
+    - "Elektro- oder normale Zäune um die am stärksten gefährdeten Flächen"
+    - "Vergrämungsmittel (optisch, akustisch oder geruchlich)"
+    - "die Zusammenarbeit mit der Jagdgesellschaft bei Fütterungen, die das Wild von den Feldern fernhalten"
+    - "rechtzeitige Ernte und das Entfernen von Ernteresten, die Wild anlocken"
+    - "Schutznetze oder Folien an Obstbäumen und in Weinbergen"
+  maintenance: "Prüfen Sie den Schutz regelmäßig, beheben Sie Schäden und erneuern Sie die Vergrämungsmittel, damit die Maßnahmen die ganze Saison wirken."
+
+membership:
+  lead: "Wir begrüßen neue Mitglieder, die bei der Bewirtschaftung des Reviers und beim Naturschutz mitwirken möchten."
+  requirementsHeading: "Voraussetzungen für die Mitgliedschaft"
+  requirementsIntro: "Wer Mitglied werden möchte, muss diese Voraussetzungen erfüllen:"
+  requirements:
+    - "Mindestalter 18 Jahre"
+    - "Staatsbürgerschaft der Republik Slowenien"
+    - "bestandene Jägerprüfung"
+    - "keine Vorstrafen wegen jagdbezogener Straftaten"
+    - "Bereitschaft, aktiv im Verein mitzuwirken"
+    - "Achtung der Waidgerechtigkeit und der jagdlichen Tradition"
+  examHeading: "Der Weg zur Jägerprüfung"
+  examIntro: "Der Weg zur Jägerprüfung umfasst eine theoretische und eine praktische Ausbildung:"
+  examSteps:
+    - "Theoretische Ausbildung (40 Stunden)."
+    - "Praktische Ausbildung im Revier mit einem Mentor."
+    - "Kenntnis der Jagdwaffen und ihres sicheren Gebrauchs."
+    - "Die Jägerprüfung vor der Prüfungskommission."
+  applyHeading: "So werden Sie Mitglied"
+  applyText: "Wenn Sie sich für eine Mitgliedschaft interessieren, schreiben Sie uns. Wir stellen Ihnen den Verein gern vor und beantworten Ihre Fragen."
+
+gallery:
+  lead: "Momente aus dem Leben des Vereins und seines Reviers."
+  pending: "Die Fotos für die Galerie liefert der Verein. Die Bilder unten sind vorläufig und zeigen nur das Layout."
+
+documents:
+  lead: "Satzung und andere Dokumente des Vereins zum Herunterladen."
+  pending: "Die Dokumente liefert der Verein. Bis dahin sind sie ohne Link aufgeführt."
+  items:
+    - title: "Satzung der Jagdgesellschaft Istra Gračišče"
+      meta: "PDF · Slowenisch · Datei noch nicht verfügbar"
+    - title: "Ordnungen des Vereins"
+      meta: "PDF · Slowenisch · Datei noch nicht verfügbar"
+
+contact:
+  lead: "Bei Fragen zum Jagdtourismus, zur Mitgliedschaft oder zu Wildschäden schreiben Sie uns."
+  officersHeading: "Funktionsträger"
+  officersText: "Der Verein wird von gewählten Funktionsträgern geleitet. Erreichen Sie sie über die E-Mail-Adresse des Vereins."
+  phonePending: "Die zu veröffentlichende Telefonnummer bestätigt der Verein."

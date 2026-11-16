@@ -1,0 +1,219 @@
+# Besedila strani v slovenščini (shema: src/content.config.ts, zbirka pages).
+# Vir besedil: dosedanja spletna stran ldistragracisce.si (assets/i18n/sl.json, 14. 11. 2026).
+# Podatki (površina, višine, vrste, leto, lovne dobe) se pred objavo preverijo pri družini.
+
+alt:
+  hero: "Začasna slika: risba gričev slovenske Istre ob mraku"
+  about: "Začasna slika: risba kraške pokrajine"
+  huntingGround: "Začasna slika: risba gozdnatih gričev lovišča"
+  huntingTourism: "Začasna slika: risba gozda ob večeru"
+  huntingLodge: "Začasna slika: risba lovskega doma ob gozdu"
+  lodgeInterior: "Začasna slika: risba lovskega doma v jesenski pokrajini"
+  gameDamage: "Začasna slika: risba njiv pod griči"
+  membership: "Začasna slika: risba gozda v jutranji meglici"
+  bandForest: "Začasna slika: risba gozda na pobočju"
+  bandKarst: "Začasna slika: risba kraškega roba"
+
+pendingLabel: "Čaka na vsebino"
+
+home:
+  heroText: "Prostovoljno, nepridobitno združenje lovcev, ki od leta 1947 skrbi za divjad in lovišče na Kraškem robu v slovenski Istri."
+  numbersHeading: "Lovišče v številkah"
+  numbers:
+    - value: "6.503 ha"
+      label: "površina lovišča"
+    - value: "200–800 m"
+      label: "nadmorska višina"
+    - value: "8"
+      label: "vrst divjadi"
+    - value: "1947"
+      label: "leto ustanovitve"
+  numbersSource: "Vir: dosedanja spletna stran ldistragracisce.si (14. 11. 2026). Podatke pred objavo potrdi družina."
+  waysHeading: "Spoznajte družino"
+  ways:
+    huntingGround: "Kraške gmajne, gozdovi in polja ter osem vrst divjadi."
+    huntingTourism: "Lov na srnjaka in divjega prašiča z vodenjem naših lovcev."
+    huntingLodge: "Zbirališče članov in gostov družine."
+  tourismHeading: "Lov v slovenski Istri"
+  tourismText: "Gostom iz tujine ponujamo lov v raznolikem lovišču med Kraškim robom in istrskimi griči, v spremstvu izkušenih lovcev naše družine."
+  tourismSeasons: "Lovne dobe"
+  localHeading: "Za domačine"
+  local:
+    gameDamage: "Je divjad naredila škodo na vaši njivi ali v vinogradu? Tako jo prijavite in tako zaščitite površine."
+    membership: "Pogoji za včlanitev in pot do lovskega izpita."
+  contactHeading: "Pišite nam"
+  contactText: "Za vprašanja o lovskem turizmu, članstvu ali škodi po divjadi nam pišite na e-naslov družine."
+
+about:
+  lead: "Lovska družina Istra Gračišče je že od leta 1947 del lokalne skupnosti. Lovsko tradicijo združujemo s sodobnim upravljanjem z divjadjo in varstvom narave."
+  sections:
+    - heading: "Kdo smo"
+      paragraphs:
+        - "Lovska družina je prostovoljno, samostojno in nepridobitno združenje ljudi, ki so se povezali zaradi varstva, gojitve in lova divjadi, upravljanja lovišča ter drugih z lovstvom povezanih dejavnosti."
+        - "Smo dejavna skupnost, ki združuje izkušnje starejših in energijo mlajših članov. Poleg lova organiziramo izobraževanja in družabne dogodke ter sodelujemo pri okoljskih projektih v lokalni skupnosti."
+    - heading: "Zgodovina"
+      paragraphs:
+        - "Družina je bila ustanovljena leta 1947 kot majhna skupina predanih lovcev. Skozi desetletja je rasla in pri tem ohranjala ravnovesje med lovsko tradicijo in sodobnimi načini upravljanja z divjadjo."
+    - heading: "Poslanstvo"
+      paragraphs:
+        - "Naše poslanstvo je trajnostno upravljanje z loviščem in divjadjo ter izobraževanje članov in širše javnosti o pomenu varstva narave. Zavzemamo se za odgovoren lov, ki temelji na spoštovanju narave in živali ter na ohranjanju biotske raznovrstnosti."
+    - heading: "Vrednote"
+      paragraphs:
+        - "Temelj našega dela so lovska etika, odgovornost do narave in divjadi, sodelovanje z lokalno skupnostjo in prenašanje znanja na mlajše rodove."
+  officersHeading: "Organizacija"
+  officersText: "Družino vodijo izvoljeni funkcionarji. Navajamo jih po funkcijah; za stik uporabite e-naslov družine."
+  officers:
+    - "Starešina"
+    - "Gospodar"
+    - "Tajnik"
+  clubHeading: "Več o družini"
+
+huntingGround:
+  lead: "Lovišče se razprostira na razgibanem terenu slovenske Istre, kjer se prepletajo kraške gmajne, gozdovi in kmetijske površine."
+  sections:
+    - heading: "Območje lovišča"
+      paragraphs:
+        - "Lovišče leži na območju Kraškega roba in zajema teren od nižinskih predelov do višjih kraških planot. Posebnost lovišča je preplet habitatov: kraške gmajne, gozdnata pobočja in tradicionalne kmetijske površine."
+        - "To raznoliko okolje nudi dobre pogoje za različne vrste divjadi in omogoča trajnostno upravljanje z loviščem."
+  speciesHeading: "Divjad v lovišču"
+  speciesIntro: "V lovišču živi divjad, značilna za kraško območje. Posebno pozornost namenjamo srnjadi in divjim prašičem, najpomembnejšima vrstama v lovišču."
+  species:
+    - id: red-deer
+      name: "Jelenjad"
+      latin: "Cervus elaphus"
+      text: "Naša največja vrsta divjadi, ki se zadržuje v gozdnatih predelih lovišča."
+      alt: "Jelen na travniku z razvejanim rogovjem"
+    - id: roe-deer
+      name: "Srnjad"
+      latin: "Capreolus capreolus"
+      text: "Ena od dveh najpomembnejših vrst v lovišču, doma na robu gozda in na travnikih."
+      alt: "Začasna slika: risba travnika pod griči"
+    - id: wild-boar
+      name: "Divji prašič"
+      latin: "Sus scrofa"
+      text: "Druga od najpomembnejših vrst v lovišču; pri upravljanju z njo sodelujemo z lokalnimi kmeti."
+      alt: "Začasna slika: risba gozda"
+    - id: hare
+      name: "Poljski zajec"
+      latin: "Lepus europaeus"
+      text: "Mala divjad odprtih travnikov in polj."
+      alt: "Začasna slika: risba travnatih gričev zjutraj"
+    - id: fox
+      name: "Lisica"
+      latin: "Vulpes vulpes"
+      text: "Prilagodljiva zver, ki živi v vseh delih lovišča."
+      alt: "Začasna slika: risba jesenske pokrajine"
+    - id: badger
+      name: "Jazbec"
+      latin: "Meles meles"
+      text: "Nočna žival gozdnih pobočij."
+      alt: "Začasna slika: risba gričev ob večeru"
+    - id: partridge
+      name: "Poljska jerebica"
+      latin: "Perdix perdix"
+      text: "Pernata divjad kraških gmajn in polj."
+      alt: "Začasna slika: risba kraške gmajne"
+    - id: pheasant
+      name: "Fazan"
+      latin: "Phasianus colchicus"
+      text: "Pernata divjad polj in mejic."
+      alt: "Začasna slika: risba pokrajine v meglici"
+  management:
+    heading: "Upravljanje z loviščem"
+    paragraphs:
+      - "Upravljanje temelji na načelih trajnostnega lovstva in varstva narave. Redno spremljamo stanje populacij divjadi, skrbimo za krmišča in solnice ter vzdržujemo lovske preže in druge objekte."
+      - "Posebno pozornost namenjamo preprečevanju škode na kmetijskih površinah in sodelovanju z lokalnimi kmeti."
+
+huntingTourism:
+  offersHeading: "Naša ponudba"
+  seasonsHeading: "Lovne dobe"
+  seasonsIntro: "Lovne dobe so odvisne od vrste divjadi."
+  seasonColumns:
+    species: "Vrsta"
+    season: "Lovna doba"
+  seasons:
+    - species: "Srnjak"
+      season: "maj–oktober"
+    - species: "Divji prašič"
+      season: "vse leto"
+  seasonsPending: "Navedeni lovni dobi sta z dosedanje spletne strani. Točne datume in lovne dobe drugih vrst pred objavo potrdi družina."
+  needsHeading: "Kaj potrebuje lovec gost"
+  needs:
+    - "veljavno lovsko dovoljenje svoje države"
+    - "evropsko orožno prepustnico, če prinese svoje orožje"
+    - "zavarovanje odgovornosti"
+    - "predhodno dogovorjen termin lova"
+  needsPending: "Seznam je osnutek. Kaj točno potrebuje lovec gost, pred objavo potrdi družina."
+  enquireHeading: "Povpraševanje"
+  enquireText: "Pišite nam, katero divjad in kateri termin vas zanimata. Odgovorili vam bomo s pogoji in ponudbo."
+
+huntingLodge:
+  lead: "Lovski dom je zbirališče članov družine in izhodišče za skupne love."
+  sections:
+    - heading: "Lovski dom"
+      paragraphs:
+        - "V lovskem domu se člani srečujejo na sestankih, pred skupnimi lovi in ob družabnih dogodkih. V njem sprejmemo tudi lovce goste."
+  featuresHeading: "Kaj nudi"
+  features:
+    - "prostor za srečanja in sestanke članov"
+    - "izhodišče za skupne love"
+    - "sprejem lovcev gostov"
+  pending: "Fotografije lovskega doma, njegovo lego in opis, kaj nudi, pripravi družina."
+
+gameDamage:
+  lead: "Kako prijavite škodo, ki jo je divjad povzročila na kmetijskih površinah, in kako površine zaščitite."
+  reportHeading: "Kako prijaviti škodo"
+  reportIntro: "Če ste na svojih površinah opazili škodo, ki jo je povzročila divjad, sledite tem korakom:"
+  steps:
+    - "Takoj po tem, ko škodo opazite, obvestite lovsko družino. Kontakt najdete na strani Kontakt."
+    - "Pripravite podatke o lokaciji, obsegu in vrsti škode ter fotografije ali druge dokaze."
+    - "Z lovsko družino sodelujte pri ogledu in dokumentiranju škode ter izpolnite potrebne obrazce."
+  protectHeading: "Zaščita kmetijskih površin"
+  protectIntro: "Učinkovita zaščita pred divjadjo zahteva več ukrepov in redno vzdrževanje. Priporočamo:"
+  measures:
+    - "električne ali navadne ograje okoli najbolj ogroženih površin"
+    - "odvračala (vidna, zvočna ali vonjalna)"
+    - "sodelovanje z lovsko družino pri krmiščih, ki divjad odvračajo od polj"
+    - "pravočasno žetev in odstranjevanje ostankov pridelka, ki privabljajo divjad"
+    - "zaščitne mreže ali folije na sadnem drevju in v vinogradih"
+  maintenance: "Zaščito redno preverjajte, popravljajte poškodbe in obnavljajte odvračala, da bodo ukrepi učinkoviti vso sezono."
+
+membership:
+  lead: "Vabimo nove člane, ki želijo sodelovati pri upravljanju z loviščem in varstvu narave."
+  requirementsHeading: "Pogoji za članstvo"
+  requirementsIntro: "Kandidat za člana mora izpolnjevati te pogoje:"
+  requirements:
+    - "starost najmanj 18 let"
+    - "državljanstvo Republike Slovenije"
+    - "opravljen lovski izpit"
+    - "nekaznovanost za kazniva dejanja s področja lovstva"
+    - "pripravljenost na dejavno sodelovanje v družini"
+    - "spoštovanje lovske etike in tradicije"
+  examHeading: "Pot do lovskega izpita"
+  examIntro: "Pot do lovskega izpita vključuje teoretično in praktično usposabljanje:"
+  examSteps:
+    - "Teoretično usposabljanje (40 ur)."
+    - "Praktično usposabljanje v lovišču pod mentorstvom."
+    - "Seznanitev z lovskim orožjem in varnim ravnanjem z njim."
+    - "Lovski izpit pred izpitno komisijo."
+  applyHeading: "Postopek včlanitve"
+  applyText: "Če vas zanima članstvo, nam pišite. Z veseljem vam predstavimo družino in odgovorimo na vaša vprašanja."
+
+gallery:
+  lead: "Utrinki iz življenja družine in lovišča."
+  pending: "Fotografije za galerijo pripravi družina. Spodnje slike so začasne in kažejo le postavitev strani."
+
+documents:
+  lead: "Pravni akti in drugi dokumenti družine za prenos."
+  pending: "Dokumente pripravi družina. Dokler jih ni, so navedeni brez povezave."
+  items:
+    - title: "Statut Lovske družine Istra Gračišče"
+      meta: "PDF · slovenščina · datoteka še ni na voljo"
+    - title: "Pravilniki družine"
+      meta: "PDF · slovenščina · datoteka še ni na voljo"
+
+contact:
+  lead: "Za vprašanja o lovskem turizmu, članstvu ali škodi po divjadi nam pišite."
+  officersHeading: "Funkcionarji"
+  officersText: "Družino vodijo izvoljeni funkcionarji. Za stik z njimi uporabite e-naslov družine."
+  phonePending: "Telefonsko številko, ki naj bo objavljena, potrdi družina."

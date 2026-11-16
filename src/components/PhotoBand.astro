@@ -1,0 +1,17 @@
+---
+// A wide photo between two sections. Lazy: it is never on the first screen.
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import { wideWidths } from "../lib/photos";
+
+interface Props {
+  photo: ImageMetadata;
+  alt: string;
+}
+
+const { photo, alt } = Astro.props;
+---
+
+<div class="photo-frame photo-band">
+  <Image src={photo} alt={alt} widths={wideWidths} sizes="100vw" format="avif" loading="lazy" />
+</div>

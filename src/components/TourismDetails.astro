@@ -1,0 +1,47 @@
+---
+// The rest of the hunting-tourism page after its offers: the season table,
+// what a visiting hunter needs, and how to enquire.
+import { t, type Lang } from "../i18n";
+import type { PageTexts } from "../lib/pages";
+import site from "../site.config";
+import Placeholder from "./Placeholder.astro";
+import SeasonTable from "./SeasonTable.astro";
+
+interface Props {
+  lang: Lang;
+  texts: PageTexts;
+}
+
+const { lang, texts } = Astro.props;
+const { huntingTourism: tourism, pendingLabel } = texts;
+---
+
+<!-- No aria-labelledby here: the season table's own region already carries this name. -->
+<section class="section">
+  <div class="wrap prose">
+    <h2 id="seasons">{tourism.seasonsHeading}</h2>
+    <p>{tourism.seasonsIntro}</p>
+    <SeasonTable caption={tourism.seasonsHeading} columns={tourism.seasonColumns} seasons={tourism.seasons} />
+    <Placeholder label={pendingLabel} text={tourism.seasonsPending} />
+  </div>
+</section>
+
+<section class="section" aria-labelledby="needs">
+  <div class="wrap prose">
+    <h2 id="needs">{tourism.needsHeading}</h2>
+    <ul class="checklist">
+      {tourism.needs.map((need) => <li>{need}</li>)}
+    </ul>
+    <Placeholder label={pendingLabel} text={tourism.needsPending} />
+  </div>
+</section>
+
+<section class="section section-band on-dark" aria-labelledby="enquire">
+  <div class="wrap prose">
+    <h2 id="enquire">{tourism.enquireHeading}</h2>
+    <p>{tourism.enquireText}</p>
+    <div class="actions">
+      {site.contact.topics.map(({ email }) => <a class="button light" href={`mailto:${email}`}>{t(lang, "cta.enquire")}</a>)}
+    </div>
+  </div>
+</section>
