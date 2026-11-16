@@ -42,6 +42,7 @@ const it: UiStrings = {
   "footer.club": "La società",
   "footer.contact": "Contatti",
   "cta.enquire": "Invia una richiesta",
+  "cta.tourismOffers": "Offerte di turismo venatorio",
   "cta.writeUs": "Scriveteci",
   "notFound.title": "Pagina non trovata",
   "notFound.text": "La pagina richiesta non esiste.",

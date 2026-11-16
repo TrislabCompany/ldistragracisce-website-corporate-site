@@ -44,6 +44,7 @@ const en = {
   "footer.club": "The club",
   "footer.contact": "Contact",
   "cta.enquire": "Send an enquiry",
+  "cta.tourismOffers": "See the hunting tourism offers",
   "cta.writeUs": "Write to us",
   "notFound.title": "Page not found",
   "notFound.text": "The page you asked for doesn't exist.",

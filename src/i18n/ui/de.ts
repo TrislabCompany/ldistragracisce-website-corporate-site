@@ -42,6 +42,7 @@ const de: UiStrings = {
   "footer.club": "Der Verein",
   "footer.contact": "Kontakt",
   "cta.enquire": "Anfrage senden",
+  "cta.tourismOffers": "Angebote im Jagdtourismus",
   "cta.writeUs": "Schreiben Sie uns",
   "notFound.title": "Seite nicht gefunden",
   "notFound.text": "Die gesuchte Seite existiert nicht.",

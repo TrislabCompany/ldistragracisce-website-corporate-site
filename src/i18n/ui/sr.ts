@@ -43,6 +43,7 @@ const sr: UiStrings = {
   "footer.club": "Društvo",
   "footer.contact": "Kontakt",
   "cta.enquire": "Pošaljite upit",
+  "cta.tourismOffers": "Ponuda lovnog turizma",
   "cta.writeUs": "Pišite nam",
   "notFound.title": "Stranica nije pronađena",
   "notFound.text": "Stranica koju tražite ne postoji.",
