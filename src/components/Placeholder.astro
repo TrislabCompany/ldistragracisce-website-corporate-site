@@ -1,0 +1,13 @@
+---
+// Content that is still missing (the club supplies it, or a fact waits to be
+// confirmed): a dashed box that says what is to come. For the review on dev
+// and staging; none should be left when the site goes to production.
+interface Props {
+  label: string;
+  text: string;
+}
+
+const { label, text } = Astro.props;
+---
+
+<p class="placeholder"><strong>{label}:</strong> {text}</p>

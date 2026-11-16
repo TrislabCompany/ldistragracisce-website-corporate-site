@@ -1,22 +1,34 @@
 ---
-import ContactCta from "../../../components/ContactCta.astro";
+// The page of a list of items. The only list is hunting tourism: its offers,
+// under a photo head, then the seasons, what a visitor needs and how to enquire.
 import ItemCard from "../../../components/ItemCard.astro";
+import PhotoHead from "../../../components/PhotoHead.astro";
+import TourismDetails from "../../../components/TourismDetails.astro";
 import { type Lang } from "../../../i18n";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { collectionPaths, collectionSettings, sortedItems, type ItemCollection } from "../../../lib/items";
+import { pageTexts } from "../../../lib/pages";
+import { photos } from "../../../lib/photos";
 
 export const getStaticPaths = collectionPaths;
 
 const { lang, collection } = Astro.props as { lang: Lang; collection: ItemCollection };
 const settings = collectionSettings(collection);
 const items = await sortedItems(collection, lang);
+const texts = await pageTexts(lang);
 ---
 
-<BaseLayout title={settings.title[lang]} description={settings.lead[lang]} lang={lang}>
-  <h1>{settings.title[lang]}</h1>
-  <p class="lead">{settings.lead[lang]}</p>
-  <ul class="grid">
-    {items.map((entry) => <ItemCard entry={entry} collection={collection} lang={lang} level={2} />)}
-  </ul>
-  <ContactCta lang={lang} />
+<BaseLayout title={settings.title[lang]} description={settings.lead[lang]} lang={lang} full>
+  <PhotoHead photo={photos.huntingTourism} alt={texts.alt.huntingTourism} title={settings.title[lang]} lead={settings.lead[lang]} />
+
+  <section class="section" aria-labelledby="offers">
+    <div class="wrap">
+      <h2 id="offers">{texts.huntingTourism.offersHeading}</h2>
+      <ul class="grid">
+        {items.map((entry) => <ItemCard entry={entry} collection={collection} lang={lang} level={3} />)}
+      </ul>
+    </div>
+  </section>
+
+  <TourismDetails lang={lang} texts={texts} />
 </BaseLayout>

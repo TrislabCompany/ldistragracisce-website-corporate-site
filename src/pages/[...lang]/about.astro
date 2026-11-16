@@ -1,19 +1,52 @@
 ---
+// About the club: a photo head, the presentation, history, mission and values,
+// and the officers by role (no personal names, docs/brief.md).
 import ContactCta from "../../components/ContactCta.astro";
-import { languagePaths, t, type Lang } from "../../i18n";
+import PhotoBand from "../../components/PhotoBand.astro";
+import PhotoHead from "../../components/PhotoHead.astro";
+import TextSections from "../../components/TextSections.astro";
+import { languagePaths, localizedPath, t, type Lang } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import site from "../../site.config";
+import { pageTexts } from "../../lib/pages";
+import { photos } from "../../lib/photos";
 
 export const getStaticPaths = languagePaths;
 
 const { lang } = Astro.props as { lang: Lang };
+const { about, alt } = await pageTexts(lang);
 ---
 
-<BaseLayout title={t(lang, "nav.about")} lang={lang}>
-  <div class="prose">
-    <h1>{t(lang, "nav.about")}</h1>
-    <p class="lead">{site.description[lang]}</p>
-    {/* Sample page: replace the text above with the site's own, in every language, or move it to Markdown in src/content/. */}
-  </div>
-  <ContactCta lang={lang} />
+<BaseLayout title={t(lang, "nav.about")} description={about.lead} lang={lang} full>
+  <PhotoHead photo={photos.about} alt={alt.about} title={t(lang, "nav.about")} lead={about.lead} />
+
+  <section class="section">
+    <div class="wrap prose">
+      <TextSections sections={about.sections} />
+    </div>
+  </section>
+
+  <PhotoBand photo={photos.bandForest} alt={alt.bandForest} />
+
+  <section class="section" aria-labelledby="officers">
+    <div class="wrap split">
+      <div>
+        <h2 id="officers">{about.officersHeading}</h2>
+        <p>{about.officersText}</p>
+        <ul class="checklist">
+          {about.officers.map((role) => <li>{role}</li>)}
+        </ul>
+      </div>
+      <div>
+        <h2>{about.clubHeading}</h2>
+        <ul class="checklist">
+          <li><a href={localizedPath(lang, "/membership")}>{t(lang, "nav.membership")}</a></li>
+          <li><a href={localizedPath(lang, "/gallery")}>{t(lang, "nav.gallery")}</a></li>
+          <li><a href={localizedPath(lang, "/documents")}>{t(lang, "nav.documents")}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap">
+      <ContactCta lang={lang} />
+    </div>
+  </section>
 </BaseLayout>

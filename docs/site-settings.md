@@ -151,7 +151,7 @@ A site's look and its facts are kept in few files, so that changing a site means
 | --- | --- |
 | `src/site.config.ts` | Name, address, description, languages, `themeColor`, the lists of items (`collections`), company, contact, legal pages, structured data, `security.txt` |
 | `src/styles/tokens.css` | The brand's colours, radius and font. `src/styles/global.css` holds the layout and uses only these names |
-| `src/components/Logo.astro` and `public/favicon.svg` | The logo. The only brand files besides `tokens.css`; the template has a neutral sample |
+| `src/components/Logo.astro`, `src/assets/logo.png`, `public/logo.png` and `public/favicon.png` | The club's badge, from today's site; an SVG drawn from it replaces them (docs/brief.md, Assets) |
 | `src/i18n/ui/<language>.ts` | Interface strings, never site copy |
 | `src/content/` | Every text of the pages: items, legal texts |
 | `lighthouserc.json` | The pages Lighthouse checks: change its URLs when the sample pages change |

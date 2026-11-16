@@ -1,0 +1,12 @@
+---
+// Numbered steps, such as how to report game damage.
+interface Props {
+  steps: string[];
+}
+
+const { steps } = Astro.props;
+---
+
+<ol class="steps">
+  {steps.map((step) => <li>{step}</li>)}
+</ol>

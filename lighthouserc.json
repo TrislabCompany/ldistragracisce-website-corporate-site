@@ -1,7 +1,7 @@
 {
   "ci": {
     "collect": {
-      "url": ["/sl", "/en", "/hr", "/sr", "/it", "/de", "/sl/about", "/sl/contact", "/sl/hunting-tourism", "/sl/sustainability"],
+      "url": ["/sl", "/en", "/hr", "/sr", "/it", "/de", "/sl/about", "/sl/contact", "/sl/hunting-ground", "/sl/hunting-tourism", "/sl/game-damage", "/sl/membership"],
       "numberOfRuns": 3,
       "settings": {
         "chromeFlags": "--headless=new --no-sandbox --disable-dev-shm-usage"

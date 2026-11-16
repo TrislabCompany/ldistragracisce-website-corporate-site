@@ -1,0 +1,219 @@
+# The page texts in English (schema: src/content.config.ts, collection pages).
+# Source: today's site ldistragracisce.si (assets/i18n/en.json, 2026-11-14).
+# The facts (area, heights, species, year, seasons) are checked with the club before production.
+
+alt:
+  hero: "Temporary image: a drawing of the hills of Slovenian Istria at dusk"
+  about: "Temporary image: a drawing of a karst landscape"
+  huntingGround: "Temporary image: a drawing of the wooded hills of the hunting ground"
+  huntingTourism: "Temporary image: a drawing of a forest in the evening"
+  huntingLodge: "Temporary image: a drawing of the hunting lodge by the forest"
+  lodgeInterior: "Temporary image: a drawing of the hunting lodge in an autumn landscape"
+  gameDamage: "Temporary image: a drawing of fields below the hills"
+  membership: "Temporary image: a drawing of a forest in the morning mist"
+  bandForest: "Temporary image: a drawing of a forest on a slope"
+  bandKarst: "Temporary image: a drawing of the Karst Edge"
+
+pendingLabel: "Content to come"
+
+home:
+  heroText: "A voluntary, non-profit association of hunters that has cared for the game and the hunting ground on the Karst Edge in Slovenian Istria since 1947."
+  numbersHeading: "The hunting ground in numbers"
+  numbers:
+    - value: "6,503 ha"
+      label: "area of the hunting ground"
+    - value: "200–800 m"
+      label: "above sea level"
+    - value: "8"
+      label: "game species"
+    - value: "1947"
+      label: "year founded"
+  numbersSource: "Source: today's site ldistragracisce.si (14 November 2026). The club confirms these figures before publication."
+  waysHeading: "Get to know the club"
+  ways:
+    huntingGround: "Karst commons, forests and fields, and eight game species."
+    huntingTourism: "Roe deer and wild boar hunting, guided by the club's hunters."
+    huntingLodge: "Where the club's members and guests meet."
+  tourismHeading: "Hunting in Slovenian Istria"
+  tourismText: "We offer visiting hunters from abroad a hunt in a varied hunting ground between the Karst Edge and the Istrian hills, accompanied by experienced hunters of the club."
+  tourismSeasons: "Hunting seasons"
+  localHeading: "For local people"
+  local:
+    gameDamage: "Has game damaged your field or vineyard? How to report it, and how to protect your land."
+    membership: "The requirements for joining and the path to the hunting exam."
+  contactHeading: "Write to us"
+  contactText: "For questions about hunting tourism, membership or game damage, write to the club's e-mail address."
+
+about:
+  lead: "The hunting club Istra Gračišče has been part of the local community since 1947. We combine the hunting tradition with modern wildlife management and nature conservation."
+  sections:
+    - heading: "Who we are"
+      paragraphs:
+        - "A hunting club (lovska družina) is a voluntary, independent, non-profit association of people who joined for the protection, breeding and hunting of game, the management of the hunting ground and other hunting-related activities."
+        - "We are an active community that brings together the experience of older members and the energy of younger ones. Besides hunting, we organise training and social events and take part in environmental projects in the local community."
+    - heading: "History"
+      paragraphs:
+        - "The club was founded in 1947 as a small group of dedicated hunters. Over the decades it has grown, keeping a balance between the hunting tradition and modern wildlife management."
+    - heading: "Mission"
+      paragraphs:
+        - "Our mission is the sustainable management of the hunting ground and its game, and teaching our members and the public why nature conservation matters. We stand for responsible hunting based on respect for nature and animals and on preserving biodiversity."
+    - heading: "Values"
+      paragraphs:
+        - "Our work rests on hunting ethics, responsibility for nature and game, cooperation with the local community and passing knowledge on to younger generations."
+  officersHeading: "Organisation"
+  officersText: "The club is led by elected officers. We list them by role; to reach them, use the club's e-mail address."
+  officers:
+    - "Head of the club (starešina)"
+    - "Gamekeeper (gospodar)"
+    - "Secretary (tajnik)"
+  clubHeading: "More about the club"
+
+huntingGround:
+  lead: "The hunting ground covers the varied terrain of Slovenian Istria, where karst commons, forests and farmland meet."
+  sections:
+    - heading: "The area"
+      paragraphs:
+        - "The hunting ground lies on the Karst Edge and reaches from lowland areas to the higher karst plateaus. What makes it special is the mix of habitats: karst commons, wooded slopes and traditional farmland."
+        - "This varied land offers good conditions for many game species and allows the ground to be managed sustainably."
+  speciesHeading: "Game in the hunting ground"
+  speciesIntro: "The hunting ground is home to the game typical of the karst. We give special attention to roe deer and wild boar, its two most important species."
+  species:
+    - id: red-deer
+      name: "Red deer"
+      latin: "Cervus elaphus"
+      text: "Our largest game species, found in the wooded parts of the hunting ground."
+      alt: "A red deer stag with branched antlers in a meadow"
+    - id: roe-deer
+      name: "Roe deer"
+      latin: "Capreolus capreolus"
+      text: "One of the two most important species of the hunting ground, at home on the forest edge and in meadows."
+      alt: "Temporary image: a drawing of a meadow below the hills"
+    - id: wild-boar
+      name: "Wild boar"
+      latin: "Sus scrofa"
+      text: "The other most important species of the hunting ground; we manage it together with local farmers."
+      alt: "Temporary image: a drawing of a forest"
+    - id: hare
+      name: "European hare"
+      latin: "Lepus europaeus"
+      text: "Small game of open meadows and fields."
+      alt: "Temporary image: a drawing of grassy hills in the morning"
+    - id: fox
+      name: "Red fox"
+      latin: "Vulpes vulpes"
+      text: "An adaptable predator found in every part of the hunting ground."
+      alt: "Temporary image: a drawing of an autumn landscape"
+    - id: badger
+      name: "European badger"
+      latin: "Meles meles"
+      text: "A nocturnal animal of the wooded slopes."
+      alt: "Temporary image: a drawing of hills in the evening"
+    - id: partridge
+      name: "Grey partridge"
+      latin: "Perdix perdix"
+      text: "Feathered game of the karst commons and fields."
+      alt: "Temporary image: a drawing of karst commons"
+    - id: pheasant
+      name: "Common pheasant"
+      latin: "Phasianus colchicus"
+      text: "Feathered game of fields and hedgerows."
+      alt: "Temporary image: a drawing of a landscape in mist"
+  management:
+    heading: "Managing the hunting ground"
+    paragraphs:
+      - "Our management follows the principles of sustainable hunting and nature conservation. We monitor the game populations regularly, look after feeding places and salt licks, and maintain the hunting stands and other facilities."
+      - "We pay special attention to preventing damage to farmland and work together with local farmers."
+
+huntingTourism:
+  offersHeading: "What we offer"
+  seasonsHeading: "Hunting seasons"
+  seasonsIntro: "The hunting seasons depend on the species."
+  seasonColumns:
+    species: "Species"
+    season: "Season"
+  seasons:
+    - species: "Roe buck"
+      season: "May–October"
+    - species: "Wild boar"
+      season: "all year"
+  seasonsPending: "These two seasons are from today's site. The club confirms the exact dates and the seasons of the other species before publication."
+  needsHeading: "What a visiting hunter needs"
+  needs:
+    - "a valid hunting licence from their own country"
+    - "a European Firearms Pass when bringing their own weapon"
+    - "liability insurance"
+    - "a date agreed in advance"
+  needsPending: "This list is a draft. The club confirms what a visiting hunter needs before publication."
+  enquireHeading: "Enquiries"
+  enquireText: "Write to us which game and which dates interest you. We will reply with the conditions and an offer."
+
+huntingLodge:
+  lead: "The hunting lodge is where the club's members meet and where shared hunts begin."
+  sections:
+    - heading: "The lodge"
+      paragraphs:
+        - "Members meet at the lodge for meetings, before shared hunts and at social events. We also welcome visiting hunters there."
+  featuresHeading: "What it offers"
+  features:
+    - "a place for members' meetings"
+    - "the starting point of shared hunts"
+    - "a welcome for visiting hunters"
+  pending: "The club supplies the photos of the lodge, where it is and what it offers."
+
+gameDamage:
+  lead: "How to report damage that game has done to farmland, and how to protect your land."
+  reportHeading: "How to report damage"
+  reportIntro: "If you find damage caused by game on your land, follow these steps:"
+  steps:
+    - "As soon as you notice the damage, tell the hunting club. You will find its details on the Contact page."
+    - "Note where the damage is, how large it is and what kind, and take photos or keep other evidence."
+    - "Work with the hunting club when it inspects and records the damage, and fill in the forms needed."
+  protectHeading: "Protecting farmland"
+  protectIntro: "Protecting land from game takes several measures and regular upkeep. We recommend:"
+  measures:
+    - "electric or ordinary fences around the land most at risk"
+    - "deterrents (visual, sound or scent)"
+    - "working with the hunting club on feeding places that draw game away from fields"
+    - "harvesting on time and clearing crop remains that attract game"
+    - "protective nets or film on fruit trees and in vineyards"
+  maintenance: "Check the protection regularly, repair damage and renew the deterrents, so the measures work all season."
+
+membership:
+  lead: "We welcome new members who want to take part in managing the hunting ground and protecting nature."
+  requirementsHeading: "Requirements for membership"
+  requirementsIntro: "A candidate for membership must meet these requirements:"
+  requirements:
+    - "at least 18 years of age"
+    - "citizenship of the Republic of Slovenia"
+    - "a passed hunting exam"
+    - "no criminal record for offences related to hunting"
+    - "willingness to take an active part in the club"
+    - "respect for hunting ethics and tradition"
+  examHeading: "The path to the hunting exam"
+  examIntro: "The path to the hunting exam includes theoretical and practical training:"
+  examSteps:
+    - "Theoretical training (40 hours)."
+    - "Practical training in the hunting ground with a mentor."
+    - "Learning about hunting weapons and their safe handling."
+    - "The hunting exam before the examination board."
+  applyHeading: "How to join"
+  applyText: "If you are interested in membership, write to us. We will be glad to introduce the club and answer your questions."
+
+gallery:
+  lead: "Moments from the life of the club and its hunting ground."
+  pending: "The club supplies the photos for the gallery. The images below are temporary and only show the layout."
+
+documents:
+  lead: "The club's legal acts and other documents to download."
+  pending: "The club supplies the documents. Until then they are listed without a link."
+  items:
+    - title: "Statute of the hunting club Istra Gračišče"
+      meta: "PDF · Slovenian · file not available yet"
+    - title: "Rules of the club"
+      meta: "PDF · Slovenian · file not available yet"
+
+contact:
+  lead: "For questions about hunting tourism, membership or game damage, write to us."
+  officersHeading: "Officers"
+  officersText: "The club is led by elected officers. To reach them, use the club's e-mail address."
+  phonePending: "The club confirms the phone number to publish."

@@ -18,8 +18,7 @@ const { company, contact } = site;
   <address>
     {company.legalName}<br />
     {company.address.street}<br />
-    {company.address.postalCode}
-    {company.address.city}
+    {`${company.address.postalCode} ${company.address.city}`}
   </address>
   {
     contact.mapUrl && (

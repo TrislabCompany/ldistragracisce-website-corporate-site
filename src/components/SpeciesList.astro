@@ -1,0 +1,28 @@
+---
+// The game species of the hunting ground, a section each with a photo.
+import { Image } from "astro:assets";
+import { speciesPhotos } from "../lib/photos";
+
+interface Props {
+  species: { id: keyof typeof speciesPhotos; name: string; latin: string; text: string; alt: string }[];
+}
+
+const { species } = Astro.props;
+---
+
+<ul class="species">
+  {
+    species.map(({ id, name, latin, text, alt }) => (
+      <li>
+        <article class="species-item">
+          <Image src={speciesPhotos[id]} alt={alt} widths={[480, 720]} sizes="(min-width: 48rem) 50vw, 100vw" format="avif" loading="lazy" />
+          <div>
+            <h3>{name}</h3>
+            <p class="latin" lang="la">{latin}</p>
+            <p>{text}</p>
+          </div>
+        </article>
+      </li>
+    ))
+  }
+</ul>

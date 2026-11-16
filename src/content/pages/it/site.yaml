@@ -1,0 +1,218 @@
+# Testi delle pagine in italiano (schema: src/content.config.ts, collezione pages).
+# Fonte: il sito attuale ldistragracisce.si (assets/i18n/it.json, 14/11/2026). La traduzione va rivista prima della pubblicazione.
+
+alt:
+  hero: "Immagine provvisoria: disegno delle colline dell'Istria slovena al tramonto"
+  about: "Immagine provvisoria: disegno di un paesaggio carsico"
+  huntingGround: "Immagine provvisoria: disegno delle colline boscose della riserva"
+  huntingTourism: "Immagine provvisoria: disegno di un bosco di sera"
+  huntingLodge: "Immagine provvisoria: disegno della casa di caccia vicino al bosco"
+  lodgeInterior: "Immagine provvisoria: disegno della casa di caccia in un paesaggio autunnale"
+  gameDamage: "Immagine provvisoria: disegno di campi sotto le colline"
+  membership: "Immagine provvisoria: disegno di un bosco nella nebbia del mattino"
+  bandForest: "Immagine provvisoria: disegno di un bosco su un pendio"
+  bandKarst: "Immagine provvisoria: disegno del ciglione carsico"
+
+pendingLabel: "Contenuto in arrivo"
+
+home:
+  heroText: "Un'associazione di cacciatori volontaria e senza scopo di lucro che dal 1947 si prende cura della selvaggina e della riserva sul ciglione carsico, nell'Istria slovena."
+  numbersHeading: "La riserva in cifre"
+  numbers:
+    - value: "6.503 ha"
+      label: "superficie della riserva"
+    - value: "200–800 m"
+      label: "sul livello del mare"
+    - value: "8"
+      label: "specie di selvaggina"
+    - value: "1947"
+      label: "anno di fondazione"
+  numbersSource: "Fonte: il sito attuale ldistragracisce.si (14/11/2026). La società conferma i dati prima della pubblicazione."
+  waysHeading: "Conoscete la società"
+  ways:
+    huntingGround: "Pascoli carsici, boschi e campi, e otto specie di selvaggina."
+    huntingTourism: "Caccia al capriolo e al cinghiale, accompagnati dai nostri cacciatori."
+    huntingLodge: "Il luogo d'incontro dei soci e degli ospiti."
+  tourismHeading: "Caccia nell'Istria slovena"
+  tourismText: "Ai cacciatori dall'estero offriamo la caccia in una riserva varia tra il ciglione carsico e le colline istriane, accompagnati da cacciatori esperti della società."
+  tourismSeasons: "Stagioni di caccia"
+  localHeading: "Per chi vive qui"
+  local:
+    gameDamage: "La selvaggina ha danneggiato il vostro campo o vigneto? Come segnalare il danno e proteggere i terreni."
+    membership: "I requisiti per l'adesione e il percorso verso l'esame di caccia."
+  contactHeading: "Scriveteci"
+  contactText: "Per domande sul turismo venatorio, sull'adesione o sui danni da selvaggina, scrivete all'indirizzo e-mail della società."
+
+about:
+  lead: "La società venatoria Istra Gračišče fa parte della comunità locale dal 1947. Uniamo la tradizione venatoria a una gestione moderna della selvaggina e alla tutela della natura."
+  sections:
+    - heading: "Chi siamo"
+      paragraphs:
+        - "Una società venatoria (lovska družina) è un'associazione volontaria, indipendente e senza scopo di lucro di persone unite per la tutela, l'allevamento e la caccia della selvaggina, la gestione della riserva e altre attività legate alla caccia."
+        - "Siamo una comunità attiva che unisce l'esperienza dei soci più anziani e l'energia dei più giovani. Oltre alla caccia organizziamo corsi ed eventi e partecipiamo a progetti ambientali della comunità locale."
+    - heading: "Storia"
+      paragraphs:
+        - "La società è stata fondata nel 1947 da un piccolo gruppo di cacciatori appassionati. Nei decenni è cresciuta, mantenendo l'equilibrio tra la tradizione venatoria e la gestione moderna della selvaggina."
+    - heading: "Missione"
+      paragraphs:
+        - "La nostra missione è la gestione sostenibile della riserva e della selvaggina, e l'educazione dei soci e del pubblico all'importanza della tutela della natura. Sosteniamo una caccia responsabile, fondata sul rispetto della natura e degli animali e sulla conservazione della biodiversità."
+    - heading: "Valori"
+      paragraphs:
+        - "Alla base del nostro lavoro ci sono l'etica venatoria, la responsabilità verso la natura e la selvaggina, la collaborazione con la comunità locale e la trasmissione del sapere alle nuove generazioni."
+  officersHeading: "Organizzazione"
+  officersText: "La società è guidata da cariche elette. Le indichiamo per funzione; per contattarle usate l'indirizzo e-mail della società."
+  officers:
+    - "Presidente (starešina)"
+    - "Responsabile della riserva (gospodar)"
+    - "Segretario (tajnik)"
+  clubHeading: "Di più sulla società"
+
+huntingGround:
+  lead: "La riserva si estende sul terreno vario dell'Istria slovena, dove si intrecciano pascoli carsici, boschi e terreni agricoli."
+  sections:
+    - heading: "Il territorio"
+      paragraphs:
+        - "La riserva si trova sul ciglione carsico e va dalle zone di pianura agli altipiani carsici più alti. La sua particolarità è l'intreccio di habitat: pascoli carsici, pendii boscosi e terreni agricoli tradizionali."
+        - "Questo territorio vario offre buone condizioni a molte specie di selvaggina e permette una gestione sostenibile della riserva."
+  speciesHeading: "La selvaggina della riserva"
+  speciesIntro: "Nella riserva vive la selvaggina tipica del Carso. Dedichiamo un'attenzione particolare al capriolo e al cinghiale, le due specie più importanti."
+  species:
+    - id: red-deer
+      name: "Cervo"
+      latin: "Cervus elaphus"
+      text: "La nostra specie di selvaggina più grande, presente nelle parti boscose della riserva."
+      alt: "Un cervo con palchi ramificati in un prato"
+    - id: roe-deer
+      name: "Capriolo"
+      latin: "Capreolus capreolus"
+      text: "Una delle due specie più importanti della riserva, di casa ai margini del bosco e nei prati."
+      alt: "Immagine provvisoria: disegno di un prato sotto le colline"
+    - id: wild-boar
+      name: "Cinghiale"
+      latin: "Sus scrofa"
+      text: "L'altra specie più importante della riserva; la gestiamo insieme agli agricoltori locali."
+      alt: "Immagine provvisoria: disegno di un bosco"
+    - id: hare
+      name: "Lepre comune"
+      latin: "Lepus europaeus"
+      text: "Selvaggina minore di prati aperti e campi."
+      alt: "Immagine provvisoria: disegno di colline erbose al mattino"
+    - id: fox
+      name: "Volpe rossa"
+      latin: "Vulpes vulpes"
+      text: "Un predatore adattabile presente in ogni parte della riserva."
+      alt: "Immagine provvisoria: disegno di un paesaggio autunnale"
+    - id: badger
+      name: "Tasso"
+      latin: "Meles meles"
+      text: "Un animale notturno dei pendii boscosi."
+      alt: "Immagine provvisoria: disegno di colline di sera"
+    - id: partridge
+      name: "Starna"
+      latin: "Perdix perdix"
+      text: "Selvaggina di penna dei pascoli carsici e dei campi."
+      alt: "Immagine provvisoria: disegno di un pascolo carsico"
+    - id: pheasant
+      name: "Fagiano comune"
+      latin: "Phasianus colchicus"
+      text: "Selvaggina di penna dei campi e delle siepi."
+      alt: "Immagine provvisoria: disegno di un paesaggio nella nebbia"
+  management:
+    heading: "La gestione della riserva"
+    paragraphs:
+      - "La gestione segue i principi della caccia sostenibile e della tutela della natura. Monitoriamo regolarmente le popolazioni di selvaggina, curiamo mangiatoie e saline e manteniamo le altane e le altre strutture."
+      - "Dedichiamo un'attenzione particolare alla prevenzione dei danni ai terreni agricoli e alla collaborazione con gli agricoltori locali."
+
+huntingTourism:
+  offersHeading: "La nostra offerta"
+  seasonsHeading: "Stagioni di caccia"
+  seasonsIntro: "Le stagioni di caccia dipendono dalla specie."
+  seasonColumns:
+    species: "Specie"
+    season: "Stagione"
+  seasons:
+    - species: "Capriolo maschio"
+      season: "maggio–ottobre"
+    - species: "Cinghiale"
+      season: "tutto l'anno"
+  seasonsPending: "Le due stagioni indicate sono quelle del sito attuale. La società conferma le date esatte e le stagioni delle altre specie prima della pubblicazione."
+  needsHeading: "Cosa serve al cacciatore ospite"
+  needs:
+    - "una licenza di caccia valida del proprio paese"
+    - "la carta europea d'arma da fuoco, se porta la propria arma"
+    - "un'assicurazione di responsabilità civile"
+    - "una data concordata in anticipo"
+  needsPending: "L'elenco è una bozza. La società conferma cosa serve al cacciatore ospite prima della pubblicazione."
+  enquireHeading: "Richieste"
+  enquireText: "Scriveteci quale selvaggina e quali date vi interessano. Vi risponderemo con le condizioni e un'offerta."
+
+huntingLodge:
+  lead: "La casa di caccia è il luogo d'incontro dei soci e il punto di partenza delle cacce collettive."
+  sections:
+    - heading: "La casa di caccia"
+      paragraphs:
+        - "Nella casa di caccia i soci si incontrano per le riunioni, prima delle cacce collettive e in occasione degli eventi. Vi accogliamo anche i cacciatori ospiti."
+  featuresHeading: "Cosa offre"
+  features:
+    - "uno spazio per le riunioni dei soci"
+    - "il punto di partenza delle cacce collettive"
+    - "l'accoglienza dei cacciatori ospiti"
+  pending: "Le foto della casa di caccia, la sua posizione e cosa offre vengono fornite dalla società."
+
+gameDamage:
+  lead: "Come segnalare i danni causati dalla selvaggina ai terreni agricoli e come proteggerli."
+  reportHeading: "Come segnalare un danno"
+  reportIntro: "Se trovate sui vostri terreni un danno causato dalla selvaggina, seguite questi passi:"
+  steps:
+    - "Appena notate il danno, avvisate la società venatoria. I contatti sono nella pagina Contatti."
+    - "Annotate dove si trova il danno, quanto è esteso e di che tipo è, e scattate foto o conservate altre prove."
+    - "Collaborate con la società venatoria al sopralluogo e alla documentazione del danno e compilate i moduli necessari."
+  protectHeading: "Proteggere i terreni agricoli"
+  protectIntro: "Proteggere i terreni dalla selvaggina richiede più misure e una manutenzione regolare. Consigliamo:"
+  measures:
+    - "recinzioni elettriche o normali intorno ai terreni più a rischio"
+    - "dissuasori (visivi, sonori od olfattivi)"
+    - "la collaborazione con la società venatoria per mangiatoie che allontanino la selvaggina dai campi"
+    - "il raccolto puntuale e la rimozione dei residui che attirano la selvaggina"
+    - "reti o teli di protezione sugli alberi da frutto e nei vigneti"
+  maintenance: "Controllate regolarmente le protezioni, riparate i danni e rinnovate i dissuasori, perché le misure funzionino per tutta la stagione."
+
+membership:
+  lead: "Accogliamo nuovi soci che vogliono partecipare alla gestione della riserva e alla tutela della natura."
+  requirementsHeading: "Requisiti per l'adesione"
+  requirementsIntro: "Il candidato socio deve soddisfare questi requisiti:"
+  requirements:
+    - "almeno 18 anni di età"
+    - "cittadinanza della Repubblica di Slovenia"
+    - "esame di caccia superato"
+    - "nessuna condanna per reati in materia di caccia"
+    - "disponibilità a partecipare attivamente alla vita della società"
+    - "rispetto dell'etica e della tradizione venatoria"
+  examHeading: "Il percorso verso l'esame di caccia"
+  examIntro: "Il percorso verso l'esame di caccia comprende una formazione teorica e pratica:"
+  examSteps:
+    - "Formazione teorica (40 ore)."
+    - "Formazione pratica nella riserva con un tutor."
+    - "Conoscenza delle armi da caccia e del loro uso sicuro."
+    - "L'esame di caccia davanti alla commissione."
+  applyHeading: "Come aderire"
+  applyText: "Se vi interessa l'adesione, scriveteci. Saremo lieti di presentarvi la società e rispondere alle vostre domande."
+
+gallery:
+  lead: "Momenti della vita della società e della riserva."
+  pending: "Le foto per la galleria vengono fornite dalla società. Le immagini qui sotto sono provvisorie e mostrano solo l'impaginazione."
+
+documents:
+  lead: "Gli atti e gli altri documenti della società da scaricare."
+  pending: "I documenti vengono forniti dalla società. Fino ad allora sono elencati senza collegamento."
+  items:
+    - title: "Statuto della società venatoria Istra Gračišče"
+      meta: "PDF · sloveno · file non ancora disponibile"
+    - title: "Regolamenti della società"
+      meta: "PDF · sloveno · file non ancora disponibile"
+
+contact:
+  lead: "Per domande sul turismo venatorio, sull'adesione o sui danni da selvaggina, scriveteci."
+  officersHeading: "Cariche"
+  officersText: "La società è guidata da cariche elette. Per contattarle usate l'indirizzo e-mail della società."
+  phonePending: "La società conferma il numero di telefono da pubblicare."
