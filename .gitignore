@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+*.log
+.DS_Store
+.vscode/
+.idea/
+page-weight-report.json
+.wrangler/
+.quality/
+.lighthouseci/
+
+# Personal Claude Code files
+.claude/settings.local.json
+CLAUDE.local.md

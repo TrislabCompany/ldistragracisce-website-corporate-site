@@ -1,0 +1,53 @@
+---
+import Analytics from "../components/analytics/Analytics.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import StructuredData from "../components/StructuredData.astro";
+import SeoHead from "../components/seo/SeoHead.astro";
+import type { ShareImage } from "../components/seo/types";
+import { languages, t, unlocalizedPath, type Lang } from "../i18n";
+import site from "../site.config";
+import "../styles/tokens.css";
+import "../styles/global.css";
+// The Latin subset of the font in src/styles/tokens.css, loaded early so text is drawn once, in it.
+import interLatin from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+
+interface Props {
+  title: string;
+  description?: string;
+  lang: Lang;
+  /** The languages this page exists in; by default all of them. */
+  available?: readonly Lang[];
+  /** Leave the page out of search engines and the sitemap (the 404 page). */
+  noindex?: boolean;
+  /** The picture shown when the page is shared; by default the site's shareImage. */
+  image?: ShareImage;
+}
+
+const { title, description, lang, available = languages, noindex, image } = Astro.props;
+
+// The page without its language prefix, for the language switch.
+const path = unlocalizedPath(Astro.url.pathname);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <SeoHead title={title} description={description} lang={lang} available={available} noindex={noindex} image={image} />
+    <meta name="theme-color" content={site.themeColor} />
+    <StructuredData />
+    {site.analytics && <Analytics />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t(lang, "nav.skip")}</a>
+    <Header lang={lang} path={path} available={available} />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>
