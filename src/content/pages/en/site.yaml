@@ -5,16 +5,21 @@
 alt:
   hero: "Temporary image: a drawing of the hills of Slovenian Istria at dusk"
   about: "Temporary image: a drawing of a karst landscape"
-  huntingGround: "Temporary image: a drawing of the wooded hills of the hunting ground"
+  huntingGround: "The Karst Edge above Črni Kal, looking towards the sea, with autumn woods on the slopes"
   huntingTourism: "Temporary image: a drawing of a forest in the evening"
-  huntingLodge: "Temporary image: a drawing of the hunting lodge by the forest"
-  lodgeInterior: "Temporary image: a drawing of the hunting lodge in an autumn landscape"
+  huntingLodge: "Illustration: a stone hunting lodge with a tiled roof and lit windows at dusk, among karst hills"
+  lodgeInterior: "Illustration: the front of the hunting lodge with antlers above the door, a bench and a vine pergola"
   gameDamage: "Temporary image: a drawing of fields below the hills"
   membership: "Temporary image: a drawing of a forest in the morning mist"
   bandForest: "Temporary image: a drawing of a forest on a slope"
-  bandKarst: "Temporary image: a drawing of the Karst Edge"
+  bandKarst: "The rocky slope of the Karst Edge above Podpeč with autumn woods"
 
-pendingLabel: "Content to come"
+sourcesHeading: "Sources"
+
+tourismContact:
+  heading: "Hunting tourism"
+  role: "referent for hunting tourism"
+  text: "For hunts, dates, conditions and a stay in the hunting lodge, call our referent for hunting tourism."
 
 home:
   heroText: "A voluntary, non-profit association of hunters that has cared for the game and the hunting ground on the Karst Edge in Slovenian Istria since 1947."
@@ -32,7 +37,7 @@ home:
   waysHeading: "Get to know the club"
   ways:
     huntingGround: "Karst commons, forests and fields, and eight game species."
-    huntingTourism: "Roe deer and wild boar hunting, guided by the club's hunters."
+    huntingTourism: "Red deer, roe buck and wild boar hunting, guided by our hunters, with a stay in the hunting lodge."
     huntingLodge: "Where the club's members and guests meet."
   tourismHeading: "Hunting in Slovenian Istria"
   tourismText: "We offer visiting hunters from abroad a hunt in a varied hunting ground between the Karst Edge and the Istrian hills, accompanied by experienced hunters of the club."
@@ -87,37 +92,37 @@ huntingGround:
       name: "Roe deer"
       latin: "Capreolus capreolus"
       text: "One of the two most important species of the hunting ground, at home on the forest edge and in meadows."
-      alt: "Temporary image: a drawing of a meadow below the hills"
+      alt: "A roe buck in a meadow in the morning mist"
     - id: wild-boar
       name: "Wild boar"
       latin: "Sus scrofa"
       text: "The other most important species of the hunting ground; we manage it together with local farmers."
-      alt: "Temporary image: a drawing of a forest"
+      alt: "A wild boar sow with striped piglets in a forest"
     - id: hare
       name: "European hare"
       latin: "Lepus europaeus"
       text: "Small game of open meadows and fields."
-      alt: "Temporary image: a drawing of grassy hills in the morning"
+      alt: "A European hare in the grass at the forest edge"
     - id: fox
       name: "Red fox"
       latin: "Vulpes vulpes"
       text: "An adaptable predator found in every part of the hunting ground."
-      alt: "Temporary image: a drawing of an autumn landscape"
+      alt: "A red fox looking out of tall grass"
     - id: badger
       name: "European badger"
       latin: "Meles meles"
       text: "A nocturnal animal of the wooded slopes."
-      alt: "Temporary image: a drawing of hills in the evening"
+      alt: "A badger crossing a road by a dry meadow"
     - id: partridge
       name: "Grey partridge"
       latin: "Perdix perdix"
       text: "Feathered game of the karst commons and fields."
-      alt: "Temporary image: a drawing of karst commons"
+      alt: "Grey partridges on a ploughed field by a hedge"
     - id: pheasant
       name: "Common pheasant"
       latin: "Phasianus colchicus"
       text: "Feathered game of fields and hedgerows."
-      alt: "Temporary image: a drawing of a landscape in mist"
+      alt: "A cock pheasant in a meadow"
   management:
     heading: "Managing the hunting ground"
     paragraphs:
@@ -125,49 +130,109 @@ huntingGround:
       - "We pay special attention to preventing damage to farmland and work together with local farmers."
 
 huntingTourism:
+  sections:
+    - heading: "Hunting in Slovenian Istria"
+      paragraphs:
+        - "We offer guests red deer, roe deer and wild boar hunting in a varied hunting ground between the Karst Edge and the Istrian hills."
+        - "Every guest hunts accompanied by an experienced hunter of the club who knows the ground and its game. The guest follows the guide's instructions and shoots only the game the guide points out."
+    - heading: "A stay in the hunting lodge"
+      paragraphs:
+        - "Visiting hunters can stay overnight in the club's hunting lodge. They sleep where the hunt begins, so they are out quickly in the morning and evening, when the game is most active."
+        - "A stay in the hunting lodge is one of the strengths of our hunting tourism. The referent for hunting tourism gives the conditions of the stay."
   offersHeading: "What we offer"
   seasonsHeading: "Hunting seasons"
-  seasonsIntro: "The hunting seasons depend on the species."
+  seasonsIntro: "The hunting seasons are set by the Slovenian decree on game and hunting seasons (Uredba o določitvi divjadi in lovnih dob). They depend on the species, sex and age of the game:"
   seasonColumns:
     species: "Species"
     season: "Season"
   seasons:
+    - species: "Red deer stag"
+      season: "16 Aug – 31 Dec"
+    - species: "Red deer hind"
+      season: "1 Sep – 31 Dec"
     - species: "Roe buck"
-      season: "May–October"
-    - species: "Wild boar"
+      season: "1 May – 31 Oct"
+    - species: "Wild boar: boars, piglets and yearlings"
       season: "all year"
-  seasonsPending: "These two seasons are from today's site. The club confirms the exact dates and the seasons of the other species before publication."
+    - species: "Wild boar: sows"
+      season: "1 Jul – 31 Jan"
   needsHeading: "What a visiting hunter needs"
   needs:
-    - "a valid hunting licence from their own country"
-    - "a European Firearms Pass when bringing their own weapon"
-    - "liability insurance"
-    - "a date agreed in advance"
-  needsPending: "This list is a draft. The club confirms what a visiting hunter needs before publication."
+    - "a permit for hunting guests, without a valid Slovenian hunting card (see below)"
+    - "a European Firearms Pass when bringing their own weapon from another EU country"
+    - "a date agreed with the referent for hunting tourism"
+    - "a hunter of the club to accompany them, whom the club assigns for each hunt"
+  permit:
+    heading: "The permit for hunting guests"
+    paragraphs:
+      - "A visiting hunter without a valid Slovenian hunting card gets the right to hunt with a permit for hunting guests (dovolilnica za lovske goste). Its form, content and price are set by the Rules on the permit for hunting guests (Pravilnik o dovolilnici za lovske goste, Uradni list RS 86/2025), which apply from 1 January 2026."
+      - "A weekly permit is valid for 7 days and costs 20 euros, a monthly permit is valid for 30 days and costs 50 euros, and a yearly permit is valid until the end of the calendar year and costs 150 euros. A guest invited to hunt by the manager of the hunting ground may be given a free permit valid for 5 days."
+      - "The permit names the hunting ground and the guest's name, address, date of birth and country of residence. The referent for hunting tourism tells you how to arrange it for a hunt in our ground."
   enquireHeading: "Enquiries"
-  enquireText: "Write to us which game and which dates interest you. We will reply with the conditions and an offer."
+  enquireText: "Write to us or call the referent for hunting tourism, and tell us which game and which dates interest you. We will reply with the conditions and an offer."
+  sources:
+    - label: "Hunting seasons under the Uredba o določitvi divjadi in lovnih dob, as summed up on gov.si (Upravljanje z divjadjo, in Slovenian)"
+      url: "https://www.gov.si/teme/upravljanje-z-divjadjo/"
+    - label: "Pravilnik o dovolilnici za lovske goste, Uradni list RS 86/2025 (in Slovenian)"
+      url: "https://pisrs.si/pregledPredpisa?sop=2025-01-3056"
 
 huntingLodge:
-  lead: "The hunting lodge is where the club's members meet and where shared hunts begin."
+  lead: "The hunting lodge is where the club's members meet and where our visiting hunters stay."
   sections:
     - heading: "The lodge"
       paragraphs:
-        - "Members meet at the lodge for meetings, before shared hunts and at social events. We also welcome visiting hunters there."
+        - "Members meet at the lodge for meetings, before shared hunts and at social events."
+        - "The lodge also offers visiting hunters a place to stay overnight. Guests stay where the hunt begins, in the company of the hunters who accompany them."
   featuresHeading: "What it offers"
   features:
+    - "overnight stays for visiting hunters"
     - "a place for members' meetings"
     - "the starting point of shared hunts"
-    - "a welcome for visiting hunters"
-  pending: "The club supplies the photos of the lodge, where it is and what it offers."
+    - "time together for visiting hunters and the club's hunters"
+  tourismHeading: "A place to stay for visiting hunters"
+  tourismText: "A stay in the hunting lodge is one of the strengths of our hunting tourism: guests sleep at the starting point of the hunt and are quickly in the high seat in the morning. The referent for hunting tourism gives the conditions of the stay and the hunting offer."
 
 gameDamage:
-  lead: "How to report damage that game has done to farmland, and how to protect your land."
-  reportHeading: "How to report damage"
-  reportIntro: "If you find damage caused by game on your land, follow these steps:"
+  lead: "Who answers for damage done by game, how to report it, how compensation is worked out and how to protect your land."
+  kindsHeading: "Game or a protected species?"
+  kindsIntro: "The hunting club assesses only damage done by game species (lovna divjad) in the hunting ground. Report damage by protected species to the Slovenia Forest Service (Zavod za gozdove Slovenije)."
+  kinds:
+    - heading: "Game: report to the hunting club"
+      text: "Under the Wildlife and Hunting Act, the manager of the hunting ground answers for damage done by game in the ground; here that is the hunting club Istra Gračišče."
+      species: "Game species are, for example, wild boar, red deer, roe deer, badger, European hare, fox, martens, pheasant, jay, magpie and hooded crow."
+    - heading: "Protected species: report to the Forest Service"
+      text: "Under the Nature Conservation Act, the Republic of Slovenia answers for damage done by protected wild mammals and birds. Report it to the local unit of the Slovenia Forest Service, not to the hunting club."
+      species: "Protected species are, for example, wolf, brown bear, lynx, otter and beaver, and almost all birds; the exceptions are game birds such as jay, magpie, hooded crow and pheasant."
+  reportHeading: "Reporting damage by game"
+  reportIntro: "If game has damaged your crops or forest plantations in the hunting ground:"
   steps:
-    - "As soon as you notice the damage, tell the hunting club. You will find its details on the Contact page."
-    - "Note where the damage is, how large it is and what kind, and take photos or keep other evidence."
-    - "Work with the hunting club when it inspects and records the damage, and fill in the forms needed."
+    - "Within three days of noticing the damage, report it to the hunting club in writing with form A. Registered post is recommended. You can also report it on the eGozd portal."
+    - "In the report, give the plot and cadastral municipality, the dates the damage occurred and was noticed, the game species and the crop damaged, the extent of the damage and any protective measures you used. Photos of the damage help."
+    - "Within eight days of the report, the club inspects the damage and tries to agree with you on the amount."
+    - "If you do not agree, report the damage in writing with form B to the commission for assessing damage to agricultural and forest crops at the local administrative unit."
+    - "If there is still no agreement after the commission's assessment, you can take the matter to the competent court, within three years of the damage."
+  formsText: "Forms A and B and the list of market purchase prices are on the page"
+  protectedHeading: "Damage by protected species"
+  protectedIntro: "The hunting club does not assess damage done by protected species. The Slovenia Forest Service handles it:"
+  protectedSteps:
+    - "Within three days of noticing the damage, report it in writing to the local unit of the Slovenia Forest Service. A phone call is recommended too."
+    - "Within two days the Forest Service inspects the damage and records it, and within eight days it sets the compensation on the valid scale and proposes an agreement."
+    - "If you do not agree with the amount, you do not sign. Within 30 days of the damage you can apply for compensation to the Slovenian Environment Agency (ARSO); the form is available from the Forest Service's authorised assessor."
+    - "If you do not agree with the agency's decision either, you can take the matter to the competent court, within three years of the damage."
+  nonHunting:
+    heading: "Damage on land where hunting is not allowed"
+    paragraphs:
+      - "Land where hunting is not allowed includes areas where hunting is banned, villages and hamlets, and gardens, orchards and other crops fenced so that hares and hoofed game cannot pass. The Republic of Slovenia answers for damage done by game on such land."
+      - "Report the damage in writing to the local unit of the Slovenia Forest Service within three days. It inspects the damage within eight days and proposes an agreement; if you do not sign, report the damage to the Ministry of Agriculture, Forestry and Food."
+  compensationHeading: "How compensation is worked out"
+  compensationIntro: "The amount depends mainly on the game species and on the crop and its stage of growth. The owner is entitled to compensation:"
+  compensation:
+    - "for a crop that cannot be replaced in the same season: the value of the yield for the area and crop, at the previous year's market purchase price published by the Statistical Office of Slovenia, revalued by annual inflation"
+    - "for a crop that can be replaced in the same season: the cost of labour and material for the new crop, plus the difference in value between the destroyed and the new crop"
+    - "for a domestic animal killed: the price of an equivalent animal and the cost of buying a replacement"
+    - "for a domestic animal injured: the cost of treatment and the loss from missed or delayed breeding goals"
+    - "for other damage: an amount assessed by a qualified expert"
+  compensationNote: "The market purchase prices of farm produce are collected in a list you will find among the documents."
   protectHeading: "Protecting farmland"
   protectIntro: "Protecting land from game takes several measures and regular upkeep. We recommend:"
   measures:
@@ -177,6 +242,14 @@ gameDamage:
     - "harvesting on time and clearing crop remains that attract game"
     - "protective nets or film on fruit trees and in vineyards"
   maintenance: "Check the protection regularly, repair damage and renew the deterrents, so the measures work all season."
+  stewardship: "An owner is entitled to compensation only after doing, as a good steward, everything reasonable to protect their property from damage. For protected species, the owner must follow the Slovenian rules on suitable protection measures (Pravilnik o primernih načinih varovanja in vrstah ukrepov za preprečitev nadaljnje škode na premoženju)."
+  sources:
+    - label: "KGZS: damage by game and protected species (in Slovenian)"
+      url: "https://www.kgzs.si/gozdarstvo-in-lovstvo/skoda-po-divjadi-in-zavarovanih-vrstah"
+    - label: "Lovska zveza Slovenije: calculating compensation for damage by game, 4 May 2026 (in Slovenian)"
+      url: "https://www.lovska-zveza.si/2026/05/04/izracun-odskodnine-za-skodo-po-divjadi/"
+    - label: "Slovenia Forest Service, eGozd: report damage online (in Slovenian)"
+      url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
 
 membership:
   lead: "We welcome new members who want to take part in managing the hunting ground and protecting nature."
@@ -185,35 +258,48 @@ membership:
   requirements:
     - "at least 18 years of age"
     - "citizenship of the Republic of Slovenia"
-    - "a passed hunting exam"
+    - "a passed hunting exam; those without one start as a hunting trainee (see below)"
     - "no criminal record for offences related to hunting"
     - "willingness to take an active part in the club"
     - "respect for hunting ethics and tradition"
   examHeading: "The path to the hunting exam"
-  examIntro: "The path to the hunting exam includes theoretical and practical training:"
+  examIntro: "The hunting exam has a practical part, taken in the hunting club, and a theoretical part at the regional hunting association. Following the guidelines of Lovska zveza Slovenije (the Hunting Association of Slovenia), the path goes like this:"
   examSteps:
-    - "Theoretical training (40 hours)."
-    - "Practical training in the hunting ground with a mentor."
-    - "Learning about hunting weapons and their safe handling."
-    - "The hunting exam before the examination board."
+    - heading: "An application to the club"
+      text: "You send the hunting club a written application with your personal details and a short note on why managing game and its habitat and the company of hunters interest you. The club usually decides on applications at its annual assembly in early spring."
+    - heading: "Hunting trainee"
+      text: "Once the club accepts you, you become a hunting trainee. You get a mentor and the club's rules and pay the yearly membership fee, which covers the fees of the club, the regional hunting association, OZUL and Lovska zveza Slovenije. From then on you also receive the magazine Lovec."
+    - heading: "Practical training"
+      text: "The traineeship lasts one to three years, and the practical training programme takes 150 to 200 hours a year. With your mentor you keep a trainee's logbook. You may hunt only when accompanied by a hunter with a valid hunting card, usually your mentor."
+    - heading: "The practical exam"
+      text: "After the traineeship your mentor hands the approved logbook to a three-member examination board appointed by the club. You take the practical exam before it and receive a certificate for the practical part."
+    - heading: "The theoretical exam"
+      text: "The course is run by the regional hunting association; you can enrol once your practical part is entered in the Lisjak information system. Lecturers check your knowledge in partial exams, and then you take a final exam before a three-member board on game biology and ecology, hunting law and planning in hunting."
+    - heading: "Certificate and hunting card"
+      text: "Lovska zveza Slovenije issues your hunting exam certificate. With it you can get a hunting card."
+  examNote: "Under the Weapons Act, a trainee may apply at the administrative unit for a permit to buy a hunting weapon. The conditions are an exam in the safe handling of weapons, a medical examination and membership of a hunting club."
   applyHeading: "How to join"
   applyText: "If you are interested in membership, write to us. We will be glad to introduce the club and answer your questions."
-
-gallery:
-  lead: "Moments from the life of the club and its hunting ground."
-  pending: "The club supplies the photos for the gallery. The images below are temporary and only show the layout."
+  sources:
+    - label: "Lovska zveza Slovenije: how to become a hunter (in Slovenian)"
+      url: "https://www.lovska-zveza.si/informacijsko-sredisce/kako-postati-lovec/"
 
 documents:
-  lead: "The club's legal acts and other documents to download."
-  pending: "The club supplies the documents. Until then they are listed without a link."
-  items:
-    - title: "Statute of the hunting club Istra Gračišče"
-      meta: "PDF · Slovenian · file not available yet"
-    - title: "Rules of the club"
-      meta: "PDF · Slovenian · file not available yet"
+  lead: "Forms and other documents to download."
+  groups:
+    - heading: "Game damage"
+      items:
+        - title: "Form A: reporting damage by game to the hunting club"
+          meta: "PDF · 166 KB · Slovenian · source: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/obrazec-za-skodo-lovski-druzini.pdf"
+        - title: "Form B: reporting damage by game to the commission"
+          meta: "PDF · 191 KB · Slovenian · source: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/obrazec-za-skodo-komisiji-b-4.pdf"
+        - title: "Market purchase prices of farm produce, 2025"
+          meta: "PDF · 603 KB · Slovenian · source: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/zbirnik_cene_2025.pdf"
 
 contact:
   lead: "For questions about hunting tourism, membership or game damage, write to us."
   officersHeading: "Officers"
   officersText: "The club is led by elected officers. To reach them, use the club's e-mail address."
-  phonePending: "The club confirms the phone number to publish."

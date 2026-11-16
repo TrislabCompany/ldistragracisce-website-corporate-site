@@ -1,8 +1,10 @@
 ---
-// The page of a list of items. The only list is hunting tourism: its offers,
-// under a photo head, then the seasons, what a visitor needs and how to enquire.
+// The page of a list of items. The only list is hunting tourism: under a photo
+// head, the hunting ground for guests and the stay in the lodge, the offers,
+// then the seasons, what a visitor needs, how to enquire and whom to call.
 import ItemCard from "../../../components/ItemCard.astro";
 import PhotoHead from "../../../components/PhotoHead.astro";
+import TextSections from "../../../components/TextSections.astro";
 import TourismDetails from "../../../components/TourismDetails.astro";
 import { type Lang } from "../../../i18n";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
@@ -20,6 +22,12 @@ const texts = await pageTexts(lang);
 
 <BaseLayout title={settings.title[lang]} description={settings.lead[lang]} lang={lang} full>
   <PhotoHead photo={photos.huntingTourism} alt={texts.alt.huntingTourism} title={settings.title[lang]} lead={settings.lead[lang]} />
+
+  <section class="section">
+    <div class="wrap prose">
+      <TextSections sections={texts.huntingTourism.sections} />
+    </div>
+  </section>
 
   <section class="section" aria-labelledby="offers">
     <div class="wrap">

@@ -1035,40 +1035,52 @@ main.full {
   font-size: 0.9rem;
 }
 
-/* The gallery: the club's photos in a grid. */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
-  gap: 0.75rem;
+/* The documents in groups: a heading over each list. */
+.document-group + .document-group {
+  margin-top: 2.5rem;
+}
+
+/* Steps with a short heading each, such as the path to the hunting exam. */
+.steps h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.steps p {
   margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
-.gallery img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 0.5rem;
+/* The sources a page's facts come from, at its foot. */
+.sources {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
-/* Content that is still missing, shown on dev and staging for the review:
-   a dashed box that says what is to come. */
-.placeholder {
-  margin: 1.5rem 0;
-  padding: 1rem 1.25rem;
-  border: 2px dashed var(--earth);
-  border-radius: var(--radius);
-  background: var(--surface);
-  color: var(--text);
+.sources h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
 }
 
-.placeholder strong {
-  color: var(--earth);
+.sources ul {
+  margin: 0;
+  padding-left: 1.25rem;
 }
 
-.section-band .placeholder {
-  color: var(--text);
+.sources li + li {
+  margin-top: 0.35rem;
+}
+
+/* A person to call, with the role, the name and the phone. */
+.person {
+  margin: 0.5rem 0 0;
+}
+
+.person strong {
+  display: block;
+  font-size: 1.15rem;
 }
 
 /* Two short cards for local people. */
@@ -1101,6 +1113,12 @@ main.full {
   .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.contact-cards {
+  display: grid;
+  gap: 1.5rem;
+  align-content: start;
 }
 
 .contact-details h2 {

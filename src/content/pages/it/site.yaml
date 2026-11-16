@@ -4,16 +4,21 @@
 alt:
   hero: "Immagine provvisoria: disegno delle colline dell'Istria slovena al tramonto"
   about: "Immagine provvisoria: disegno di un paesaggio carsico"
-  huntingGround: "Immagine provvisoria: disegno delle colline boscose della riserva"
+  huntingGround: "Il ciglione carsico sopra Črni Kal con vista verso il mare e boschi autunnali sui pendii"
   huntingTourism: "Immagine provvisoria: disegno di un bosco di sera"
-  huntingLodge: "Immagine provvisoria: disegno della casa di caccia vicino al bosco"
-  lodgeInterior: "Immagine provvisoria: disegno della casa di caccia in un paesaggio autunnale"
+  huntingLodge: "Illustrazione: una casa di caccia in pietra con tetto di coppi e finestre illuminate al tramonto, tra le colline carsiche"
+  lodgeInterior: "Illustrazione: la facciata della casa di caccia con un trofeo di palchi sopra la porta, una panca e un pergolato"
   gameDamage: "Immagine provvisoria: disegno di campi sotto le colline"
   membership: "Immagine provvisoria: disegno di un bosco nella nebbia del mattino"
   bandForest: "Immagine provvisoria: disegno di un bosco su un pendio"
-  bandKarst: "Immagine provvisoria: disegno del ciglione carsico"
+  bandKarst: "Il pendio roccioso del ciglione carsico sopra Podpeč con boschi autunnali"
 
-pendingLabel: "Contenuto in arrivo"
+sourcesHeading: "Fonti"
+
+tourismContact:
+  heading: "Turismo venatorio"
+  role: "referente per il turismo venatorio"
+  text: "Per cacce, date, condizioni e pernottamento nella casa di caccia chiamate il nostro referente per il turismo venatorio."
 
 home:
   heroText: "Un'associazione di cacciatori volontaria e senza scopo di lucro che dal 1947 si prende cura della selvaggina e della riserva sul ciglione carsico, nell'Istria slovena."
@@ -31,7 +36,7 @@ home:
   waysHeading: "Conoscete la società"
   ways:
     huntingGround: "Pascoli carsici, boschi e campi, e otto specie di selvaggina."
-    huntingTourism: "Caccia al capriolo e al cinghiale, accompagnati dai nostri cacciatori."
+    huntingTourism: "Caccia al cervo, al capriolo maschio e al cinghiale, accompagnati dai nostri cacciatori, con pernottamento nella casa di caccia."
     huntingLodge: "Il luogo d'incontro dei soci e degli ospiti."
   tourismHeading: "Caccia nell'Istria slovena"
   tourismText: "Ai cacciatori dall'estero offriamo la caccia in una riserva varia tra il ciglione carsico e le colline istriane, accompagnati da cacciatori esperti della società."
@@ -86,37 +91,37 @@ huntingGround:
       name: "Capriolo"
       latin: "Capreolus capreolus"
       text: "Una delle due specie più importanti della riserva, di casa ai margini del bosco e nei prati."
-      alt: "Immagine provvisoria: disegno di un prato sotto le colline"
+      alt: "Un capriolo maschio in un prato nella nebbia del mattino"
     - id: wild-boar
       name: "Cinghiale"
       latin: "Sus scrofa"
       text: "L'altra specie più importante della riserva; la gestiamo insieme agli agricoltori locali."
-      alt: "Immagine provvisoria: disegno di un bosco"
+      alt: "Una femmina di cinghiale con i piccoli striati nel bosco"
     - id: hare
       name: "Lepre comune"
       latin: "Lepus europaeus"
       text: "Selvaggina minore di prati aperti e campi."
-      alt: "Immagine provvisoria: disegno di colline erbose al mattino"
+      alt: "Una lepre comune nell'erba al margine del bosco"
     - id: fox
       name: "Volpe rossa"
       latin: "Vulpes vulpes"
       text: "Un predatore adattabile presente in ogni parte della riserva."
-      alt: "Immagine provvisoria: disegno di un paesaggio autunnale"
+      alt: "Una volpe che guarda fuori dall'erba alta"
     - id: badger
       name: "Tasso"
       latin: "Meles meles"
       text: "Un animale notturno dei pendii boscosi."
-      alt: "Immagine provvisoria: disegno di colline di sera"
+      alt: "Un tasso che attraversa una strada accanto a un prato secco"
     - id: partridge
       name: "Starna"
       latin: "Perdix perdix"
       text: "Selvaggina di penna dei pascoli carsici e dei campi."
-      alt: "Immagine provvisoria: disegno di un pascolo carsico"
+      alt: "Starne su un campo arato vicino a una siepe"
     - id: pheasant
       name: "Fagiano comune"
       latin: "Phasianus colchicus"
       text: "Selvaggina di penna dei campi e delle siepi."
-      alt: "Immagine provvisoria: disegno di un paesaggio nella nebbia"
+      alt: "Un fagiano maschio in un prato"
   management:
     heading: "La gestione della riserva"
     paragraphs:
@@ -124,49 +129,109 @@ huntingGround:
       - "Dedichiamo un'attenzione particolare alla prevenzione dei danni ai terreni agricoli e alla collaborazione con gli agricoltori locali."
 
 huntingTourism:
+  sections:
+    - heading: "Caccia nell'Istria slovena"
+      paragraphs:
+        - "Offriamo agli ospiti la caccia al cervo, al capriolo e al cinghiale in una riserva varia tra il ciglione carsico e le colline istriane."
+        - "Ogni ospite caccia accompagnato da un cacciatore esperto della società che conosce la riserva e la selvaggina. L'ospite segue le indicazioni dell'accompagnatore e abbatte solo la selvaggina che l'accompagnatore gli indica."
+    - heading: "Pernottamento nella casa di caccia"
+      paragraphs:
+        - "I cacciatori ospiti possono pernottare nella casa di caccia della società. Dormono dove la caccia comincia e sono subito sul posto al mattino e alla sera, quando la selvaggina è più attiva."
+        - "Il pernottamento nella casa di caccia è uno dei punti di forza del nostro turismo venatorio. Le condizioni del soggiorno le comunica il referente per il turismo venatorio."
   offersHeading: "La nostra offerta"
   seasonsHeading: "Stagioni di caccia"
-  seasonsIntro: "Le stagioni di caccia dipendono dalla specie."
+  seasonsIntro: "Le stagioni di caccia sono fissate dal decreto sloveno sulla selvaggina e le stagioni di caccia (Uredba o določitvi divjadi in lovnih dob). Dipendono da specie, sesso ed età della selvaggina:"
   seasonColumns:
     species: "Specie"
     season: "Stagione"
   seasons:
+    - species: "Cervo maschio"
+      season: "16/8 – 31/12"
+    - species: "Cerva"
+      season: "1/9 – 31/12"
     - species: "Capriolo maschio"
-      season: "maggio–ottobre"
-    - species: "Cinghiale"
+      season: "1/5 – 31/10"
+    - species: "Cinghiale: maschi, piccoli e giovani"
       season: "tutto l'anno"
-  seasonsPending: "Le due stagioni indicate sono quelle del sito attuale. La società conferma le date esatte e le stagioni delle altre specie prima della pubblicazione."
-  needsHeading: "Cosa serve al cacciatore ospite"
+    - species: "Cinghiale: femmine adulte"
+      season: "1/7 – 31/1"
+  needsHeading: "Che cosa serve al cacciatore ospite"
   needs:
-    - "una licenza di caccia valida del proprio paese"
-    - "la carta europea d'arma da fuoco, se porta la propria arma"
-    - "un'assicurazione di responsabilità civile"
-    - "una data concordata in anticipo"
-  needsPending: "L'elenco è una bozza. La società conferma cosa serve al cacciatore ospite prima della pubblicazione."
+    - "il permesso per gli ospiti cacciatori, se non ha una tessera venatoria slovena valida (vedi sotto)"
+    - "la carta europea d'arma da fuoco, se porta la propria arma da un altro paese dell'Unione europea"
+    - "una data di caccia concordata con il referente per il turismo venatorio"
+    - "l'accompagnamento di un cacciatore della società, che la società assegna per ogni caccia"
+  permit:
+    heading: "Il permesso per gli ospiti cacciatori"
+    paragraphs:
+      - "Il cacciatore ospite senza una tessera venatoria slovena valida ottiene il diritto di caccia con il permesso per gli ospiti cacciatori (dovolilnica za lovske goste). Forma, contenuto e prezzo del permesso sono fissati dal regolamento sloveno Pravilnik o dovolilnici za lovske goste (Uradni list RS 86/2025), che si applica dal 1° gennaio 2026."
+      - "Il permesso settimanale vale 7 giorni e costa 20 euro, quello mensile vale 30 giorni e costa 50 euro, quello annuale vale fino alla fine dell'anno solare e costa 150 euro. All'ospite invitato a caccia dal gestore della riserva può essere rilasciato un permesso gratuito valido 5 giorni."
+      - "Il permesso indica la riserva e il nome, l'indirizzo, la data di nascita e il paese di residenza dell'ospite. Il referente per il turismo venatorio vi spiega come ottenerlo per cacciare nella nostra riserva."
   enquireHeading: "Richieste"
-  enquireText: "Scriveteci quale selvaggina e quali date vi interessano. Vi risponderemo con le condizioni e un'offerta."
+  enquireText: "Scriveteci o chiamate il referente per il turismo venatorio e diteci quale selvaggina e quali date vi interessano. Vi risponderemo con le condizioni e un'offerta."
+  sources:
+    - label: "Stagioni di caccia secondo la Uredba o določitvi divjadi in lovnih dob, riassunte su gov.si (Upravljanje z divjadjo, in sloveno)"
+      url: "https://www.gov.si/teme/upravljanje-z-divjadjo/"
+    - label: "Pravilnik o dovolilnici za lovske goste, Uradni list RS 86/2025 (in sloveno)"
+      url: "https://pisrs.si/pregledPredpisa?sop=2025-01-3056"
 
 huntingLodge:
-  lead: "La casa di caccia è il luogo d'incontro dei soci e il punto di partenza delle cacce collettive."
+  lead: "La casa di caccia è il luogo d'incontro dei soci e l'alloggio dei nostri cacciatori ospiti."
   sections:
     - heading: "La casa di caccia"
       paragraphs:
-        - "Nella casa di caccia i soci si incontrano per le riunioni, prima delle cacce collettive e in occasione degli eventi. Vi accogliamo anche i cacciatori ospiti."
-  featuresHeading: "Cosa offre"
+        - "I soci si incontrano nella casa di caccia per le riunioni, prima delle cacce comuni e agli eventi sociali."
+        - "La casa offre anche il pernottamento ai cacciatori ospiti. Gli ospiti alloggiano dove la caccia comincia, in compagnia dei cacciatori che li accompagnano."
+  featuresHeading: "Che cosa offre"
   features:
-    - "uno spazio per le riunioni dei soci"
-    - "il punto di partenza delle cacce collettive"
-    - "l'accoglienza dei cacciatori ospiti"
-  pending: "Le foto della casa di caccia, la sua posizione e cosa offre vengono fornite dalla società."
+    - "pernottamento per i cacciatori ospiti"
+    - "uno spazio per gli incontri e le riunioni dei soci"
+    - "il punto di partenza delle cacce comuni"
+    - "momenti insieme tra cacciatori ospiti e cacciatori della società"
+  tourismHeading: "Alloggio per i cacciatori ospiti"
+  tourismText: "Il pernottamento nella casa di caccia è uno dei punti di forza del nostro turismo venatorio: l'ospite dorme al punto di partenza della caccia ed è subito all'appostamento al mattino. Le condizioni del soggiorno e l'offerta di caccia le comunica il referente per il turismo venatorio."
 
 gameDamage:
-  lead: "Come segnalare i danni causati dalla selvaggina ai terreni agricoli e come proteggerli."
-  reportHeading: "Come segnalare un danno"
-  reportIntro: "Se trovate sui vostri terreni un danno causato dalla selvaggina, seguite questi passi:"
+  lead: "Chi risponde dei danni da selvaggina, come denunciarli, come si calcola il risarcimento e come proteggere i propri terreni."
+  kindsHeading: "Selvaggina o specie protetta?"
+  kindsIntro: "La società venatoria valuta solo i danni causati dalla selvaggina cacciabile nella riserva. I danni da specie protette si denunciano al Servizio forestale sloveno (Zavod za gozdove Slovenije)."
+  kinds:
+    - heading: "Selvaggina: denuncia alla società venatoria"
+      text: "Secondo la legge slovena sulla selvaggina e la caccia, dei danni causati dalla selvaggina nella riserva risponde il gestore della riserva, da noi la società venatoria Istra Gračišče."
+      species: "Sono selvaggina, per esempio, cinghiale, cervo, capriolo, tasso, lepre comune, volpe, martore e faine, fagiano, ghiandaia, gazza e cornacchia grigia."
+    - heading: "Specie protette: denuncia al Servizio forestale"
+      text: "Secondo la legge slovena sulla conservazione della natura, dei danni causati da mammiferi e uccelli selvatici protetti risponde la Repubblica di Slovenia. Denunciateli all'unità locale del Servizio forestale sloveno, non alla società venatoria."
+      species: "Sono specie protette, per esempio, lupo, orso bruno, lince, lontra e castoro, e quasi tutti gli uccelli; fanno eccezione le specie cacciabili come ghiandaia, gazza, cornacchia grigia e fagiano."
+  reportHeading: "Denunciare i danni da selvaggina"
+  reportIntro: "Se la selvaggina ha danneggiato le vostre colture agricole o forestali nella riserva:"
   steps:
-    - "Appena notate il danno, avvisate la società venatoria. I contatti sono nella pagina Contatti."
-    - "Annotate dove si trova il danno, quanto è esteso e di che tipo è, e scattate foto o conservate altre prove."
-    - "Collaborate con la società venatoria al sopralluogo e alla documentazione del danno e compilate i moduli necessari."
+    - "Entro tre giorni dal giorno in cui avete notato il danno, denunciatelo per iscritto alla società venatoria con il modulo A. Si consiglia la raccomandata. Potete denunciarlo anche sul portale eGozd."
+    - "Nella denuncia indicate la particella e il comune catastale, le date in cui il danno è avvenuto ed è stato notato, la specie di selvaggina e la coltura danneggiata, l'entità del danno e le misure di protezione adottate. Le foto del danno aiutano."
+    - "Entro otto giorni dalla denuncia la società esamina il danno e cerca di accordarsi con voi sull'importo."
+    - "Se non si raggiunge un accordo, denunciate il danno per iscritto con il modulo B alla commissione per la determinazione dei danni alle colture agricole e forestali presso l'unità amministrativa competente."
+    - "Se anche dopo la valutazione della commissione non c'è accordo, potete rivolgervi al tribunale competente, entro tre anni dal danno."
+  formsText: "I moduli A e B e l'elenco dei prezzi di mercato si trovano nella pagina"
+  protectedHeading: "Danni da specie protette"
+  protectedIntro: "La società venatoria non valuta i danni causati da specie protette. La procedura è condotta dal Servizio forestale sloveno:"
+  protectedSteps:
+    - "Entro tre giorni dal giorno in cui avete notato il danno, denunciatelo per iscritto all'unità locale del Servizio forestale sloveno. Si consiglia anche una telefonata."
+    - "Entro due giorni il Servizio esegue il sopralluogo e redige un verbale, ed entro otto giorni fissa il risarcimento secondo la tabella vigente e vi propone un accordo."
+    - "Se non siete d'accordo sull'importo, non firmate. Entro 30 giorni dal danno potete chiedere il risarcimento all'Agenzia slovena per l'ambiente (ARSO); il modulo lo fornisce il perito autorizzato del Servizio."
+    - "Se non siete d'accordo nemmeno con la decisione dell'agenzia, potete rivolgervi al tribunale competente, entro tre anni dal danno."
+  nonHunting:
+    heading: "Danni su terreni dove non si caccia"
+    paragraphs:
+      - "Sono terreni dove non si caccia le aree in cui la caccia è vietata, i centri abitati e le frazioni, e gli orti, i frutteti e le altre colture recintati in modo che lepri e ungulati non possano passare. Dei danni della selvaggina su questi terreni risponde la Repubblica di Slovenia."
+      - "Denunciate il danno per iscritto entro tre giorni all'unità locale del Servizio forestale sloveno. Il Servizio esegue il sopralluogo entro otto giorni e propone un accordo; se non lo firmate, denunciate il danno al Ministero sloveno dell'agricoltura, delle foreste e dell'alimentazione."
+  compensationHeading: "Come si calcola il risarcimento"
+  compensationIntro: "L'importo dipende soprattutto dalla specie di selvaggina e dalla coltura e dal suo stadio di sviluppo. Il danneggiato ha diritto al risarcimento:"
+  compensation:
+    - "per un raccolto che non si può sostituire nella stessa stagione: il valore del raccolto per superficie e coltura, al prezzo di mercato dell'anno precedente pubblicato dall'Ufficio statistico sloveno, rivalutato con l'inflazione annua"
+    - "per un raccolto che si può sostituire nella stessa stagione: i costi di lavoro e materiale per la nuova coltura e la differenza di valore tra il raccolto distrutto e quello nuovo"
+    - "per un animale domestico ucciso: il prezzo di un animale equivalente e i costi di acquisto di quello sostitutivo"
+    - "per un animale domestico ferito: le spese di cura e la perdita per obiettivi di allevamento mancati o ritardati"
+    - "per altri danni: l'importo stimato da un esperto qualificato"
+  compensationNote: "I prezzi di mercato dei prodotti agricoli sono raccolti in un elenco che trovate tra i documenti."
   protectHeading: "Proteggere i terreni agricoli"
   protectIntro: "Proteggere i terreni dalla selvaggina richiede più misure e una manutenzione regolare. Consigliamo:"
   measures:
@@ -176,6 +241,14 @@ gameDamage:
     - "il raccolto puntuale e la rimozione dei residui che attirano la selvaggina"
     - "reti o teli di protezione sugli alberi da frutto e nei vigneti"
   maintenance: "Controllate regolarmente le protezioni, riparate i danni e rinnovate i dissuasori, perché le misure funzionino per tutta la stagione."
+  stewardship: "Ha diritto al risarcimento il proprietario che, da buon amministratore, ha fatto tutto il ragionevole per proteggere i propri beni dal danno. Per le specie protette deve seguire il regolamento sloveno sulle misure di protezione adeguate (Pravilnik o primernih načinih varovanja in vrstah ukrepov za preprečitev nadaljnje škode na premoženju)."
+  sources:
+    - label: "KGZS: danni da selvaggina e specie protette (in sloveno)"
+      url: "https://www.kgzs.si/gozdarstvo-in-lovstvo/skoda-po-divjadi-in-zavarovanih-vrstah"
+    - label: "Lovska zveza Slovenije: calcolo del risarcimento per i danni da selvaggina, 4/5/2026 (in sloveno)"
+      url: "https://www.lovska-zveza.si/2026/05/04/izracun-odskodnine-za-skodo-po-divjadi/"
+    - label: "Servizio forestale sloveno, eGozd: denuncia del danno online (in sloveno)"
+      url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
 
 membership:
   lead: "Accogliamo nuovi soci che vogliono partecipare alla gestione della riserva e alla tutela della natura."
@@ -184,35 +257,48 @@ membership:
   requirements:
     - "almeno 18 anni di età"
     - "cittadinanza della Repubblica di Slovenia"
-    - "esame di caccia superato"
+    - "esame di caccia superato; chi non l'ha ancora inizia come praticante cacciatore (vedi sotto)"
     - "nessuna condanna per reati in materia di caccia"
     - "disponibilità a partecipare attivamente alla vita della società"
     - "rispetto dell'etica e della tradizione venatoria"
   examHeading: "Il percorso verso l'esame di caccia"
-  examIntro: "Il percorso verso l'esame di caccia comprende una formazione teorica e pratica:"
+  examIntro: "L'esame di caccia ha una parte pratica, che si sostiene nella società venatoria, e una parte teorica presso l'associazione venatoria regionale. Secondo le linee guida della Lovska zveza Slovenije (l'associazione venatoria slovena) il percorso è questo:"
   examSteps:
-    - "Formazione teorica (40 ore)."
-    - "Formazione pratica nella riserva con un tutor."
-    - "Conoscenza delle armi da caccia e del loro uso sicuro."
-    - "L'esame di caccia davanti alla commissione."
+    - heading: "Domanda alla società venatoria"
+      text: "Inviate alla società venatoria una domanda scritta con i vostri dati personali e una breve spiegazione del vostro interesse per la gestione della selvaggina e del suo ambiente e per la compagnia dei cacciatori. Di norma la società decide sulle domande all'assemblea annuale all'inizio della primavera."
+    - heading: "Praticante cacciatore"
+      text: "Quando la società accetta la domanda, diventate praticante cacciatore. Ricevete un tutore e i regolamenti della società e pagate la quota annuale, che copre le quote della società, dell'associazione venatoria regionale, dell'OZUL e della Lovska zveza Slovenije. Da allora ricevete anche la rivista Lovec."
+    - heading: "Formazione pratica"
+      text: "Il praticantato dura da uno a tre anni e il programma di formazione pratica comprende da 150 a 200 ore l'anno. Con il tutore tenete il diario del praticante. Potete cacciare solo accompagnati da un cacciatore con tessera venatoria valida, di norma il tutore."
+    - heading: "La prova pratica"
+      text: "Dopo il praticantato il tutore consegna il diario approvato a una commissione d'esame di tre membri nominata dalla società. Davanti a essa sostenete la prova pratica e ricevete un attestato per la parte pratica."
+    - heading: "La prova teorica"
+      text: "Il corso è organizzato dall'associazione venatoria regionale; potete iscrivervi quando la parte pratica superata è registrata nel sistema informativo Lisjak. I docenti verificano le conoscenze con esami parziali, poi sostenete l'esame finale davanti a una commissione di tre membri su biologia ed ecologia della selvaggina, legislazione venatoria e pianificazione venatoria."
+    - heading: "Diploma e tessera venatoria"
+      text: "La Lovska zveza Slovenije rilascia il diploma dell'esame di caccia. Con esso potete ottenere la tessera venatoria."
+  examNote: "Secondo la legge slovena sulle armi, il praticante può chiedere all'unità amministrativa il permesso di acquisto di un'arma da caccia. Le condizioni sono un esame sul maneggio sicuro delle armi, una visita medica e l'iscrizione a una società venatoria."
   applyHeading: "Come aderire"
-  applyText: "Se vi interessa l'adesione, scriveteci. Saremo lieti di presentarvi la società e rispondere alle vostre domande."
-
-gallery:
-  lead: "Momenti della vita della società e della riserva."
-  pending: "Le foto per la galleria vengono fornite dalla società. Le immagini qui sotto sono provvisorie e mostrano solo l'impaginazione."
+  applyText: "Se vi interessa l'adesione, scriveteci. Saremo lieti di presentarvi la società e di rispondere alle vostre domande."
+  sources:
+    - label: "Lovska zveza Slovenije: come diventare cacciatore (in sloveno)"
+      url: "https://www.lovska-zveza.si/informacijsko-sredisce/kako-postati-lovec/"
 
 documents:
-  lead: "Gli atti e gli altri documenti della società da scaricare."
-  pending: "I documenti vengono forniti dalla società. Fino ad allora sono elencati senza collegamento."
-  items:
-    - title: "Statuto della società venatoria Istra Gračišče"
-      meta: "PDF · sloveno · file non ancora disponibile"
-    - title: "Regolamenti della società"
-      meta: "PDF · sloveno · file non ancora disponibile"
+  lead: "Moduli e altri documenti da scaricare."
+  groups:
+    - heading: "Danni da selvaggina"
+      items:
+        - title: "Modulo A: denuncia dei danni da selvaggina alla società venatoria"
+          meta: "PDF · 166 KB · sloveno · fonte: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/obrazec-za-skodo-lovski-druzini.pdf"
+        - title: "Modulo B: denuncia dei danni da selvaggina alla commissione"
+          meta: "PDF · 191 KB · sloveno · fonte: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/obrazec-za-skodo-komisiji-b-4.pdf"
+        - title: "Prezzi di mercato dei prodotti agricoli 2025"
+          meta: "PDF · 603 KB · sloveno · fonte: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/zbirnik_cene_2025.pdf"
 
 contact:
   lead: "Per domande sul turismo venatorio, sull'adesione o sui danni da selvaggina, scriveteci."
   officersHeading: "Cariche"
   officersText: "La società è guidata da cariche elette. Per contattarle usate l'indirizzo e-mail della società."
-  phonePending: "La società conferma il numero di telefono da pubblicare."

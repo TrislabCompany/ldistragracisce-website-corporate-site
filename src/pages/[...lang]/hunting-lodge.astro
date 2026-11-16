@@ -1,12 +1,11 @@
 ---
-// The hunting lodge: photos and what it offers. The lodge's details wait for
-// the club (a placeholder box until then).
+// The hunting lodge: what it offers, the stay it gives visiting hunters (one of
+// the strengths of the club's hunting tourism), and the referent to call.
 import { Image } from "astro:assets";
-import ContactCta from "../../components/ContactCta.astro";
 import PhotoHead from "../../components/PhotoHead.astro";
-import Placeholder from "../../components/Placeholder.astro";
 import TextSections from "../../components/TextSections.astro";
-import { languagePaths, t, type Lang } from "../../i18n";
+import TourismContact from "../../components/TourismContact.astro";
+import { languagePaths, localizedPath, t, type Lang } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { pageTexts } from "../../lib/pages";
 import { photos } from "../../lib/photos";
@@ -14,7 +13,7 @@ import { photos } from "../../lib/photos";
 export const getStaticPaths = languagePaths;
 
 const { lang } = Astro.props as { lang: Lang };
-const { huntingLodge, alt, pendingLabel } = await pageTexts(lang);
+const { huntingLodge, alt, tourismContact } = await pageTexts(lang);
 ---
 
 <BaseLayout title={t(lang, "nav.huntingLodge")} description={huntingLodge.lead} lang={lang} full>
@@ -28,12 +27,21 @@ const { huntingLodge, alt, pendingLabel } = await pageTexts(lang);
         <ul class="checklist">
           {huntingLodge.features.map((feature) => <li>{feature}</li>)}
         </ul>
-        <Placeholder label={pendingLabel} text={huntingLodge.pending} />
       </div>
       <Image src={photos.lodgeInterior} alt={alt.lodgeInterior} widths={[480, 800]} sizes="(min-width: 52rem) 50vw, 100vw" format="avif" loading="lazy" />
     </div>
-    <div class="wrap">
-      <ContactCta lang={lang} />
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="cta-box on-dark">
+        <h2>{huntingLodge.tourismHeading}</h2>
+        <p>{huntingLodge.tourismText}</p>
+        <div class="actions">
+          <a class="button" href={localizedPath(lang, "/hunting-tourism")}>{t(lang, "cta.tourismOffers")}</a>
+        </div>
+      </div>
+      <TourismContact lang={lang} texts={tourismContact} />
     </div>
   </section>
 </BaseLayout>

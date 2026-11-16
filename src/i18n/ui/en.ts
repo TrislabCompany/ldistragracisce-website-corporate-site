@@ -38,7 +38,6 @@ const en = {
   "nav.huntingLodge": "Hunting lodge",
   "nav.gameDamage": "Game damage",
   "nav.membership": "Membership",
-  "nav.gallery": "Gallery",
   "nav.documents": "Documents",
   "nav.menu": "Menu",
   "footer.club": "The club",

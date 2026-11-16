@@ -1,0 +1,28 @@
+---
+// The club's referent for hunting tourism: role, name and phone, in a card.
+import { t, type Lang } from "../i18n";
+import type { PageTexts } from "../lib/pages";
+import { tourismReferent } from "../site.config";
+
+interface Props {
+  lang: Lang;
+  texts: PageTexts["tourismContact"];
+  // The card's heading level: one below the heading of the section it is in.
+  level?: 2 | 3;
+}
+
+const { lang, texts, level = 2 } = Astro.props;
+const Heading = `h${level}` as const;
+---
+
+<section class="card" aria-label={texts.heading}>
+  <Heading>{texts.heading}</Heading>
+  <p>{texts.text}</p>
+  <p class="person">
+    <strong>{tourismReferent.name}</strong>
+    {texts.role}
+  </p>
+  <p>
+    {t(lang, "contact.phone")}: <a href={`tel:${tourismReferent.phone.replace(/\s/g, "")}`}>{tourismReferent.phone}</a>
+  </p>
+</section>

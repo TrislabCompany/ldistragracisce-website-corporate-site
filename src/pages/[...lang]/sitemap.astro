@@ -3,7 +3,7 @@
 // Search engines read /sitemap-index.xml instead (astro.config.mjs). It also
 // gives visitors a second way to find a page besides the menu (WCAG 2.4.5).
 // The lists of items come from `collections` in src/site.config.ts. A page you
-// add by hand needs a link here.
+// add by hand needs a link in `pages` below, in the menu's order.
 import { languagePaths, localizedPath, t, type Lang } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { entrySlug } from "../../lib/content";
@@ -22,6 +22,15 @@ const legal = [
   { on: site.legalPages.accessibility, href: "/accessibility", label: t(lang, "legal.accessibility") },
   { on: site.legalPages.sustainability, href: "/sustainability", label: t(lang, "legal.sustainability") },
 ].filter((link) => link.on);
+const pages = [
+  { href: "/about", label: t(lang, "nav.about") },
+  { href: "/hunting-ground", label: t(lang, "nav.huntingGround") },
+  { href: "/hunting-lodge", label: t(lang, "nav.huntingLodge") },
+  { href: "/game-damage", label: t(lang, "nav.gameDamage") },
+  { href: "/membership", label: t(lang, "nav.membership") },
+  { href: "/documents", label: t(lang, "nav.documents") },
+  { href: "/contact", label: t(lang, "nav.contact") },
+];
 ---
 
 <BaseLayout title={t(lang, "legal.sitemap")} lang={lang}>
@@ -42,8 +51,13 @@ const legal = [
         </li>
       ))
     }
-    <li><a href={localizedPath(lang, "/about")}>{t(lang, "nav.about")}</a></li>
-    <li><a href={localizedPath(lang, "/contact")}>{t(lang, "nav.contact")}</a></li>
+    {
+      pages.map(({ href, label }) => (
+        <li>
+          <a href={localizedPath(lang, href)}>{label}</a>
+        </li>
+      ))
+    }
     {
       legal.length > 0 && (
         <li>

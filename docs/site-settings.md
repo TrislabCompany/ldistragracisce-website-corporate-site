@@ -62,6 +62,8 @@ To have no list, remove the entry, the collection and the folder. The pages are 
 
 `/<lang>/contact` shows the address, a link to a map, e-mail links by topic, and optionally a phone number and a Google Business profile, all from `contact` and `company` in the settings. Use role mailboxes (info, sales, support), never a person's address.
 
+This site also shows its referent for hunting tourism, with a name and a phone number the club has agreed to publish: `tourismReferent` in `src/site.config.ts`, drawn by `src/components/TourismContact.astro` on the contact, hunting-tourism and hunting-lodge pages and in the home page's contact band.
+
 There is no form: the site has no backend. The map is a plain link, never embedded, because an embedded map loads an outside service and may set cookies.
 
 ## 4. Legal pages

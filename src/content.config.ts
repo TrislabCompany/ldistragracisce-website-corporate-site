@@ -28,13 +28,14 @@ const huntingTourism = defineCollection({
 
 
 // The texts of the site's own pages (home, about, hunting ground, the hunting
-// lodge, game damage, membership, gallery, documents, contact and the extra
-// sections of the hunting-tourism page): src/content/pages/<language>/site.yaml,
-// one file per language. The schema makes every language carry every text.
-// A text marked "pending" is shown in a dashed placeholder box until the club
-// has supplied the content (src/components/Placeholder.astro).
+// lodge, game damage, membership, documents, contact and the extra sections of
+// the hunting-tourism page): src/content/pages/<language>/site.yaml, one file
+// per language. The schema makes every language carry every text. A fact taken
+// from an outside source names it in `sources` (shown by SourceList.astro).
 const text = z.string().min(1);
 const section = z.object({ heading: text, paragraphs: z.array(text).min(1) });
+const link = z.object({ label: text, url: z.string().url() });
+const sources = z.array(link).min(1);
 const species = ["red-deer", "roe-deer", "wild-boar", "hare", "fox", "badger", "partridge", "pheasant"] as const;
 
 const pages = defineCollection({
@@ -53,8 +54,10 @@ const pages = defineCollection({
       bandForest: text,
       bandKarst: text,
     }),
-    /** The label of a placeholder box and the note on facts still to be confirmed. */
-    pendingLabel: text,
+    /** The heading of the list of sources at the foot of a page. */
+    sourcesHeading: text,
+    /** The club's referent for hunting tourism (name and phone: src/lib/contacts.ts). */
+    tourismContact: z.object({ heading: text, role: text, text }),
     home: z.object({
       heroText: text,
       numbersHeading: text,
@@ -89,35 +92,54 @@ const pages = defineCollection({
       management: section,
     }),
     huntingTourism: z.object({
+      /** Before the offers: the hunting ground for guests and the stay in the lodge. */
+      sections: z.array(section).min(1),
       offersHeading: text,
       seasonsHeading: text,
       seasonsIntro: text,
       seasonColumns: z.object({ species: text, season: text }),
-      /** From today's site; to be confirmed with the club before production. */
+      /** Per Uredba o določitvi divjadi in lovnih dob, as gov.si sums it up (in sources). */
       seasons: z.array(z.object({ species: text, season: text })).min(1),
-      seasonsPending: text,
       needsHeading: text,
       needs: z.array(text).min(1),
-      needsPending: text,
+      /** The permit for hunting guests (Pravilnik o dovolilnici za lovske goste). */
+      permit: section,
       enquireHeading: text,
       enquireText: text,
+      sources,
     }),
     huntingLodge: z.object({
       lead: text,
       sections: z.array(section).min(1),
       featuresHeading: text,
       features: z.array(text).min(1),
-      pending: text,
+      tourismHeading: text,
+      tourismText: text,
     }),
     gameDamage: z.object({
       lead: text,
+      /** Game (lovna divjad) or a protected species (zavarovana vrsta): who answers for the damage. */
+      kindsHeading: text,
+      kindsIntro: text,
+      kinds: z.array(z.object({ heading: text, text, species: text })).length(2),
       reportHeading: text,
       reportIntro: text,
       steps: z.array(text).min(1),
+      formsText: text,
+      protectedHeading: text,
+      protectedIntro: text,
+      protectedSteps: z.array(text).min(1),
+      nonHunting: section,
+      compensationHeading: text,
+      compensationIntro: text,
+      compensation: z.array(text).min(1),
+      compensationNote: text,
       protectHeading: text,
       protectIntro: text,
       measures: z.array(text).min(1),
       maintenance: text,
+      stewardship: text,
+      sources,
     }),
     membership: z.object({
       lead: text,
@@ -126,22 +148,29 @@ const pages = defineCollection({
       requirements: z.array(text).min(1),
       examHeading: text,
       examIntro: text,
-      examSteps: z.array(text).min(1),
+      /** After Lovska zveza Slovenije, "Kako postati lovec" (in sources). */
+      examSteps: z.array(z.object({ heading: text, text })).min(1),
+      examNote: text,
       applyHeading: text,
       applyText: text,
+      sources,
     }),
-    gallery: z.object({ lead: text, pending: text }),
     documents: z.object({
       lead: text,
-      pending: text,
-      /** The documents the club will supply; shown without a file until they arrive. */
-      items: z.array(z.object({ title: text, meta: text })).min(1),
+      /** Every document links to its file; one without a file is not listed. */
+      groups: z
+        .array(
+          z.object({
+            heading: text,
+            items: z.array(z.object({ title: text, meta: text, href: z.string().url() })).min(1),
+          }),
+        )
+        .min(1),
     }),
     contact: z.object({
       lead: text,
       officersHeading: text,
       officersText: text,
-      phonePending: text,
     }),
   }),
 });

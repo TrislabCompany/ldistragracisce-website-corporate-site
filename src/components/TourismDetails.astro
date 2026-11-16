@@ -1,11 +1,14 @@
 ---
 // The rest of the hunting-tourism page after its offers: the season table,
-// what a visiting hunter needs, and how to enquire.
+// what a visiting hunter needs and the permit for hunting guests, the referent
+// to call, and the sources.
 import { t, type Lang } from "../i18n";
 import type { PageTexts } from "../lib/pages";
 import site from "../site.config";
-import Placeholder from "./Placeholder.astro";
 import SeasonTable from "./SeasonTable.astro";
+import SourceList from "./SourceList.astro";
+import TextSections from "./TextSections.astro";
+import TourismContact from "./TourismContact.astro";
 
 interface Props {
   lang: Lang;
@@ -13,7 +16,7 @@ interface Props {
 }
 
 const { lang, texts } = Astro.props;
-const { huntingTourism: tourism, pendingLabel } = texts;
+const { huntingTourism: tourism } = texts;
 ---
 
 <!-- No aria-labelledby here: the season table's own region already carries this name. -->
@@ -22,7 +25,6 @@ const { huntingTourism: tourism, pendingLabel } = texts;
     <h2 id="seasons">{tourism.seasonsHeading}</h2>
     <p>{tourism.seasonsIntro}</p>
     <SeasonTable caption={tourism.seasonsHeading} columns={tourism.seasonColumns} seasons={tourism.seasons} />
-    <Placeholder label={pendingLabel} text={tourism.seasonsPending} />
   </div>
 </section>
 
@@ -32,7 +34,7 @@ const { huntingTourism: tourism, pendingLabel } = texts;
     <ul class="checklist">
       {tourism.needs.map((need) => <li>{need}</li>)}
     </ul>
-    <Placeholder label={pendingLabel} text={tourism.needsPending} />
+    <TextSections sections={[tourism.permit]} />
   </div>
 </section>
 
@@ -43,5 +45,12 @@ const { huntingTourism: tourism, pendingLabel } = texts;
     <div class="actions">
       {site.contact.topics.map(({ email }) => <a class="button light" href={`mailto:${email}`}>{t(lang, "cta.enquire")}</a>)}
     </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap prose">
+    <TourismContact lang={lang} texts={texts.tourismContact} />
+    <SourceList heading={texts.sourcesHeading} sources={tourism.sources} />
   </div>
 </section>

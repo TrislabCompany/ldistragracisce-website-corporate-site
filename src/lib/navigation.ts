@@ -1,6 +1,6 @@
-// The site's menu, shared by the header and the footer. Gallery and Documents
-// are linked from the footer only until the club has supplied their content
-// (docs/brief.md, Navigation).
+// The site's menu, shared by the header and the footer. Documents is linked
+// from the footer, the about page and the game-damage page; the site has no
+// gallery.
 
 import { t, type Lang } from "../i18n";
 
@@ -21,7 +21,6 @@ export function clubLinks(lang: Lang) {
   return [
     { href: "/about", label: t(lang, "nav.about") },
     { href: "/membership", label: t(lang, "nav.membership") },
-    { href: "/gallery", label: t(lang, "nav.gallery") },
     { href: "/documents", label: t(lang, "nav.documents") },
     { href: "/contact", label: t(lang, "nav.contact") },
   ];

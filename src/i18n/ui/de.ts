@@ -36,7 +36,6 @@ const de: UiStrings = {
   "nav.huntingLodge": "Jagdhütte",
   "nav.gameDamage": "Wildschäden",
   "nav.membership": "Mitgliedschaft",
-  "nav.gallery": "Galerie",
   "nav.documents": "Dokumente",
   "nav.menu": "Menü",
   "footer.club": "Der Verein",

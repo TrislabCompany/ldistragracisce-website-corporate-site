@@ -1,9 +1,10 @@
 ---
 title: "Skupni lov na divlje svinje"
 summary: "Skupni lov na divlje svinje s lovcima našeg društva."
-order: 2
+order: 3
 ---
 
 Gosti se pridružuju skupnom lovu na divlje svinje koji vodi lovovođa društva.
 
-> **Sadržaj slijedi:** Uvjete, termine i cijenu skupnog lova društvo daje na upit. Pojedinosti ponude priprema društvo.
+Prije skupnog lova društvo sve sudionike i lovačke pse upisuje na popis sudionika, kako to propisuje slovenski Pravilnik o dovolilnici za lovske goste.
+Uvjete, termine i cijenu skupnog lova daje referent za lovni turizam na upit.

@@ -1,9 +1,14 @@
 ---
-// Game damage: how to report it, step by step, and how to protect fields.
+// Game damage: who answers for it (game or a protected species), how to report
+// it to the club step by step, damage by protected species and on land where
+// hunting is not allowed, how compensation is worked out, how to protect
+// fields, and the sources (KGZS, Lovska zveza Slovenije).
 import ContactCta from "../../components/ContactCta.astro";
 import PhotoHead from "../../components/PhotoHead.astro";
+import SourceList from "../../components/SourceList.astro";
 import StepList from "../../components/StepList.astro";
-import { languagePaths, t, type Lang } from "../../i18n";
+import TextSections from "../../components/TextSections.astro";
+import { languagePaths, localizedPath, t, type Lang } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { pageTexts } from "../../lib/pages";
 import { photos } from "../../lib/photos";
@@ -11,17 +16,63 @@ import { photos } from "../../lib/photos";
 export const getStaticPaths = languagePaths;
 
 const { lang } = Astro.props as { lang: Lang };
-const { gameDamage, alt } = await pageTexts(lang);
+const { gameDamage, alt, sourcesHeading } = await pageTexts(lang);
 ---
 
 <BaseLayout title={t(lang, "nav.gameDamage")} description={gameDamage.lead} lang={lang} full>
   <PhotoHead photo={photos.gameDamage} alt={alt.gameDamage} title={t(lang, "nav.gameDamage")} lead={gameDamage.lead} />
+
+  <section class="section" aria-labelledby="kinds">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="kinds">{gameDamage.kindsHeading}</h2>
+        <p>{gameDamage.kindsIntro}</p>
+      </div>
+      <ul class="duo">
+        {
+          gameDamage.kinds.map((kind) => (
+            <li>
+              <article class="card">
+                <h3>{kind.heading}</h3>
+                <p>{kind.text}</p>
+                <p>{kind.species}</p>
+              </article>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
 
   <section class="section" aria-labelledby="report">
     <div class="wrap prose">
       <h2 id="report">{gameDamage.reportHeading}</h2>
       <p>{gameDamage.reportIntro}</p>
       <StepList steps={gameDamage.steps} />
+      <p>
+        {gameDamage.formsText}
+        <a href={localizedPath(lang, "/documents")}>{t(lang, "nav.documents")}</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="protected">
+    <div class="wrap prose">
+      <h2 id="protected">{gameDamage.protectedHeading}</h2>
+      <p>{gameDamage.protectedIntro}</p>
+      <StepList steps={gameDamage.protectedSteps} />
+      <TextSections sections={[gameDamage.nonHunting]} />
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="compensation">
+    <div class="wrap prose">
+      <h2 id="compensation">{gameDamage.compensationHeading}</h2>
+      <p>{gameDamage.compensationIntro}</p>
+      <ul class="checklist">
+        {gameDamage.compensation.map((item) => <li>{item}</li>)}
+      </ul>
+      <p>{gameDamage.compensationNote}</p>
     </div>
   </section>
 
@@ -33,6 +84,8 @@ const { gameDamage, alt } = await pageTexts(lang);
         {gameDamage.measures.map((measure) => <li>{measure}</li>)}
       </ul>
       <p>{gameDamage.maintenance}</p>
+      <p>{gameDamage.stewardship}</p>
+      <SourceList heading={sourcesHeading} sources={gameDamage.sources} />
     </div>
     <div class="wrap">
       <ContactCta lang={lang} />

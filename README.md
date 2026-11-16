@@ -4,9 +4,9 @@ Lovska družina Istra Gračišče, ldistragracisce.si, built from `tl-template-w
 
 ## What it is
 
-An [Astro](https://astro.build) site built into static files, served by Cloudflare Pages. It has a home page, about, the hunting ground and its game, hunting tourism (a page per offer), the hunting lodge, game damage, membership, a gallery, documents, contact, an imprint, a privacy policy, an accessibility statement, a sitemap page and a 404 page, built to the brief in [docs/brief.md](docs/brief.md). It sets no cookies and loads no outside service.
+An [Astro](https://astro.build) site built into static files, served by Cloudflare Pages. It has a home page, about, the hunting ground and its game, hunting tourism (a page per offer), the hunting lodge, game damage, membership, documents (the game-damage forms and the price list, linked at their source), contact, an imprint, a privacy policy, an accessibility statement, a sitemap page and a 404 page, built to the brief in [docs/brief.md](docs/brief.md). It sets no cookies and loads no outside service.
 
-**Texts:** the page texts are in `src/content/pages/<language>/site.yaml`, the hunting-tourism offers in `src/content/hunting-tourism/<language>/`, the legal texts in `src/content/legal/<language>/`. The photos are imported in `src/lib/photos.ts`. The addresses of the earlier site redirect to the new pages (`public/_redirects`).
+**Texts:** the page texts are in `src/content/pages/<language>/site.yaml`, the hunting-tourism offers in `src/content/hunting-tourism/<language>/`, the legal texts in `src/content/legal/<language>/`. The photos are imported in `src/lib/photos.ts`, which says where each comes from. The referent for hunting tourism (name and phone, published with the club's consent) is `tourismReferent` in `src/site.config.ts`. A fact taken from an outside source (seasons, the permit for hunting guests, the damage procedure, the hunting exam) names it in the page's `sources`. The addresses of the earlier site redirect to the new pages (`public/_redirects`).
 
 **Languages:** Slovenian, English, Croatian, Serbian (Latin script), Italian, German. The first is the default; each language lives under its own URL.
 
@@ -22,10 +22,10 @@ How a change moves between them is in [docs/deployment.md](docs/deployment.md). 
 
 ## Before production
 
-- **No placeholder left.** A dashed box ("Čaka na vsebino", `src/components/Placeholder.astro`) and every image labelled "ZAČASNA SLIKA" mark content still to come. Find them with `grep -rn "pending\|ZAČASNA" src/` and `src/lib/photos.ts`.
-- **Photos:** replace the drawn placeholders in `src/assets/photos/` with photos of the real hunting ground (today's site first, then stock photos whose licence needs no attribution), and the alternative texts in `site.yaml`. Clear the red deer photo from today's site: where it was taken and that the club may publish it.
-- **From the club:** the gallery photos, the documents (statute, rules), the hunting-lodge photos and description, the phone number to publish (`contact.phone` in `src/site.config.ts`), the seasons of every species and what a visiting hunter needs.
-- **Facts:** the area, heights, species, founding year and seasons are from today's site; the club confirms each one.
+- **No placeholder left.** Every image labelled "ZAČASNA SLIKA" marks a photo still to come (`src/lib/photos.ts`). The hunting lodge is an illustration until the club has photos of it.
+- **Photos:** the hunting ground page has CC0 photos from Wikimedia Commons (the Karst Edge above Črni Kal, the game species). Replace the other drawn placeholders in `src/assets/photos/` with photos of the real hunting ground (today's site first, then stock photos whose licence needs no attribution), and the alternative texts in `site.yaml`. Clear the red deer photo from today's site: where it was taken and that the club may publish it.
+- **From the club:** the club's own documents (statute, rules) as files, photos of the hunting lodge, the prices and conditions of the hunting-tourism offers. The site has no gallery.
+- **Facts:** the area, heights, species and founding year are from today's site; the club confirms each one. The seasons are from the decree (Uredba o določitvi divjadi in lovnih dob, via gov.si).
 - **Texts:** a lawyer reviews the privacy policy; a native speaker reviews every language but Slovenian (Serbian and German are new).
 - **Logo:** draw an SVG from the badge (`src/assets/logo.png`, `public/logo.png`, `public/favicon.png`).
 - **Analytics:** set `analytics` with the Cloudflare Web Analytics token and the CSP origins ([docs/analytics.md](docs/analytics.md)); the privacy policy already names it.

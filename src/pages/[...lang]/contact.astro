@@ -1,17 +1,17 @@
 ---
-// Contact: the club's e-mail link and phone, the address with a Google Maps
-// link (nothing embedded), and the officers by role.
+// Contact: the club's e-mail link, the address with a Google Maps link
+// (nothing embedded), the referent for hunting tourism with a phone, and the
+// officers by role.
 import ContactDetails from "../../components/ContactDetails.astro";
-import Placeholder from "../../components/Placeholder.astro";
+import TourismContact from "../../components/TourismContact.astro";
 import { languagePaths, t, type Lang } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { pageTexts } from "../../lib/pages";
-import site from "../../site.config";
 
 export const getStaticPaths = languagePaths;
 
 const { lang } = Astro.props as { lang: Lang };
-const { contact, about, pendingLabel } = await pageTexts(lang);
+const { contact, about, tourismContact } = await pageTexts(lang);
 ---
 
 <BaseLayout title={t(lang, "contact.title")} description={contact.lead} lang={lang}>
@@ -20,14 +20,16 @@ const { contact, about, pendingLabel } = await pageTexts(lang);
   <div class="contact-grid">
     <div>
       <ContactDetails lang={lang} />
-      {!site.contact.phone && <Placeholder label={pendingLabel} text={contact.phonePending} />}
     </div>
-    <section class="card" aria-labelledby="officers">
-      <h2 id="officers">{contact.officersHeading}</h2>
-      <p>{contact.officersText}</p>
-      <ul class="checklist">
-        {about.officers.map((role) => <li>{role}</li>)}
-      </ul>
-    </section>
+    <div class="contact-cards">
+      <TourismContact lang={lang} texts={tourismContact} />
+      <section class="card" aria-labelledby="officers">
+        <h2 id="officers">{contact.officersHeading}</h2>
+        <p>{contact.officersText}</p>
+        <ul class="checklist">
+          {about.officers.map((role) => <li>{role}</li>)}
+        </ul>
+      </section>
+    </div>
   </div>
 </BaseLayout>
