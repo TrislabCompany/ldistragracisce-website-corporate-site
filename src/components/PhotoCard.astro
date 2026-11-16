@@ -17,7 +17,7 @@ const { photo, alt, title, text, href } = Astro.props;
 ---
 
 <li class="photo-frame photo-card">
-  <Image src={photo} alt={alt} width={800} height={450} widths={[480, 800]} sizes="(min-width: 52rem) 33vw, 100vw" format="avif" quality={photoQuality.card} loading="lazy" />
+  <Image src={photo} alt={alt} width={640} height={360} widths={[480, 640]} sizes="(min-width: 52rem) 33vw, 100vw" format="avif" quality={photoQuality.card} loading="lazy" />
   <div class="photo-fade" aria-hidden="true"></div>
   <div class="photo-text photo-content">
     <h3><a href={href}>{title}</a></h3>

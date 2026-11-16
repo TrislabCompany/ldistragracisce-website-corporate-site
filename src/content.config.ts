@@ -34,7 +34,7 @@ const huntingTourism = defineCollection({
 // from an outside source names it in `sources` (shown by SourceList.astro).
 const text = z.string().min(1);
 const section = z.object({ heading: text, paragraphs: z.array(text).min(1) });
-const link = z.object({ label: text, url: z.string().url() });
+const link = z.object({ label: text, url: z.url() });
 const sources = z.array(link).min(1);
 const species = ["red-deer", "roe-deer", "wild-boar", "hare", "fox", "badger", "partridge", "pheasant"] as const;
 
@@ -162,7 +162,7 @@ const pages = defineCollection({
         .array(
           z.object({
             heading: text,
-            items: z.array(z.object({ title: text, meta: text, href: z.string().url() })).min(1),
+            items: z.array(z.object({ title: text, meta: text, href: z.url() })).min(1),
           }),
         )
         .min(1),
