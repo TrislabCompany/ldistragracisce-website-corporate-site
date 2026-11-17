@@ -108,11 +108,11 @@ huntingGround:
       latin: "Vulpes vulpes"
       text: "Prilagodljiva zver, ki živi v vseh delih lovišča."
       alt: "Lisica gleda iz visoke trave"
-    - id: badger
-      name: "Jazbec"
-      latin: "Meles meles"
-      text: "Nočna žival gozdnih pobočij."
-      alt: "Jazbec prečka cesto ob suhem travniku"
+    - id: jackal
+      name: "Šakal"
+      latin: "Canis aureus"
+      text: "Se v zadnjih letih širi po Krasu in Istri."
+      alt: "Šakal stoji na pokošenem travniku in gleda proti fotografu"
     - id: partridge
       name: "Poljska jerebica"
       latin: "Perdix perdix"
@@ -212,6 +212,10 @@ gameDamage:
     - "Če do sporazuma ne pride, škodo z obrazcem B pisno prijavite Komisiji za določanje višine škode na kmetijskih in gozdnih kulturah pri krajevno pristojni upravni enoti."
     - "Če se tudi po oceni komisije ne sporazumemo, lahko vložite tožbo pri pristojnem sodišču, najpozneje v treh letih od nastanka škode."
   formsText: "Obrazca A in B ter zbirnik tržnih odkupnih cen najdete na strani"
+  egozd:
+    text: "Škodo lahko prijavite tudi prek spleta, na portalu eGozd Zavoda za gozdove Slovenije."
+    label: "Prijavite škodo v eGozd"
+    url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
   protectedHeading: "Škoda po zavarovanih vrstah"
   protectedIntro: "Škode, ki jo naredijo zavarovane vrste, lovska družina ne ocenjuje. Postopek vodi Zavod za gozdove Slovenije:"
   protectedSteps:

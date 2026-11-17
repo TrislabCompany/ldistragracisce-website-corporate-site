@@ -22,8 +22,8 @@ How a change moves between them is in [docs/deployment.md](docs/deployment.md). 
 
 ## Before production
 
-- **No placeholder left.** Every image labelled "ZAČASNA SLIKA" marks a photo still to come (`src/lib/photos.ts`). The hunting lodge is an illustration until the club has photos of it.
-- **Photos:** the hunting ground page has CC0 photos from Wikimedia Commons (the Karst Edge above Črni Kal, the game species). Replace the other drawn placeholders in `src/assets/photos/` with photos of the real hunting ground (today's site first, then stock photos whose licence needs no attribution), and the alternative texts in `site.yaml`. Clear the red deer photo from today's site: where it was taken and that the club may publish it.
+- **No placeholder left.** Every image labelled "ZAČASNA SLIKA" marks a photo still to come (`src/lib/photos.ts`). The three home page cards (hunting ground, hunting tourism, hunting lodge) are flat illustrations the club chose to keep, without the label.
+- **Photos:** the hunting ground page has photos from Wikimedia Commons (the Karst Edge from Zjat, the game species): CC0, except the golden jackal (CC BY-SA 4.0), which the page credits under the photo. Replace the other drawn placeholders in `src/assets/photos/` with photos of the real hunting ground (today's site first, then stock photos whose licence needs no attribution), and the alternative texts in `site.yaml`. Clear the red deer photo from today's site: where it was taken and that the club may publish it.
 - **From the club:** the club's own documents (statute, rules) as files, photos of the hunting lodge, the prices and conditions of the hunting-tourism offers. The site has no gallery.
 - **Facts:** the area, heights, species and founding year are from today's site; the club confirms each one. The seasons are from the decree (Uredba o določitvi divjadi in lovnih dob, via gov.si).
 - **Texts:** a lawyer reviews the privacy policy; a native speaker reviews every language but Slovenian (Serbian and German are new).

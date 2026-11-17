@@ -107,11 +107,11 @@ huntingGround:
       latin: "Vulpes vulpes"
       text: "Ein anpassungsfähiges Raubwild in allen Teilen des Reviers."
       alt: "Ein Rotfuchs schaut aus hohem Gras"
-    - id: badger
-      name: "Dachs"
-      latin: "Meles meles"
-      text: "Ein nachtaktives Tier der bewaldeten Hänge."
-      alt: "Ein Dachs überquert eine Straße neben einer trockenen Wiese"
+    - id: jackal
+      name: "Goldschakal"
+      latin: "Canis aureus"
+      text: "Breitet sich in den letzten Jahren über den Karst und Istrien aus."
+      alt: "Ein Goldschakal steht auf einer gemähten Wiese und blickt in die Kamera"
     - id: partridge
       name: "Rebhuhn"
       latin: "Perdix perdix"
@@ -211,6 +211,10 @@ gameDamage:
     - "Kommt keine Einigung zustande, melden Sie den Schaden schriftlich mit Formular B der Kommission zur Bestimmung von Schäden an landwirtschaftlichen und forstlichen Kulturen bei der zuständigen Verwaltungseinheit."
     - "Gibt es auch nach der Bewertung der Kommission keine Einigung, können Sie innerhalb von drei Jahren nach dem Schaden beim zuständigen Gericht klagen."
   formsText: "Die Formulare A und B und die Liste der Marktankaufspreise finden Sie auf der Seite"
+  egozd:
+    text: "Sie können den Schaden auch online melden, im Portal eGozd des Slowenischen Forstdienstes (slowenisch)."
+    label: "Schaden in eGozd melden"
+    url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
   protectedHeading: "Schäden durch geschützte Arten"
   protectedIntro: "Schäden durch geschützte Arten bewertet die Jagdgesellschaft nicht. Das Verfahren führt der Slowenische Forstdienst:"
   protectedSteps:

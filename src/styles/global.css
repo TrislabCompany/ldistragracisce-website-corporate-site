@@ -68,6 +68,17 @@ h3 {
   margin: 0 0 0.5rem;
 }
 
+/* A heading that follows text gets room above it, so it reads as the start of
+   the next part and not as the end of the last. A heading at the top of a
+   card or column has nothing before it and keeps its own margin. */
+* + h2 {
+  margin-top: 2.5rem;
+}
+
+* + h3 {
+  margin-top: 1.75rem;
+}
+
 .wrap {
   width: 100%;
   max-width: 72rem;
@@ -675,9 +686,17 @@ main.full {
   margin: 0 0 1rem;
 }
 
-.text-block h2,
+.text-block h2 {
+  margin-top: 2.5rem;
+}
+
 .text-block h3 {
-  margin-top: 2rem;
+  margin-top: 1.75rem;
+}
+
+/* Text sections after other content in the same column, such as after steps. */
+* + .text-block {
+  margin-top: 2.5rem;
 }
 
 .text-block > :first-child {
@@ -691,6 +710,11 @@ main.full {
   gap: 1.5rem 1rem;
   margin: 0;
   padding: 0;
+}
+
+/* The numbers under a page's text, as on the hunting ground. */
+* + .numbers {
+  margin-top: 2.5rem;
 }
 
 @media (min-width: 48rem) {
@@ -979,11 +1003,17 @@ main.full {
   margin: 0;
 }
 
+.species-item .credit {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
 /* The steps to report game damage. */
 .steps {
   display: grid;
   gap: 1rem;
-  margin: 0;
+  margin: 1.5rem 0;
   padding: 0;
   list-style: none;
   counter-reset: step;
@@ -1011,6 +1041,23 @@ main.full {
   background: var(--accent);
   color: var(--accent-contrast);
   font-weight: 700;
+}
+
+/* The online report on eGozd under the steps: a sentence and a button. */
+.online-report {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface-strong);
+  border-radius: var(--radius);
+}
+
+.online-report p {
+  flex: 1 1 18rem;
+  margin: 0;
 }
 
 /* The document list: title, file type and size, language. */
@@ -1166,6 +1213,11 @@ main.full {
   border-radius: var(--radius);
   background: var(--band);
   color: var(--band-text);
+}
+
+/* A box beside another in two columns starts level with it. */
+.split > .cta-box {
+  margin-top: 0;
 }
 
 .cta-box h2 {

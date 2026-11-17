@@ -47,6 +47,7 @@ const en = {
   "cta.writeUs": "Write to us",
   "notFound.title": "Page not found",
   "notFound.text": "The page you asked for doesn't exist.",
+  "photo.credit": "Photo",
   "notFound.home": "Go to the home page",
 };
 

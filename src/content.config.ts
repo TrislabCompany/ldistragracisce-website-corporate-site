@@ -36,7 +36,7 @@ const text = z.string().min(1);
 const section = z.object({ heading: text, paragraphs: z.array(text).min(1) });
 const link = z.object({ label: text, url: z.url() });
 const sources = z.array(link).min(1);
-const species = ["red-deer", "roe-deer", "wild-boar", "hare", "fox", "badger", "partridge", "pheasant"] as const;
+const species = ["red-deer", "roe-deer", "wild-boar", "hare", "fox", "jackal", "partridge", "pheasant"] as const;
 
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.yaml", base: "./src/content/pages" }),
@@ -126,6 +126,8 @@ const pages = defineCollection({
       reportIntro: text,
       steps: z.array(text).min(1),
       formsText: text,
+      /** The online report on the Slovenia Forest Service's eGozd portal, linked from both ways to report. */
+      egozd: z.object({ text, label: text, url: z.url() }),
       protectedHeading: text,
       protectedIntro: text,
       protectedSteps: z.array(text).min(1),
