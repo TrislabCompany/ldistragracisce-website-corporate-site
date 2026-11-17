@@ -3,8 +3,6 @@ title: "Politika privatnosti"
 description: "Kako veb-stranica Lovačkog društva Istra Gračišče postupa sa podacima o ličnosti."
 ---
 
-> **Nacrt:** tekst pre objave pregleda pravnik.
-
 ## Rukovalac
 
 Rukovalac podacima o ličnosti je Lovska družina Istra Gračišče, Trebeše 40, 6272 Gračišče, Slovenija. Možete nam pisati na [ld.istra.gracisce@gmail.com](mailto:ld.istra.gracisce@gmail.com).

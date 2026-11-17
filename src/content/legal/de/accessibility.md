@@ -3,8 +3,6 @@ title: "Erklärung zur Barrierefreiheit"
 description: "Wie barrierefrei die Website der Jagdgesellschaft Istra Gračišče ist und wie Sie uns eine Barriere melden."
 ---
 
-> **Entwurf:** Der Verein prüft den Text vor der Veröffentlichung.
-
 Die Jagdgesellschaft Istra Gračišče möchte, dass alle diese Website nutzen können. Die Website folgt den Richtlinien WCAG 2.1 auf Stufe AA.
 
 ## Wie wir das prüfen
