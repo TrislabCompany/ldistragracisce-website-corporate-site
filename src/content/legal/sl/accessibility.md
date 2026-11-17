@@ -3,8 +3,6 @@ title: "Izjava o dostopnosti"
 description: "Kako dostopna je spletna stran Lovske družine Istra Gračišče in kako nam sporočite oviro."
 ---
 
-> **Osnutek:** besedilo pred objavo pregleda družina.
-
 Lovska družina Istra Gračišče želi, da lahko stran uporablja vsak. Stran sledi smernicam WCAG 2.1 na ravni AA.
 
 ## Kako to preverjamo

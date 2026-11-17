@@ -3,8 +3,6 @@ title: "Accessibility statement"
 description: "How accessible the website of the hunting club Istra Gračišče is, and how to tell us about a barrier."
 ---
 
-> **Draft:** the club reviews this text before publication.
-
 The hunting club Istra Gračišče wants everyone to be able to use this site. The site follows the Web Content Accessibility Guidelines (WCAG) 2.1 at level AA.
 
 ## How we check it

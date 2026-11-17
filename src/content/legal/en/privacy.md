@@ -3,8 +3,6 @@ title: "Privacy policy"
 description: "How the website of the hunting club Istra Gračišče handles personal data."
 ---
 
-> **Draft:** a lawyer reviews this text before publication.
-
 ## Controller
 
 The controller of personal data is Lovska družina Istra Gračišče, Trebeše 40, 6272 Gračišče, Slovenia. You can write to us at [ld.istra.gracisce@gmail.com](mailto:ld.istra.gracisce@gmail.com).

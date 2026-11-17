@@ -3,8 +3,6 @@ title: "Izjava o pristupačnosti"
 description: "Koliko je pristupačna veb-stranica Lovačkog društva Istra Gračišče i kako da nam prijavite prepreku."
 ---
 
-> **Nacrt:** tekst pre objave pregleda društvo.
-
 Lovačko društvo Istra Gračišče želi da stranicu može da koristi svako. Stranica prati smernice WCAG 2.1 na nivou AA.
 
 ## Kako to proveravamo

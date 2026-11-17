@@ -3,8 +3,6 @@ title: "Dichiarazione di accessibilità"
 description: "Quanto è accessibile il sito della società venatoria Istra Gračišče e come segnalarci un ostacolo."
 ---
 
-> **Bozza:** il testo viene rivisto dalla società prima della pubblicazione.
-
 La società venatoria Istra Gračišče vuole che tutti possano usare questo sito. Il sito segue le linee guida WCAG 2.1 al livello AA.
 
 ## Come lo verifichiamo

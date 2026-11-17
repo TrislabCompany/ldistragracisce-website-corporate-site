@@ -3,8 +3,6 @@ title: "Datenschutzerklärung"
 description: "Wie die Website der Jagdgesellschaft Istra Gračišče mit personenbezogenen Daten umgeht."
 ---
 
-> **Entwurf:** Ein Jurist prüft den Text vor der Veröffentlichung.
-
 ## Verantwortlicher
 
 Verantwortlich für die Verarbeitung personenbezogener Daten ist Lovska družina Istra Gračišče, Trebeše 40, 6272 Gračišče, Slowenien. Sie erreichen uns unter [ld.istra.gracisce@gmail.com](mailto:ld.istra.gracisce@gmail.com).

@@ -3,8 +3,6 @@ title: "Politika privatnosti"
 description: "Kako mrežna stranica Lovačkog društva Istra Gračišče postupa s osobnim podacima."
 ---
 
-> **Nacrt:** tekst prije objave pregledava pravnik.
-
 ## Voditelj obrade
 
 Voditelj obrade osobnih podataka je Lovska družina Istra Gračišče, Trebeše 40, 6272 Gračišče, Slovenija. Možete nam pisati na [ld.istra.gracisce@gmail.com](mailto:ld.istra.gracisce@gmail.com).
