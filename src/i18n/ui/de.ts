@@ -45,6 +45,7 @@ const de: UiStrings = {
   "cta.writeUs": "Schreiben Sie uns",
   "notFound.title": "Seite nicht gefunden",
   "notFound.text": "Die gesuchte Seite existiert nicht.",
+  "photo.credit": "Foto",
   "notFound.home": "Zur Startseite",
 };
 

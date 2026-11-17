@@ -1,6 +1,6 @@
 ---
 // Game damage: who answers for it (game or a protected species), how to report
-// it to the club step by step, damage by protected species and on land where
+// it to the club step by step with the online report on eGozd, damage by protected species and on land where
 // hunting is not allowed, how compensation is worked out, how to protect
 // fields, and the sources (KGZS, Lovska zveza Slovenije).
 import ContactCta from "../../components/ContactCta.astro";
@@ -50,9 +50,13 @@ const { gameDamage, alt, sourcesHeading } = await pageTexts(lang);
       <p>{gameDamage.reportIntro}</p>
       <StepList steps={gameDamage.steps} />
       <p>
-        {gameDamage.formsText}
+        {gameDamage.formsText}{" "}
         <a href={localizedPath(lang, "/documents")}>{t(lang, "nav.documents")}</a>
       </p>
+      <div class="online-report">
+        <p>{gameDamage.egozd.text}</p>
+        <a class="button" href={gameDamage.egozd.url}>{gameDamage.egozd.label}</a>
+      </div>
     </div>
   </section>
 
@@ -61,6 +65,10 @@ const { gameDamage, alt, sourcesHeading } = await pageTexts(lang);
       <h2 id="protected">{gameDamage.protectedHeading}</h2>
       <p>{gameDamage.protectedIntro}</p>
       <StepList steps={gameDamage.protectedSteps} />
+      <div class="online-report">
+        <p>{gameDamage.egozd.text}</p>
+        <a class="button" href={gameDamage.egozd.url}>{gameDamage.egozd.label}</a>
+      </div>
       <TextSections sections={[gameDamage.nonHunting]} />
     </div>
   </section>

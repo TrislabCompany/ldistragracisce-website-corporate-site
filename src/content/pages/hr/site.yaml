@@ -107,11 +107,11 @@ huntingGround:
       latin: "Vulpes vulpes"
       text: "Prilagodljiva zvijer koja živi u svim dijelovima lovišta."
       alt: "Lisica viri iz visoke trave"
-    - id: badger
-      name: "Jazavac"
-      latin: "Meles meles"
-      text: "Noćna životinja šumovitih padina."
-      alt: "Jazavac prelazi cestu uz suhu livadu"
+    - id: jackal
+      name: "Čagalj"
+      latin: "Canis aureus"
+      text: "Posljednjih se godina širi Krasom i Istrom."
+      alt: "Čagalj stoji na pokošenoj livadi i gleda prema fotografu"
     - id: partridge
       name: "Trčka skvržulja"
       latin: "Perdix perdix"
@@ -211,6 +211,10 @@ gameDamage:
     - "Ako do dogovora ne dođe, štetu obrascem B pisano prijavite Komisiji za utvrđivanje visine štete na poljoprivrednim i šumskim kulturama pri mjesno nadležnoj upravnoj jedinici."
     - "Ako ni nakon procjene komisije ne postignemo dogovor, možete podnijeti tužbu nadležnom sudu, najkasnije tri godine od nastanka štete."
   formsText: "Obrasce A i B te popis tržnih otkupnih cijena naći ćete na stranici"
+  egozd:
+    text: "Štetu možete prijaviti i internetom, na portalu eGozd Zavoda za gozdove Slovenije (na slovenskom)."
+    label: "Prijavite štetu u eGozd"
+    url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
   protectedHeading: "Šteta od zaštićenih vrsta"
   protectedIntro: "Štetu koju počine zaštićene vrste lovačko društvo ne procjenjuje. Postupak vodi Zavod za gozdove Slovenije:"
   protectedSteps:

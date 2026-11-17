@@ -107,11 +107,11 @@ huntingGround:
       latin: "Vulpes vulpes"
       text: "Un predatore adattabile presente in ogni parte della riserva."
       alt: "Una volpe che guarda fuori dall'erba alta"
-    - id: badger
-      name: "Tasso"
-      latin: "Meles meles"
-      text: "Un animale notturno dei pendii boscosi."
-      alt: "Un tasso che attraversa una strada accanto a un prato secco"
+    - id: jackal
+      name: "Sciacallo dorato"
+      latin: "Canis aureus"
+      text: "Negli ultimi anni si sta diffondendo sul Carso e in Istria."
+      alt: "Uno sciacallo dorato in un prato falciato guarda verso l'obiettivo"
     - id: partridge
       name: "Starna"
       latin: "Perdix perdix"
@@ -211,6 +211,10 @@ gameDamage:
     - "Se non si raggiunge un accordo, denunciate il danno per iscritto con il modulo B alla commissione per la determinazione dei danni alle colture agricole e forestali presso l'unità amministrativa competente."
     - "Se anche dopo la valutazione della commissione non c'è accordo, potete rivolgervi al tribunale competente, entro tre anni dal danno."
   formsText: "I moduli A e B e l'elenco dei prezzi di mercato si trovano nella pagina"
+  egozd:
+    text: "Potete denunciare il danno anche online, sul portale eGozd del Servizio forestale sloveno (in sloveno)."
+    label: "Denunciate il danno su eGozd"
+    url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
   protectedHeading: "Danni da specie protette"
   protectedIntro: "La società venatoria non valuta i danni causati da specie protette. La procedura è condotta dal Servizio forestale sloveno:"
   protectedSteps:

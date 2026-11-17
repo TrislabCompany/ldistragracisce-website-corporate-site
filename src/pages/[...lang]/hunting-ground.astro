@@ -36,7 +36,7 @@ const { huntingGround, home, alt } = await pageTexts(lang);
         <h2 id="species">{huntingGround.speciesHeading}</h2>
         <p>{huntingGround.speciesIntro}</p>
       </div>
-      <SpeciesList species={huntingGround.species} />
+      <SpeciesList lang={lang} species={huntingGround.species} />
     </div>
   </section>
 

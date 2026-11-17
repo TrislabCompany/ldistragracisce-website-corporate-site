@@ -45,6 +45,7 @@ const sl: UiStrings = {
   "cta.writeUs": "Pišite nam",
   "notFound.title": "Strani ni mogoče najti",
   "notFound.text": "Stran, ki ste jo iskali, ne obstaja.",
+  "photo.credit": "Foto",
   "notFound.home": "Na domačo stran",
 };
 

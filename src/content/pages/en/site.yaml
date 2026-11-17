@@ -108,11 +108,11 @@ huntingGround:
       latin: "Vulpes vulpes"
       text: "An adaptable predator found in every part of the hunting ground."
       alt: "A red fox looking out of tall grass"
-    - id: badger
-      name: "European badger"
-      latin: "Meles meles"
-      text: "A nocturnal animal of the wooded slopes."
-      alt: "A badger crossing a road by a dry meadow"
+    - id: jackal
+      name: "Golden jackal"
+      latin: "Canis aureus"
+      text: "In recent years it has been spreading across the Karst and Istria."
+      alt: "A golden jackal standing in a mown meadow, looking towards the camera"
     - id: partridge
       name: "Grey partridge"
       latin: "Perdix perdix"
@@ -212,6 +212,10 @@ gameDamage:
     - "If you do not agree, report the damage in writing with form B to the commission for assessing damage to agricultural and forest crops at the local administrative unit."
     - "If there is still no agreement after the commission's assessment, you can take the matter to the competent court, within three years of the damage."
   formsText: "Forms A and B and the list of market purchase prices are on the page"
+  egozd:
+    text: "You can also report damage online, on the Slovenia Forest Service's eGozd portal (in Slovenian)."
+    label: "Report damage in eGozd"
+    url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
   protectedHeading: "Damage by protected species"
   protectedIntro: "The hunting club does not assess damage done by protected species. The Slovenia Forest Service handles it:"
   protectedSteps:

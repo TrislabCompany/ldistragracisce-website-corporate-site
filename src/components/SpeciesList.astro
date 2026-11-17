@@ -1,18 +1,23 @@
 ---
-// The game species of the hunting ground, a section each with a photo.
+// The game species of the hunting ground, a section each with a photo, and the
+// photo's credit where its licence asks for one.
 import { Image } from "astro:assets";
-import { photoQuality, speciesPhotos } from "../lib/photos";
+import { t, type Lang } from "../i18n";
+import { photoQuality, speciesCredits, speciesPhotos } from "../lib/photos";
 
 interface Props {
+  lang: Lang;
   species: { id: keyof typeof speciesPhotos; name: string; latin: string; text: string; alt: string }[];
 }
 
-const { species } = Astro.props;
+const { lang, species } = Astro.props;
 ---
 
 <ul class="species">
   {
-    species.map(({ id, name, latin, text, alt }) => (
+    species.map(({ id, name, latin, text, alt }) => {
+      const credit = speciesCredits[id];
+      return (
       <li>
         <article class="species-item">
           <Image src={speciesPhotos[id]} alt={alt} width={560} height={350} widths={[400, 560]} sizes="(min-width: 48rem) 50vw, 100vw" format="avif" quality={photoQuality.card} loading="lazy" />
@@ -20,9 +25,15 @@ const { species } = Astro.props;
             <h3>{name}</h3>
             <p class="latin" lang="la">{latin}</p>
             <p>{text}</p>
+            {credit && (
+              <p class="credit">
+                {t(lang, "photo.credit")}: <a href={credit.url}>{credit.author}</a>, {credit.licence}
+              </p>
+            )}
           </div>
         </article>
       </li>
-    ))
+      );
+    })
   }
 </ul>
