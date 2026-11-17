@@ -51,12 +51,12 @@ const site: SiteSettings<Lang> = {
         de: "Jagdtourismus"
       },
       lead: {
-        sl: "Lov na srnjad in divjega prašiča v slovenski Istri, z vodenjem lovcev naše družine.",
-        en: "Roe deer and wild boar hunting in Slovenian Istria, guided by the club's hunters.",
-        hr: "Lov na srnu i divlju svinju u slovenskoj Istri, uz vodstvo lovaca našeg društva.",
-        sr: "Lov na srnu i divlju svinju u slovenačkoj Istri, uz vođenje lovaca našeg društva.",
-        it: "Caccia al capriolo e al cinghiale nell'Istria slovena, accompagnati dai cacciatori della nostra società.",
-        de: "Jagd auf Rehwild und Schwarzwild im slowenischen Istrien, begleitet von den Jägern unserer Gesellschaft."
+        sl: "Lov na jelenjad, srnjad in divjega prašiča v slovenski Istri, z vodenjem lovcev naše družine in prenočiščem v lovskem domu.",
+        en: "Red deer, roe deer and wild boar hunting in Slovenian Istria, guided by the club's hunters, with a stay in the hunting lodge.",
+        hr: "Lov na jelena, srnu i divlju svinju u slovenskoj Istri, uz vodstvo lovaca našeg društva i noćenje u lovačkom domu.",
+        sr: "Lov na jelena, srnu i divlju svinju u slovenačkoj Istri, uz vođenje lovaca našeg društva i noćenje u lovačkom domu.",
+        it: "Caccia al cervo, al capriolo e al cinghiale nell'Istria slovena, accompagnati dai cacciatori della nostra società, con pernottamento nella casa di caccia.",
+        de: "Jagd auf Rot-, Reh- und Schwarzwild im slowenischen Istrien, begleitet von den Jägern unserer Gesellschaft, mit Übernachtung in der Jagdhütte."
       },
       // The header and the home page link it themselves (src/components/Header.astro, src/pages/[...lang]/index.astro).
       nav: false,
@@ -67,7 +67,7 @@ const site: SiteSettings<Lang> = {
     name: "Lovska družina Istra Gračišče",
     legalName: "Lovska družina Istra Gračišče",
     address: {
-      street: "Gračišče 40",
+      street: "Trebeše 40",
       postalCode: "6272",
       city: "Gračišče",
       country: "SI"
@@ -89,7 +89,7 @@ const site: SiteSettings<Lang> = {
         }
       }
     ],
-    mapUrl: "https://www.google.com/maps?q=Gra%C4%8Di%C5%A1%C4%8De+40,+6272+Gra%C4%8Di%C5%A1%C4%8De,+Slovenia"
+    mapUrl: "https://www.google.com/maps?q=Trebe%C5%A1e+40,+6272+Gra%C4%8Di%C5%A1%C4%8De,+Slovenia"
   },
   legalPages: {
     imprint: true,
@@ -102,6 +102,16 @@ const site: SiteSettings<Lang> = {
     contact: "mailto:info@trislab.com",
     expires: "2027-11-11T13:38:06.594Z"
   }
+};
+
+/**
+ * The club's referent for hunting tourism, shown on the hunting-tourism page,
+ * the hunting lodge, the contact page and the home page. The club has agreed
+ * to publish the name and the phone number.
+ */
+export const tourismReferent = {
+  name: "Iztok Trček",
+  phone: "+386 41 721 176",
 };
 
 export default site;

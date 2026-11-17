@@ -4,16 +4,21 @@
 alt:
   hero: "Vorläufiges Bild: Zeichnung der Hügel des slowenischen Istrien in der Abenddämmerung"
   about: "Vorläufiges Bild: Zeichnung einer Karstlandschaft"
-  huntingGround: "Vorläufiges Bild: Zeichnung der bewaldeten Hügel des Reviers"
+  huntingGround: "Der Karstrand oberhalb von Črni Kal mit Blick zum Meer und Herbstwald an den Hängen"
   huntingTourism: "Vorläufiges Bild: Zeichnung eines Waldes am Abend"
-  huntingLodge: "Vorläufiges Bild: Zeichnung der Jagdhütte am Waldrand"
-  lodgeInterior: "Vorläufiges Bild: Zeichnung der Jagdhütte in einer Herbstlandschaft"
+  huntingLodge: "Illustration: eine steinerne Jagdhütte mit Ziegeldach und erleuchteten Fenstern in der Abenddämmerung, zwischen Karsthügeln"
+  lodgeInterior: "Illustration: die Vorderseite der Jagdhütte mit einem Geweih über der Tür, einer Bank und einer Weinlaube"
   gameDamage: "Vorläufiges Bild: Zeichnung von Feldern unter den Hügeln"
   membership: "Vorläufiges Bild: Zeichnung eines Waldes im Morgennebel"
   bandForest: "Vorläufiges Bild: Zeichnung eines Waldes am Hang"
-  bandKarst: "Vorläufiges Bild: Zeichnung des Karstrands"
+  bandKarst: "Der felsige Hang des Karstrands oberhalb von Podpeč mit Herbstwald"
 
-pendingLabel: "Inhalt folgt"
+sourcesHeading: "Quellen"
+
+tourismContact:
+  heading: "Jagdtourismus"
+  role: "Referent für Jagdtourismus"
+  text: "Für Jagden, Termine, Bedingungen und eine Übernachtung in der Jagdhütte rufen Sie unseren Referenten für Jagdtourismus an."
 
 home:
   heroText: "Ein ehrenamtlicher, gemeinnütziger Verein von Jägern, der seit 1947 für das Wild und das Revier am Karstrand im slowenischen Istrien sorgt."
@@ -31,7 +36,7 @@ home:
   waysHeading: "Lernen Sie den Verein kennen"
   ways:
     huntingGround: "Karstweiden, Wälder und Felder und acht Wildarten."
-    huntingTourism: "Jagd auf Rehbock und Schwarzwild, geführt von unseren Jägern."
+    huntingTourism: "Jagd auf Rothirsch, Rehbock und Schwarzwild, geführt von unseren Jägern, mit Übernachtung in der Jagdhütte."
     huntingLodge: "Treffpunkt der Mitglieder und Gäste des Vereins."
   tourismHeading: "Jagen im slowenischen Istrien"
   tourismText: "Jägern aus dem Ausland bieten wir die Jagd in einem abwechslungsreichen Revier zwischen dem Karstrand und den istrischen Hügeln, begleitet von erfahrenen Jägern des Vereins."
@@ -86,37 +91,37 @@ huntingGround:
       name: "Rehwild"
       latin: "Capreolus capreolus"
       text: "Eine der beiden wichtigsten Arten des Reviers, zu Hause am Waldrand und auf Wiesen."
-      alt: "Vorläufiges Bild: Zeichnung einer Wiese unter den Hügeln"
+      alt: "Ein Rehbock auf einer Wiese im Morgennebel"
     - id: wild-boar
       name: "Schwarzwild"
       latin: "Sus scrofa"
       text: "Die andere wichtige Art des Reviers; wir bewirtschaften sie gemeinsam mit den Landwirten vor Ort."
-      alt: "Vorläufiges Bild: Zeichnung eines Waldes"
+      alt: "Eine Bache mit gestreiften Frischlingen im Wald"
     - id: hare
       name: "Feldhase"
       latin: "Lepus europaeus"
       text: "Niederwild offener Wiesen und Felder."
-      alt: "Vorläufiges Bild: Zeichnung grasbewachsener Hügel am Morgen"
+      alt: "Ein Feldhase im Gras am Waldrand"
     - id: fox
       name: "Rotfuchs"
       latin: "Vulpes vulpes"
       text: "Ein anpassungsfähiges Raubwild in allen Teilen des Reviers."
-      alt: "Vorläufiges Bild: Zeichnung einer Herbstlandschaft"
+      alt: "Ein Rotfuchs schaut aus hohem Gras"
     - id: badger
       name: "Dachs"
       latin: "Meles meles"
       text: "Ein nachtaktives Tier der bewaldeten Hänge."
-      alt: "Vorläufiges Bild: Zeichnung von Hügeln am Abend"
+      alt: "Ein Dachs überquert eine Straße neben einer trockenen Wiese"
     - id: partridge
       name: "Rebhuhn"
       latin: "Perdix perdix"
       text: "Federwild der Karstweiden und Felder."
-      alt: "Vorläufiges Bild: Zeichnung einer Karstweide"
+      alt: "Rebhühner auf einem gepflügten Acker an einer Hecke"
     - id: pheasant
       name: "Fasan"
       latin: "Phasianus colchicus"
       text: "Federwild der Felder und Hecken."
-      alt: "Vorläufiges Bild: Zeichnung einer Landschaft im Nebel"
+      alt: "Ein Fasanenhahn auf einer Wiese"
   management:
     heading: "Die Bewirtschaftung des Reviers"
     paragraphs:
@@ -124,49 +129,109 @@ huntingGround:
       - "Besonders achten wir darauf, Schäden an landwirtschaftlichen Flächen zu verhindern, und arbeiten mit den Landwirten vor Ort zusammen."
 
 huntingTourism:
+  sections:
+    - heading: "Jagen im slowenischen Istrien"
+      paragraphs:
+        - "Wir bieten Gästen die Jagd auf Rot-, Reh- und Schwarzwild in einem abwechslungsreichen Revier zwischen dem Karstrand und den istrischen Hügeln."
+        - "Jeder Gast jagt in Begleitung eines erfahrenen Jägers des Vereins, der das Revier und das Wild kennt. Der Gast folgt den Anweisungen des Begleiters und erlegt nur das Wild, das ihm der Begleiter freigibt."
+    - heading: "Übernachtung in der Jagdhütte"
+      paragraphs:
+        - "Jagdgäste können in der Jagdhütte des Vereins übernachten. Sie schlafen dort, wo die Jagd beginnt, und sind morgens und abends, wenn das Wild am aktivsten ist, schnell auf der Jagd."
+        - "Die Übernachtung in der Jagdhütte ist eine der Stärken unseres Jagdtourismus. Die Bedingungen des Aufenthalts nennt der Referent für Jagdtourismus."
   offersHeading: "Unser Angebot"
   seasonsHeading: "Jagdzeiten"
-  seasonsIntro: "Die Jagdzeiten hängen von der Wildart ab."
+  seasonsIntro: "Die Jagdzeiten legt die slowenische Verordnung über Wild und Jagdzeiten fest (Uredba o določitvi divjadi in lovnih dob). Sie hängen von Wildart, Geschlecht und Alter ab:"
   seasonColumns:
     species: "Wildart"
     season: "Jagdzeit"
   seasons:
+    - species: "Rothirsch"
+      season: "16.8.–31.12."
+    - species: "Alttier"
+      season: "1.9.–31.12."
     - species: "Rehbock"
-      season: "Mai–Oktober"
-    - species: "Schwarzwild"
+      season: "1.5.–31.10."
+    - species: "Schwarzwild: Keiler, Frischlinge und Überläufer"
       season: "ganzjährig"
-  seasonsPending: "Die beiden Jagdzeiten stammen von der bisherigen Website. Die genauen Daten und die Jagdzeiten der anderen Arten bestätigt der Verein vor der Veröffentlichung."
+    - species: "Schwarzwild: Bache"
+      season: "1.7.–31.1."
   needsHeading: "Was ein Jagdgast braucht"
   needs:
-    - "einen gültigen Jagdschein seines Landes"
-    - "den Europäischen Feuerwaffenpass, wenn er seine eigene Waffe mitbringt"
-    - "eine Haftpflichtversicherung"
-    - "einen im Voraus vereinbarten Termin"
-  needsPending: "Die Liste ist ein Entwurf. Was ein Jagdgast genau braucht, bestätigt der Verein vor der Veröffentlichung."
-  enquireHeading: "Anfragen"
-  enquireText: "Schreiben Sie uns, welches Wild und welche Termine Sie interessieren. Wir antworten mit den Bedingungen und einem Angebot."
+    - "einen Erlaubnisschein für Jagdgäste, wenn er keine gültige slowenische Jagdkarte hat (siehe unten)"
+    - "den Europäischen Feuerwaffenpass, wenn er seine eigene Waffe aus einem anderen EU-Land mitbringt"
+    - "einen mit dem Referenten für Jagdtourismus vereinbarten Jagdtermin"
+    - "die Begleitung durch einen Jäger des Vereins, den der Verein für jede Jagd bestimmt"
+  permit:
+    heading: "Der Erlaubnisschein für Jagdgäste"
+    paragraphs:
+      - "Ein Jagdgast ohne gültige slowenische Jagdkarte erhält das Recht zu jagen mit einem Erlaubnisschein für Jagdgäste (dovolilnica za lovske goste). Form, Inhalt und Preis legt die slowenische Verordnung Pravilnik o dovolilnici za lovske goste fest (Uradni list RS 86/2025), die seit dem 1. Januar 2026 gilt."
+      - "Ein Wochenschein gilt 7 Tage und kostet 20 Euro, ein Monatsschein gilt 30 Tage und kostet 50 Euro, ein Jahresschein gilt bis zum Ende des Kalenderjahres und kostet 150 Euro. Einem Gast, den der Revierinhaber zur Jagd einlädt, kann ein kostenloser Erlaubnisschein für 5 Tage ausgestellt werden."
+      - "Der Erlaubnisschein nennt das Revier sowie Name, Anschrift, Geburtsdatum und Wohnsitzland des Gastes. Wie Sie ihn für eine Jagd in unserem Revier bekommen, sagt Ihnen der Referent für Jagdtourismus."
+  enquireHeading: "Anfrage"
+  enquireText: "Schreiben Sie uns oder rufen Sie den Referenten für Jagdtourismus an und sagen Sie uns, welches Wild und welcher Termin Sie interessieren. Wir antworten mit den Bedingungen und einem Angebot."
+  sources:
+    - label: "Jagdzeiten nach der Uredba o določitvi divjadi in lovnih dob, zusammengefasst auf gov.si (Upravljanje z divjadjo, slowenisch)"
+      url: "https://www.gov.si/teme/upravljanje-z-divjadjo/"
+    - label: "Pravilnik o dovolilnici za lovske goste, Uradni list RS 86/2025 (slowenisch)"
+      url: "https://pisrs.si/pregledPredpisa?sop=2025-01-3056"
 
 huntingLodge:
-  lead: "Die Jagdhütte ist der Treffpunkt der Mitglieder und der Ausgangspunkt gemeinsamer Jagden."
+  lead: "Die Jagdhütte ist der Treffpunkt der Mitglieder und die Unterkunft unserer Jagdgäste."
   sections:
     - heading: "Die Jagdhütte"
       paragraphs:
-        - "In der Jagdhütte treffen sich die Mitglieder zu Versammlungen, vor gemeinsamen Jagden und bei geselligen Anlässen. Dort empfangen wir auch Jagdgäste."
+        - "In der Jagdhütte treffen sich die Mitglieder zu Sitzungen, vor gemeinsamen Jagden und bei geselligen Anlässen."
+        - "Die Hütte bietet auch Jagdgästen eine Übernachtung. Gäste wohnen dort, wo die Jagd beginnt, in Gesellschaft der Jäger, die sie begleiten."
   featuresHeading: "Was sie bietet"
   features:
-    - "einen Raum für Versammlungen der Mitglieder"
+    - "Übernachtung für Jagdgäste"
+    - "einen Raum für Treffen und Sitzungen der Mitglieder"
     - "den Ausgangspunkt gemeinsamer Jagden"
-    - "den Empfang von Jagdgästen"
-  pending: "Fotos der Jagdhütte, ihre Lage und was sie bietet, liefert der Verein."
+    - "Geselligkeit von Jagdgästen und Jägern des Vereins"
+  tourismHeading: "Eine Unterkunft für Jagdgäste"
+  tourismText: "Die Übernachtung in der Jagdhütte ist eine der Stärken unseres Jagdtourismus: Der Gast schläft am Ausgangspunkt der Jagd und ist morgens schnell auf dem Hochsitz. Die Bedingungen des Aufenthalts und das Jagdangebot nennt der Referent für Jagdtourismus."
 
 gameDamage:
-  lead: "Wie Sie Schäden melden, die Wild an landwirtschaftlichen Flächen verursacht hat, und wie Sie Ihre Flächen schützen."
-  reportHeading: "So melden Sie einen Schaden"
-  reportIntro: "Wenn Sie auf Ihren Flächen einen Wildschaden bemerken, gehen Sie so vor:"
+  lead: "Wer für Wildschäden haftet, wie Sie sie melden, wie die Entschädigung berechnet wird und wie Sie Ihre Flächen schützen."
+  kindsHeading: "Jagdbares Wild oder geschützte Art?"
+  kindsIntro: "Die Jagdgesellschaft bewertet nur Schäden, die jagdbares Wild im Revier verursacht. Schäden durch geschützte Arten melden Sie dem Slowenischen Forstdienst (Zavod za gozdove Slovenije)."
+  kinds:
+    - heading: "Jagdbares Wild: Meldung an die Jagdgesellschaft"
+      text: "Nach dem slowenischen Wild- und Jagdgesetz haftet für Schäden durch jagdbares Wild im Revier der Revierinhaber, bei uns die Jagdgesellschaft Istra Gračišče."
+      species: "Jagdbares Wild sind zum Beispiel Schwarzwild, Rotwild, Rehwild, Dachs, Feldhase, Fuchs, Marder, Fasan, Eichelhäher, Elster und Nebelkrähe."
+    - heading: "Geschützte Arten: Meldung an den Forstdienst"
+      text: "Nach dem slowenischen Naturschutzgesetz haftet für Schäden durch geschützte wildlebende Säugetiere und Vögel die Republik Slowenien. Melden Sie sie der örtlichen Einheit des Slowenischen Forstdienstes, nicht der Jagdgesellschaft."
+      species: "Geschützte Arten sind zum Beispiel Wolf, Braunbär, Luchs, Fischotter und Biber sowie fast alle Vögel; Ausnahmen sind jagdbare Arten wie Eichelhäher, Elster, Nebelkrähe und Fasan."
+  reportHeading: "Wildschaden durch jagdbares Wild melden"
+  reportIntro: "Wenn jagdbares Wild Ihre landwirtschaftlichen oder forstlichen Kulturen im Revier beschädigt hat:"
   steps:
-    - "Benachrichtigen Sie die Jagdgesellschaft, sobald Sie den Schaden bemerken. Die Kontaktdaten finden Sie auf der Seite Kontakt."
-    - "Notieren Sie Ort, Umfang und Art des Schadens und machen Sie Fotos oder sichern Sie andere Nachweise."
-    - "Arbeiten Sie bei der Besichtigung und Dokumentation des Schadens mit der Jagdgesellschaft zusammen und füllen Sie die nötigen Formulare aus."
+    - "Melden Sie den Schaden innerhalb von drei Tagen, nachdem Sie ihn bemerkt haben, schriftlich mit Formular A der Jagdgesellschaft. Ein Einschreiben wird empfohlen. Sie können den Schaden auch über das Portal eGozd melden."
+    - "Geben Sie in der Meldung das Grundstück und die Katastralgemeinde an, die Tage, an denen der Schaden entstand und bemerkt wurde, die Wildart und die beschädigte Kultur, den Umfang des Schadens und Ihre Schutzmaßnahmen. Fotos des Schadens helfen."
+    - "Innerhalb von acht Tagen nach der Meldung besichtigt die Jagdgesellschaft den Schaden und versucht, sich mit Ihnen über die Höhe zu einigen."
+    - "Kommt keine Einigung zustande, melden Sie den Schaden schriftlich mit Formular B der Kommission zur Bestimmung von Schäden an landwirtschaftlichen und forstlichen Kulturen bei der zuständigen Verwaltungseinheit."
+    - "Gibt es auch nach der Bewertung der Kommission keine Einigung, können Sie innerhalb von drei Jahren nach dem Schaden beim zuständigen Gericht klagen."
+  formsText: "Die Formulare A und B und die Liste der Marktankaufspreise finden Sie auf der Seite"
+  protectedHeading: "Schäden durch geschützte Arten"
+  protectedIntro: "Schäden durch geschützte Arten bewertet die Jagdgesellschaft nicht. Das Verfahren führt der Slowenische Forstdienst:"
+  protectedSteps:
+    - "Melden Sie den Schaden innerhalb von drei Tagen, nachdem Sie ihn bemerkt haben, schriftlich der örtlichen Einheit des Slowenischen Forstdienstes. Ein Anruf wird ebenfalls empfohlen."
+    - "Innerhalb von zwei Tagen besichtigt der Forstdienst den Schaden und nimmt ein Protokoll auf, innerhalb von acht Tagen setzt er die Entschädigung nach der geltenden Tabelle fest und schlägt Ihnen eine Vereinbarung vor."
+    - "Sind Sie mit der Höhe nicht einverstanden, unterschreiben Sie nicht. Innerhalb von 30 Tagen nach dem Schaden können Sie bei der Slowenischen Umweltagentur (ARSO) eine Entschädigung beantragen; das Formular erhalten Sie beim bevollmächtigten Schätzer des Forstdienstes."
+    - "Sind Sie auch mit der Entscheidung der Agentur nicht einverstanden, können Sie innerhalb von drei Jahren nach dem Schaden beim zuständigen Gericht klagen."
+  nonHunting:
+    heading: "Schäden auf befriedeten Flächen"
+    paragraphs:
+      - "Befriedete Flächen sind Flächen, auf denen die Jagd verboten ist, Siedlungen und Weiler sowie Gärten, Obstanlagen und andere Kulturen, die so eingezäunt sind, dass weder Hase noch Schalenwild hindurchkommen. Für Wildschäden auf diesen Flächen haftet die Republik Slowenien."
+      - "Melden Sie den Schaden innerhalb von drei Tagen schriftlich der örtlichen Einheit des Slowenischen Forstdienstes. Er besichtigt den Schaden innerhalb von acht Tagen und schlägt eine Vereinbarung vor; unterschreiben Sie nicht, melden Sie den Schaden dem slowenischen Ministerium für Landwirtschaft, Forstwirtschaft und Ernährung."
+  compensationHeading: "Wie die Entschädigung berechnet wird"
+  compensationIntro: "Die Höhe hängt vor allem von der Wildart sowie von der Kultur und ihrem Entwicklungsstadium ab. Der Geschädigte hat Anspruch auf Entschädigung:"
+  compensation:
+    - "für eine Ernte, die in derselben Saison nicht ersetzt werden kann: den Wert der Ernte nach Fläche und Kultur, zum Marktankaufspreis des Vorjahres, den das Slowenische Statistikamt veröffentlicht, angepasst um die jährliche Inflation"
+    - "für eine Ernte, die in derselben Saison ersetzt werden kann: die Arbeits- und Materialkosten für die neue Kultur und den Wertunterschied zwischen der zerstörten und der neuen Ernte"
+    - "für ein getötetes Haustier: den Preis eines gleichwertigen Tieres und die Kosten für den Kauf eines Ersatztieres"
+    - "für ein verletztes Haustier: die Behandlungskosten und den Verlust durch verpasste oder verzögerte Zuchtziele"
+    - "für andere Schäden: einen Betrag, den ein Sachverständiger schätzt"
+  compensationNote: "Die Marktankaufspreise landwirtschaftlicher Erzeugnisse sind in einer Liste gesammelt, die Sie bei den Dokumenten finden."
   protectHeading: "Landwirtschaftliche Flächen schützen"
   protectIntro: "Wirksamer Schutz vor Wild braucht mehrere Maßnahmen und regelmäßige Pflege. Wir empfehlen:"
   measures:
@@ -176,6 +241,14 @@ gameDamage:
     - "rechtzeitige Ernte und das Entfernen von Ernteresten, die Wild anlocken"
     - "Schutznetze oder Folien an Obstbäumen und in Weinbergen"
   maintenance: "Prüfen Sie den Schutz regelmäßig, beheben Sie Schäden und erneuern Sie die Vergrämungsmittel, damit die Maßnahmen die ganze Saison wirken."
+  stewardship: "Anspruch auf Entschädigung hat ein Eigentümer, der als guter Wirt alles Zumutbare getan hat, um sein Eigentum vor Schaden zu schützen. Bei geschützten Arten muss er die slowenische Verordnung über geeignete Schutzmaßnahmen beachten (Pravilnik o primernih načinih varovanja in vrstah ukrepov za preprečitev nadaljnje škode na premoženju)."
+  sources:
+    - label: "KGZS: Schäden durch Wild und geschützte Arten (slowenisch)"
+      url: "https://www.kgzs.si/gozdarstvo-in-lovstvo/skoda-po-divjadi-in-zavarovanih-vrstah"
+    - label: "Lovska zveza Slovenije: Berechnung der Entschädigung für Wildschäden, 4.5.2026 (slowenisch)"
+      url: "https://www.lovska-zveza.si/2026/05/04/izracun-odskodnine-za-skodo-po-divjadi/"
+    - label: "Slowenischer Forstdienst, eGozd: Schaden online melden (slowenisch)"
+      url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
 
 membership:
   lead: "Wir begrüßen neue Mitglieder, die bei der Bewirtschaftung des Reviers und beim Naturschutz mitwirken möchten."
@@ -184,35 +257,48 @@ membership:
   requirements:
     - "Mindestalter 18 Jahre"
     - "Staatsbürgerschaft der Republik Slowenien"
-    - "bestandene Jägerprüfung"
+    - "eine bestandene Jägerprüfung; wer sie noch nicht hat, beginnt als Jagdanwärter (siehe unten)"
     - "keine Vorstrafen wegen jagdbezogener Straftaten"
     - "Bereitschaft, aktiv im Verein mitzuwirken"
     - "Achtung der Waidgerechtigkeit und der jagdlichen Tradition"
   examHeading: "Der Weg zur Jägerprüfung"
-  examIntro: "Der Weg zur Jägerprüfung umfasst eine theoretische und eine praktische Ausbildung:"
+  examIntro: "Die Jägerprüfung hat einen praktischen Teil, den Sie in der Jagdgesellschaft ablegen, und einen theoretischen Teil beim regionalen Jagdverband. Nach den Leitlinien der Lovska zveza Slovenije (des Slowenischen Jagdverbands) läuft der Weg so:"
   examSteps:
-    - "Theoretische Ausbildung (40 Stunden)."
-    - "Praktische Ausbildung im Revier mit einem Mentor."
-    - "Kenntnis der Jagdwaffen und ihres sicheren Gebrauchs."
-    - "Die Jägerprüfung vor der Prüfungskommission."
+    - heading: "Antrag an die Jagdgesellschaft"
+      text: "Sie schicken der Jagdgesellschaft einen schriftlichen Antrag mit Ihren Personalien und erklären kurz, warum Sie die Hege des Wildes und seines Lebensraums und die Gemeinschaft der Jäger interessieren. Über Anträge entscheidet der Verein in der Regel bei der Jahresversammlung im frühen Frühjahr."
+    - heading: "Jagdanwärter"
+      text: "Nimmt der Verein Ihren Antrag an, werden Sie Jagdanwärter. Sie bekommen einen Mentor und die Satzung des Vereins und zahlen den Jahresbeitrag, der die Gebühren des Vereins, des regionalen Jagdverbands, der OZUL und der Lovska zveza Slovenije deckt. Ab dann erhalten Sie auch die Zeitschrift Lovec."
+    - heading: "Praktische Ausbildung"
+      text: "Die Anwärterzeit dauert ein bis drei Jahre, das Programm der praktischen Ausbildung umfasst 150 bis 200 Stunden im Jahr. Mit Ihrem Mentor führen Sie ein Anwärtertagebuch. Jagen dürfen Sie nur in Begleitung eines Jägers mit gültiger Jagdkarte, in der Regel Ihres Mentors."
+    - heading: "Die praktische Prüfung"
+      text: "Nach der Anwärterzeit übergibt der Mentor das bestätigte Tagebuch einer dreiköpfigen Prüfungskommission, die der Verein ernennt. Vor ihr legen Sie die praktische Prüfung ab und erhalten eine Bestätigung über den praktischen Teil."
+    - heading: "Die theoretische Prüfung"
+      text: "Den Kurs veranstaltet der regionale Jagdverband; Sie können sich anmelden, sobald der bestandene praktische Teil im Informationssystem Lisjak eingetragen ist. Die Vortragenden prüfen Ihr Wissen in Teilprüfungen, danach legen Sie die Abschlussprüfung vor einer dreiköpfigen Kommission in Wildbiologie und -ökologie, Jagdrecht und jagdlicher Planung ab."
+    - heading: "Zeugnis und Jagdkarte"
+      text: "Die Lovska zveza Slovenije stellt Ihnen das Zeugnis über die Jägerprüfung aus. Damit können Sie eine Jagdkarte bekommen."
+  examNote: "Nach dem slowenischen Waffengesetz kann ein Jagdanwärter bei der Verwaltungseinheit eine Erwerbserlaubnis für eine Jagdwaffe beantragen. Voraussetzungen sind eine Prüfung im sicheren Umgang mit Waffen, eine ärztliche Untersuchung und die Mitgliedschaft in einer Jagdgesellschaft."
   applyHeading: "So werden Sie Mitglied"
   applyText: "Wenn Sie sich für eine Mitgliedschaft interessieren, schreiben Sie uns. Wir stellen Ihnen den Verein gern vor und beantworten Ihre Fragen."
-
-gallery:
-  lead: "Momente aus dem Leben des Vereins und seines Reviers."
-  pending: "Die Fotos für die Galerie liefert der Verein. Die Bilder unten sind vorläufig und zeigen nur das Layout."
+  sources:
+    - label: "Lovska zveza Slovenije: Wie wird man Jäger (slowenisch)"
+      url: "https://www.lovska-zveza.si/informacijsko-sredisce/kako-postati-lovec/"
 
 documents:
-  lead: "Satzung und andere Dokumente des Vereins zum Herunterladen."
-  pending: "Die Dokumente liefert der Verein. Bis dahin sind sie ohne Link aufgeführt."
-  items:
-    - title: "Satzung der Jagdgesellschaft Istra Gračišče"
-      meta: "PDF · Slowenisch · Datei noch nicht verfügbar"
-    - title: "Ordnungen des Vereins"
-      meta: "PDF · Slowenisch · Datei noch nicht verfügbar"
+  lead: "Formulare und andere Dokumente zum Herunterladen."
+  groups:
+    - heading: "Wildschäden"
+      items:
+        - title: "Formular A: Meldung eines Wildschadens an die Jagdgesellschaft"
+          meta: "PDF · 166 KB · Slowenisch · Quelle: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/obrazec-za-skodo-lovski-druzini.pdf"
+        - title: "Formular B: Meldung eines Wildschadens an die Kommission"
+          meta: "PDF · 191 KB · Slowenisch · Quelle: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/obrazec-za-skodo-komisiji-b-4.pdf"
+        - title: "Marktankaufspreise landwirtschaftlicher Erzeugnisse 2025"
+          meta: "PDF · 603 KB · Slowenisch · Quelle: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/zbirnik_cene_2025.pdf"
 
 contact:
   lead: "Bei Fragen zum Jagdtourismus, zur Mitgliedschaft oder zu Wildschäden schreiben Sie uns."
   officersHeading: "Funktionsträger"
   officersText: "Der Verein wird von gewählten Funktionsträgern geleitet. Erreichen Sie sie über die E-Mail-Adresse des Vereins."
-  phonePending: "Die zu veröffentlichende Telefonnummer bestätigt der Verein."

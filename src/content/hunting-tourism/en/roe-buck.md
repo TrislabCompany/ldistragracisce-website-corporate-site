@@ -6,4 +6,6 @@ order: 1
 
 The guest hunts roe buck individually, accompanied by an experienced hunter of the club who knows the ground and its game.
 
-> **Content to come:** The club gives the conditions, dates and price on request. The club supplies the details of the offer.
+The roe buck season runs from 1 May to 31 October (see the hunting seasons on the Hunting tourism page).
+The referent for hunting tourism gives the conditions, dates and price on request.
+Guests can stay overnight in the club's hunting lodge.

@@ -4,7 +4,7 @@
 // version, with buttons in the slot.
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import { wideWidths } from "../lib/photos";
+import { photoQuality, wideWidths } from "../lib/photos";
 
 interface Props {
   photo: ImageMetadata;
@@ -19,7 +19,7 @@ const { photo, alt, title, lead, eyebrow, hero = false } = Astro.props;
 ---
 
 <section class:list={["photo-frame", hero ? "hero" : "page-head"]}>
-  <Image src={photo} alt={alt} widths={wideWidths} sizes="100vw" format="avif" loading="eager" fetchpriority="high" />
+  <Image src={photo} alt={alt} widths={wideWidths} sizes="100vw" format="avif" quality={photoQuality.wide} loading="eager" fetchpriority="high" />
   <div class="photo-fade" aria-hidden="true"></div>
   <div class="photo-text">
     <div class="wrap photo-content">

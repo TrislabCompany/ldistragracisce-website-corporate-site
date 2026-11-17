@@ -36,7 +36,6 @@ const sl: UiStrings = {
   "nav.huntingLodge": "Lovski dom",
   "nav.gameDamage": "Škoda po divjadi",
   "nav.membership": "Članstvo",
-  "nav.gallery": "Galerija",
   "nav.documents": "Dokumenti",
   "nav.menu": "Meni",
   "footer.club": "Družina",

@@ -7,7 +7,7 @@ description: "Come il sito della società venatoria Istra Gračišče tratta i d
 
 ## Titolare
 
-Il titolare del trattamento è Lovska družina Istra Gračišče, Gračišče 40, 6272 Gračišče, Slovenia. Potete scriverci a [ld.istra.gracisce@gmail.com](mailto:ld.istra.gracisce@gmail.com).
+Il titolare del trattamento è Lovska družina Istra Gračišče, Trebeše 40, 6272 Gračišče, Slovenia. Potete scriverci a [ld.istra.gracisce@gmail.com](mailto:ld.istra.gracisce@gmail.com).
 
 ## Cookie
 

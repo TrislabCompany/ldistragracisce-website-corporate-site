@@ -6,4 +6,6 @@ order: 1
 
 Gost lovi srndaća pojedinačno, u pratnji iskusnog lovca društva koji poznaje lovište i divljač.
 
-> **Sadržaj sledi:** Uslove, termine i cenu lova društvo daje na upit. Pojedinosti ponude priprema društvo.
+Lovna sezona srndaća traje od 1. maja do 31. oktobra (pogledajte lovne sezone na stranici Lovni turizam).
+Uslove, termine i cenu lova daje referent za lovni turizam na upit.
+Gosti mogu da prenoće u lovačkom domu društva.

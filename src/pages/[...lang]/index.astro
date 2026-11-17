@@ -9,7 +9,7 @@ import { languagePaths, localizedPath, t, type Lang } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { pageTexts } from "../../lib/pages";
 import { photos } from "../../lib/photos";
-import site from "../../site.config";
+import site, { tourismReferent } from "../../site.config";
 
 export const getStaticPaths = languagePaths;
 
@@ -132,6 +132,10 @@ const { contact, company } = site;
             </li>
           )
         }
+        <li>
+          {`${texts.tourismContact.heading}: ${tourismReferent.name}, `}
+          <a href={`tel:${tourismReferent.phone.replace(/\s/g, "")}`}>{tourismReferent.phone}</a>
+        </li>
         <li>{`${company.address.street}, ${company.address.postalCode} ${company.address.city}`}</li>
         {
           contact.mapUrl && (

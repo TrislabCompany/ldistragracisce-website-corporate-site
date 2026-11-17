@@ -6,4 +6,6 @@ order: 1
 
 Gost lovi srnjaka pojedinačno, u pratnji iskusnog lovca društva koji poznaje lovište i divljač.
 
-> **Sadržaj slijedi:** Uvjete, termine i cijenu lova društvo daje na upit. Pojedinosti ponude priprema društvo.
+Lovna sezona srnjaka traje od 1. svibnja do 31. listopada (pogledajte lovne sezone na stranici Lovni turizam).
+Uvjete, termine i cijenu lova daje referent za lovni turizam na upit.
+Gosti mogu noćiti u lovačkom domu društva.

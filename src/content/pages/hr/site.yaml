@@ -4,16 +4,21 @@
 alt:
   hero: "Privremena slika: crtež brežuljaka slovenske Istre u sumrak"
   about: "Privremena slika: crtež krškog krajolika"
-  huntingGround: "Privremena slika: crtež šumovitih brežuljaka lovišta"
+  huntingGround: "Krški rub iznad Črnog Kala s pogledom prema moru i jesenskom šumom na padinama"
   huntingTourism: "Privremena slika: crtež šume navečer"
-  huntingLodge: "Privremena slika: crtež lovačkog doma uz šumu"
-  lodgeInterior: "Privremena slika: crtež lovačkog doma u jesenskom krajoliku"
+  huntingLodge: "Ilustracija: kameni lovački dom s crijepom i osvijetljenim prozorima u sumrak, među krškim brežuljcima"
+  lodgeInterior: "Ilustracija: pročelje lovačkog doma s rogovljem iznad vrata, klupom i odrinom"
   gameDamage: "Privremena slika: crtež polja ispod brežuljaka"
   membership: "Privremena slika: crtež šume u jutarnjoj magli"
   bandForest: "Privremena slika: crtež šume na padini"
-  bandKarst: "Privremena slika: crtež Krškog ruba"
+  bandKarst: "Stjenovita padina Krškog ruba iznad Podpeča s jesenskom šumom"
 
-pendingLabel: "Sadržaj slijedi"
+sourcesHeading: "Izvori"
+
+tourismContact:
+  heading: "Lovni turizam"
+  role: "referent za lovni turizam"
+  text: "Za lov, termine, uvjete i noćenje u lovačkom domu nazovite referenta za lovni turizam."
 
 home:
   heroText: "Dobrovoljno, neprofitno udruženje lovaca koje od 1947. skrbi za divljač i lovište na Krškom rubu u slovenskoj Istri."
@@ -31,7 +36,7 @@ home:
   waysHeading: "Upoznajte društvo"
   ways:
     huntingGround: "Krški pašnjaci, šume i polja te osam vrsta divljači."
-    huntingTourism: "Lov na srnjaka i divlju svinju uz vodstvo naših lovaca."
+    huntingTourism: "Lov na jelena, srnjaka i divlju svinju uz vodstvo naših lovaca i noćenje u lovačkom domu."
     huntingLodge: "Okupljalište članova i gostiju društva."
   tourismHeading: "Lov u slovenskoj Istri"
   tourismText: "Lovcima iz inozemstva nudimo lov u raznolikom lovištu između Krškog ruba i istarskih brežuljaka, uz pratnju iskusnih lovaca našeg društva."
@@ -86,37 +91,37 @@ huntingGround:
       name: "Srneća divljač"
       latin: "Capreolus capreolus"
       text: "Jedna od dviju najvažnijih vrsta lovišta, kod kuće na rubu šume i na livadama."
-      alt: "Privremena slika: crtež livade ispod brežuljaka"
+      alt: "Srnjak na livadi u jutarnjoj izmaglici"
     - id: wild-boar
       name: "Divlja svinja"
       latin: "Sus scrofa"
       text: "Druga najvažnija vrsta lovišta; njome gospodarimo u suradnji s lokalnim poljoprivrednicima."
-      alt: "Privremena slika: crtež šume"
+      alt: "Divlja svinja s prugastom prasadi u šumi"
     - id: hare
       name: "Europski zec"
       latin: "Lepus europaeus"
       text: "Sitna divljač otvorenih livada i polja."
-      alt: "Privremena slika: crtež travnatih brežuljaka ujutro"
+      alt: "Europski zec u travi na rubu šume"
     - id: fox
       name: "Lisica"
       latin: "Vulpes vulpes"
       text: "Prilagodljiva zvijer koja živi u svim dijelovima lovišta."
-      alt: "Privremena slika: crtež jesenskog krajolika"
+      alt: "Lisica viri iz visoke trave"
     - id: badger
       name: "Jazavac"
       latin: "Meles meles"
       text: "Noćna životinja šumovitih padina."
-      alt: "Privremena slika: crtež brežuljaka navečer"
+      alt: "Jazavac prelazi cestu uz suhu livadu"
     - id: partridge
       name: "Trčka skvržulja"
       latin: "Perdix perdix"
       text: "Pernata divljač krških pašnjaka i polja."
-      alt: "Privremena slika: crtež krškog pašnjaka"
+      alt: "Trčke na preoranoj njivi uz grmlje"
     - id: pheasant
       name: "Fazan"
       latin: "Phasianus colchicus"
       text: "Pernata divljač polja i živica."
-      alt: "Privremena slika: crtež krajolika u magli"
+      alt: "Fazan pijetao na livadi"
   management:
     heading: "Gospodarenje lovištem"
     paragraphs:
@@ -124,49 +129,109 @@ huntingGround:
       - "Posebnu pozornost posvećujemo sprječavanju šteta na poljoprivrednim površinama i suradnji s lokalnim poljoprivrednicima."
 
 huntingTourism:
+  sections:
+    - heading: "Lov u slovenskoj Istri"
+      paragraphs:
+        - "Gostima nudimo lov na jelena, srnu i divlju svinju u raznolikom lovištu između Krškog ruba i istarskih brežuljaka."
+        - "Svaki gost lovi u pratnji iskusnog lovca društva koji poznaje lovište i divljač. Gost se pridržava uputa pratitelja i odstrjeljuje samo divljač koju mu pratitelj odredi."
+    - heading: "Noćenje u lovačkom domu"
+      paragraphs:
+        - "Lovci gosti mogu noćiti u lovačkom domu društva. Spavaju ondje gdje lov počinje i ujutro i navečer, kad je divljač najaktivnija, brzo su u lovu."
+        - "Noćenje u lovačkom domu jedna je od prednosti našeg lovnog turizma. Uvjete boravka daje referent za lovni turizam."
   offersHeading: "Naša ponuda"
   seasonsHeading: "Lovne sezone"
-  seasonsIntro: "Lovne sezone ovise o vrsti divljači."
+  seasonsIntro: "Lovne sezone određuje slovenska Uredba o određivanju divljači i lovnih sezona (Uredba o določitvi divjadi in lovnih dob). Ovise o vrsti, spolu i dobi divljači:"
   seasonColumns:
     species: "Vrsta"
     season: "Lovna sezona"
   seasons:
+    - species: "Jelen"
+      season: "16. 8. – 31. 12."
+    - species: "Košuta"
+      season: "1. 9. – 31. 12."
     - species: "Srnjak"
-      season: "svibanj–listopad"
-    - species: "Divlja svinja"
+      season: "1. 5. – 31. 10."
+    - species: "Divlja svinja: vepar, prasad i nazimad"
       season: "cijele godine"
-  seasonsPending: "Navedene sezone preuzete su s dosadašnje stranice. Točne datume i sezone ostalih vrsta društvo potvrđuje prije objave."
+    - species: "Divlja svinja: krmača"
+      season: "1. 7. – 31. 1."
   needsHeading: "Što treba lovac gost"
   needs:
-    - "važeću lovačku dozvolu svoje zemlje"
-    - "europsku propusnicu za vatreno oružje ako donosi svoje oružje"
-    - "osiguranje od odgovornosti"
-    - "unaprijed dogovoren termin lova"
-  needsPending: "Popis je nacrt. Što točno treba lovac gost, društvo potvrđuje prije objave."
+    - "dozvolu za lovce goste, ako nema važeću slovensku lovačku iskaznicu (vidi dolje)"
+    - "europsku propusnicu za vatreno oružje, ako donosi vlastito oružje iz druge države Europske unije"
+    - "termin lova dogovoren s referentom za lovni turizam"
+    - "pratnju lovca našeg društva, kojeg društvo određuje za svaki lov"
+  permit:
+    heading: "Dozvola za lovce goste"
+    paragraphs:
+      - "Lovac gost koji nema važeću slovensku lovačku iskaznicu pravo na lov stječe dozvolom za lovce goste (dovolilnica za lovske goste). Oblik, sadržaj i cijenu dozvole određuje slovenski Pravilnik o dovolilnici za lovske goste (Uradni list RS, br. 86/2025), koji se primjenjuje od 1. siječnja 2026."
+      - "Tjedna dozvola vrijedi 7 dana i stoji 20 eura, mjesečna vrijedi 30 dana i stoji 50 eura, a godišnja vrijedi do kraja kalendarske godine i stoji 150 eura. Gostu kojeg na lov pozove upravitelj lovišta može se izdati besplatna dozvola koja vrijedi 5 dana."
+      - "Dozvola navodi lovište te ime, adresu, datum rođenja i državu prebivališta gosta. Kako je urediti za lov u našem lovištu, reći će vam referent za lovni turizam."
   enquireHeading: "Upit"
-  enquireText: "Napišite nam koja vas divljač i koji termin zanimaju. Odgovorit ćemo vam s uvjetima i ponudom."
+  enquireText: "Pišite nam ili nazovite referenta za lovni turizam i recite koja vas divljač i koji termin zanimaju. Odgovorit ćemo vam s uvjetima i ponudom."
+  sources:
+    - label: "Lovne sezone prema Uredbi o določitvi divjadi in lovnih dob, sažete na gov.si (Upravljanje z divjadjo, na slovenskom)"
+      url: "https://www.gov.si/teme/upravljanje-z-divjadjo/"
+    - label: "Pravilnik o dovolilnici za lovske goste, Uradni list RS 86/2025 (na slovenskom)"
+      url: "https://pisrs.si/pregledPredpisa?sop=2025-01-3056"
 
 huntingLodge:
-  lead: "Lovački dom okupljalište je članova društva i polazište zajedničkih lova."
+  lead: "Lovački dom okuplja članove društva i nudi noćenje našim lovcima gostima."
   sections:
     - heading: "Lovački dom"
       paragraphs:
-        - "U lovačkom domu članovi se sastaju na sastancima, prije zajedničkih lova i na društvenim događanjima. U njemu dočekujemo i lovce goste."
+        - "U lovačkom domu članovi se sastaju na sastancima, prije zajedničkih lovova i na druženjima."
+        - "Dom nudi i noćenje lovcima gostima. Gosti borave ondje gdje lov počinje, u društvu lovaca koji ih prate u lovu."
   featuresHeading: "Što nudi"
   features:
-    - "prostor za sastanke članova"
-    - "polazište zajedničkih lova"
-    - "doček lovaca gostiju"
-  pending: "Fotografije lovačkog doma, njegov položaj i opis onoga što nudi priprema društvo."
+    - "noćenje za lovce goste"
+    - "prostor za sastanke i susrete članova"
+    - "polazište za zajedničke lovove"
+    - "druženje lovaca gostiju s lovcima društva"
+  tourismHeading: "Noćenje za lovce goste"
+  tourismText: "Noćenje u lovačkom domu jedna je od prednosti našeg lovnog turizma: gost spava na polazištu za lov i ujutro je brzo na čeki. Uvjete boravka i ponudu lova daje referent za lovni turizam."
 
 gameDamage:
-  lead: "Kako prijaviti štetu koju je divljač napravila na poljoprivrednim površinama i kako zaštititi površine."
-  reportHeading: "Kako prijaviti štetu"
-  reportIntro: "Ako ste na svojim površinama primijetili štetu koju je napravila divljač, slijedite ove korake:"
+  lead: "Tko odgovara za štetu od divljači, kako je prijaviti, kako se izračunava naknada i kako zaštititi svoje površine."
+  kindsHeading: "Lovna divljač ili zaštićena vrsta?"
+  kindsIntro: "Lovačko društvo procjenjuje samo štetu koju u lovištu počini lovna divljač. Štetu od zaštićenih vrsta prijavite Slovenskoj šumarskoj službi (Zavod za gozdove Slovenije)."
+  kinds:
+    - heading: "Lovna divljač: prijava lovačkom društvu"
+      text: "Za štetu od lovne divljači u lovištu prema slovenskom Zakonu o divljači i lovstvu odgovara upravitelj lovišta, kod nas Lovska družina Istra Gračišče."
+      species: "Lovna divljač su, primjerice, divlja svinja, jelen, srna, jazavac, europski zec, lisica, kune, fazan, šojka, svraka i siva vrana."
+    - heading: "Zaštićene vrste: prijava šumarskoj službi"
+      text: "Za štetu od zaštićenih divljih sisavaca i ptica prema slovenskom Zakonu o zaštiti prirode odgovara Republika Slovenija. Prijavite je mjesno nadležnoj područnoj jedinici Zavoda za gozdove Slovenije, a ne lovačkom društvu."
+      species: "Zaštićene vrste su, primjerice, vuk, smeđi medvjed, ris, vidra i dabar te gotovo sve ptice; iznimke su lovne vrste poput šojke, svrake, sive vrane i fazana."
+  reportHeading: "Prijava štete od lovne divljači"
+  reportIntro: "Ako je lovna divljač oštetila vaše poljoprivredne ili šumske kulture u lovištu:"
   steps:
-    - "Čim primijetite štetu, obavijestite lovačko društvo. Kontakt je na stranici Kontakt."
-    - "Pripremite podatke o lokaciji, opsegu i vrsti štete te fotografije ili druge dokaze."
-    - "Surađujte s lovačkim društvom pri pregledu i dokumentiranju štete te ispunite potrebne obrasce."
+    - "U roku od tri dana od dana kad ste štetu primijetili, pisano je prijavite lovačkom društvu obrascem A. Preporučuje se preporučena pošta. Štetu možete prijaviti i na portalu eGozd."
+    - "U prijavi navedite česticu i katastarsku općinu, datum nastanka i uočavanja štete, vrstu divljači i oštećene kulture, opseg štete te zaštitne mjere koje ste primijenili. Fotografije štete pomažu."
+    - "U roku od osam dana od prijave društvo pregledava štetu i pokušava se s vama dogovoriti o njezinoj visini."
+    - "Ako do dogovora ne dođe, štetu obrascem B pisano prijavite Komisiji za utvrđivanje visine štete na poljoprivrednim i šumskim kulturama pri mjesno nadležnoj upravnoj jedinici."
+    - "Ako ni nakon procjene komisije ne postignemo dogovor, možete podnijeti tužbu nadležnom sudu, najkasnije tri godine od nastanka štete."
+  formsText: "Obrasce A i B te popis tržnih otkupnih cijena naći ćete na stranici"
+  protectedHeading: "Šteta od zaštićenih vrsta"
+  protectedIntro: "Štetu koju počine zaštićene vrste lovačko društvo ne procjenjuje. Postupak vodi Zavod za gozdove Slovenije:"
+  protectedSteps:
+    - "U roku od tri dana od dana kad ste štetu primijetili, pisano je prijavite mjesno nadležnoj područnoj jedinici Zavoda za gozdove Slovenije. Preporučuje se i telefonski poziv."
+    - "Zavod u roku od dva dana obavlja očevid i sastavlja zapisnik, a u roku od osam dana prema važećoj ljestvici određuje visinu naknade i predlaže vam sporazum."
+    - "Ako se s visinom ne slažete, sporazum ne potpisujete. U roku od 30 dana od nastanka štete možete podnijeti zahtjev za isplatu naknade Agenciji RS za okoliš (ARSO); obrazac dobivate kod ovlaštenog procjenitelja Zavoda."
+    - "Ako se ne slažete ni s odlukom agencije, možete podnijeti tužbu nadležnom sudu, najkasnije tri godine od nastanka štete."
+  nonHunting:
+    heading: "Šteta na nelovnim površinama"
+    paragraphs:
+      - "Nelovne površine su površine na kojima je lov zabranjen, naselja i zaseoci te vrtovi, nasadi i druge kulture ograđeni ogradom kroz koju ne mogu proći zec ni papkara. Za štetu od lovne divljači na njima odgovara Republika Slovenija."
+      - "Štetu u roku od tri dana pisano prijavite mjesno nadležnoj područnoj jedinici Zavoda za gozdove Slovenije. Zavod u roku od osam dana obavlja očevid i predlaže sporazum; ako ga ne potpišete, štetu prijavite slovenskom Ministarstvu poljoprivrede, šumarstva i prehrane."
+  compensationHeading: "Kako se izračunava naknada"
+  compensationIntro: "Visina štete ovisi ponajprije o vrsti divljači te o kulturi i njezinoj razvojnoj fazi. Oštećeni ima pravo na naknadu:"
+  compensation:
+    - "za urod koji se u istoj sezoni ne može nadomjestiti: vrijednost uroda prema površini i kulturi, po tržnoj otkupnoj cijeni prethodne godine koju objavljuje slovenski Statistički ured, revaloriziranoj godišnjom inflacijom"
+    - "za urod koji se u istoj sezoni može nadomjestiti: troškove rada i materijala za novu sjetvu ili sadnju te razliku u vrijednosti između uništenog i novog uroda"
+    - "za usmrćenu domaću životinju: cijenu jednakovrijedne životinje i troškove nabave zamjenske"
+    - "za ozlijeđenu domaću životinju: troškove liječenja i gubitak zbog propuštenih ili odgođenih uzgojnih ciljeva"
+    - "za drugu štetu: iznos koji procijeni odgovarajući stručnjak"
+  compensationNote: "Tržne otkupne cijene poljoprivrednih proizvoda skupljene su u popisu koji ćete naći među dokumentima."
   protectHeading: "Zaštita poljoprivrednih površina"
   protectIntro: "Učinkovita zaštita od divljači zahtijeva više mjera i redovito održavanje. Preporučujemo:"
   measures:
@@ -176,6 +241,14 @@ gameDamage:
     - "pravovremenu žetvu i uklanjanje ostataka uroda koji privlače divljač"
     - "zaštitne mreže ili folije na voćkama i u vinogradima"
   maintenance: "Redovito provjeravajte zaštitu, popravljajte oštećenja i obnavljajte sredstva za odvraćanje, kako bi mjere bile učinkovite cijelu sezonu."
+  stewardship: "Pravo na naknadu ima vlasnik koji je kao dobar gospodar učinio sve razumno da svoju imovinu zaštiti od štete. Kod zaštićenih vrsta mora poštivati slovenski pravilnik o primjerenim načinima zaštite (Pravilnik o primernih načinih varovanja in vrstah ukrepov za preprečitev nadaljnje škode na premoženju)."
+  sources:
+    - label: "KGZS: šteta od divljači i zaštićenih vrsta (na slovenskom)"
+      url: "https://www.kgzs.si/gozdarstvo-in-lovstvo/skoda-po-divjadi-in-zavarovanih-vrstah"
+    - label: "Lovska zveza Slovenije: izračun naknade za štetu od divljači, 4. 5. 2026. (na slovenskom)"
+      url: "https://www.lovska-zveza.si/2026/05/04/izracun-odskodnine-za-skodo-po-divjadi/"
+    - label: "Zavod za gozdove Slovenije, eGozd: internetska prijava štete (na slovenskom)"
+      url: "https://egozd.zgs.si/#/egozd/PrijavaSkode"
 
 membership:
   lead: "Pozivamo nove članove koji žele sudjelovati u gospodarenju lovištem i zaštiti prirode."
@@ -184,35 +257,48 @@ membership:
   requirements:
     - "najmanje 18 godina starosti"
     - "državljanstvo Republike Slovenije"
-    - "položen lovački ispit"
-    - "nekažnjavanost za kaznena djela iz područja lovstva"
+    - "položen lovački ispit; tko ga još nema, počinje kao lovački pripravnik (vidi dolje)"
+    - "neosuđivanost za kaznena djela iz područja lovstva"
     - "spremnost na aktivno sudjelovanje u društvu"
     - "poštovanje lovačke etike i tradicije"
   examHeading: "Put do lovačkog ispita"
-  examIntro: "Put do lovačkog ispita uključuje teorijsku i praktičnu obuku:"
+  examIntro: "Lovački ispit ima praktični dio, koji polažete u lovačkom društvu, i teorijski dio pri područnom lovačkom savezu. Prema smjernicama Lovačkog saveza Slovenije (Lovska zveza Slovenije) put izgleda ovako:"
   examSteps:
-    - "Teorijska obuka (40 sati)."
-    - "Praktična obuka u lovištu uz mentora."
-    - "Upoznavanje s lovačkim oružjem i sigurnim rukovanjem njime."
-    - "Lovački ispit pred ispitnom komisijom."
-  applyHeading: "Kako se učlaniti"
+    - heading: "Molba lovačkom društvu"
+      text: "Lovačkom društvu šaljete pisanu molbu s osobnim podacima i kratko objašnjavate zašto vas zanimaju gospodarenje divljači i njezinim staništem te druženje s lovcima. Društvo o molbama u pravilu odlučuje na godišnjoj skupštini rano u proljeće."
+    - heading: "Lovački pripravnik"
+      text: "Kad društvo prihvati molbu, postajete lovački pripravnik. Dobivate mentora i akte društva te plaćate godišnju članarinu, koja pokriva pristojbe društva, područnog lovačkog saveza, OZUL-a i Lovačkog saveza Slovenije. Od tada primate i glasilo Lovec."
+    - heading: "Praktična obuka"
+      text: "Pripravnički staž traje od jedne do tri godine, a program praktične obuke obuhvaća 150 do 200 sati godišnje. Pod vodstvom mentora vodite dnevnik rada lovačkog pripravnika. Loviti smijete samo u pratnji lovca s važećom lovačkom iskaznicom, u pravilu mentora."
+    - heading: "Praktični dio ispita"
+      text: "Nakon pripravničkog staža mentor predaje potvrđeni dnevnik tročlanom ispitnom povjerenstvu koje imenuje društvo. Pred njim polažete praktični ispit i dobivate potvrdu o položenom praktičnom dijelu."
+    - heading: "Teorijski dio ispita"
+      text: "Tečaj organizira područni lovački savez; upisati se možete kad je položeni praktični dio upisan u informacijski sustav Lisjak. Predavači znanje provjeravaju na djelomičnim ispitima, a zatim polažete završni ispit pred tročlanim povjerenstvom iz biologije i ekologije divljači, lovačkog zakonodavstva i planiranja u lovstvu."
+    - heading: "Svjedodžba i lovačka iskaznica"
+      text: "Lovački savez Slovenije izdaje vam svjedodžbu o lovačkom ispitu. S njom možete dobiti lovačku iskaznicu."
+  examNote: "Pripravnik prema slovenskom Zakonu o oružju može na upravnoj jedinici zatražiti dozvolu za nabavu lovačkog oružja. Uvjeti su ispit iz sigurnog rukovanja oružjem, liječnički pregled i članstvo u lovačkom društvu."
+  applyHeading: "Postupak učlanjenja"
   applyText: "Ako vas zanima članstvo, pišite nam. Rado ćemo vam predstaviti društvo i odgovoriti na vaša pitanja."
-
-gallery:
-  lead: "Trenuci iz života društva i lovišta."
-  pending: "Fotografije za galeriju priprema društvo. Slike ispod su privremene i pokazuju samo izgled stranice."
+  sources:
+    - label: "Lovska zveza Slovenije: kako postati lovac (na slovenskom)"
+      url: "https://www.lovska-zveza.si/informacijsko-sredisce/kako-postati-lovec/"
 
 documents:
-  lead: "Pravni akti i drugi dokumenti društva za preuzimanje."
-  pending: "Dokumente priprema društvo. Do tada su navedeni bez poveznice."
-  items:
-    - title: "Statut Lovačkog društva Istra Gračišče"
-      meta: "PDF · slovenski · datoteka još nije dostupna"
-    - title: "Pravilnici društva"
-      meta: "PDF · slovenski · datoteka još nije dostupna"
+  lead: "Obrasci i drugi dokumenti za preuzimanje."
+  groups:
+    - heading: "Šteta od divljači"
+      items:
+        - title: "Obrazac A: prijava štete od lovne divljači lovačkom društvu"
+          meta: "PDF · 166 KB · slovenski · izvor: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/obrazec-za-skodo-lovski-druzini.pdf"
+        - title: "Obrazac B: prijava štete od lovne divljači komisiji"
+          meta: "PDF · 191 KB · slovenski · izvor: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/obrazec-za-skodo-komisiji-b-4.pdf"
+        - title: "Tržne otkupne cijene poljoprivrednih proizvoda 2025."
+          meta: "PDF · 603 KB · slovenski · izvor: KGZS"
+          href: "https://www.kgzs.si/uploads/dokumenti/obrazci_listine/zbirnik_cene_2025.pdf"
 
 contact:
   lead: "Za pitanja o lovnom turizmu, članstvu ili šteti od divljači pišite nam."
   officersHeading: "Dužnosnici"
   officersText: "Društvo vode izabrani dužnosnici. Za kontakt s njima koristite e-adresu društva."
-  phonePending: "Broj telefona koji će biti objavljen potvrđuje društvo."

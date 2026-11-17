@@ -12,17 +12,24 @@
 /* Text: Inter, self-hosted from @fontsource-variable/inter. Headings: Source
    Serif 4, self-hosted from @fontsource-variable/source-serif-4. Only the
    Latin and Latin Extended subsets are loaded: they cover the six languages
-   (č, ć, đ, š, ž, à, è, ä, ö, ü, ß). No request goes to Google Fonts. */
+   (č, ć, đ, š, ž, à, è, ä, ö, ü, ß). No request goes to Google Fonts.
+
+   Inter's Latin Extended file is cut down to Latin Extended-A (U+0100-017F,
+   every Central European letter) plus ș and ț: 15 KB instead of 85 KB, so the
+   home page's first paint stays inside the Lighthouse LCP budget. It lives in
+   src/assets/fonts/ and keeps Inter's copyright and OFL licence records. Make
+   it again after an Inter update with fonttools:
+     pyftsubset node_modules/@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2
+       --unicodes="U+0100-017F,U+0218-021B,U+2020,U+2113" --flavor=woff2
+       --layout-features='*' --name-IDs='*'
+       --output-file=src/assets/fonts/inter-latin-ext-a-wght-normal.woff2 */
 @font-face {
   font-family: "Inter Variable";
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url("../../node_modules/@fontsource-variable/inter/files/inter-latin-ext-wght-normal.woff2")
-    format("woff2-variations");
-  unicode-range:
-    U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF,
-    U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  src: url("../assets/fonts/inter-latin-ext-a-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-017F, U+0218-021B, U+2020, U+2113;
 }
 
 @font-face {

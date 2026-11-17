@@ -1,6 +1,8 @@
 ---
-// Membership: the requirements and the path to the hunting exam.
+// Membership: the requirements and the path to the hunting exam, after the
+// guidelines of Lovska zveza Slovenije (in the sources at the foot).
 import PhotoHead from "../../components/PhotoHead.astro";
+import SourceList from "../../components/SourceList.astro";
 import StepList from "../../components/StepList.astro";
 import { languagePaths, localizedPath, t, type Lang } from "../../i18n";
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -11,26 +13,29 @@ import site from "../../site.config";
 export const getStaticPaths = languagePaths;
 
 const { lang } = Astro.props as { lang: Lang };
-const { membership, alt } = await pageTexts(lang);
+const { membership, alt, sourcesHeading } = await pageTexts(lang);
 ---
 
 <BaseLayout title={t(lang, "nav.membership")} description={membership.lead} lang={lang} full>
   <PhotoHead photo={photos.membership} alt={alt.membership} title={t(lang, "nav.membership")} lead={membership.lead} />
 
-  <section class="section">
-    <div class="wrap split">
-      <div>
-        <h2>{membership.requirementsHeading}</h2>
-        <p>{membership.requirementsIntro}</p>
-        <ul class="checklist">
-          {membership.requirements.map((requirement) => <li>{requirement}</li>)}
-        </ul>
-      </div>
-      <div>
-        <h2>{membership.examHeading}</h2>
-        <p>{membership.examIntro}</p>
-        <StepList steps={membership.examSteps} />
-      </div>
+  <section class="section" aria-labelledby="requirements">
+    <div class="wrap prose">
+      <h2 id="requirements">{membership.requirementsHeading}</h2>
+      <p>{membership.requirementsIntro}</p>
+      <ul class="checklist">
+        {membership.requirements.map((requirement) => <li>{requirement}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="exam">
+    <div class="wrap prose">
+      <h2 id="exam">{membership.examHeading}</h2>
+      <p>{membership.examIntro}</p>
+      <StepList steps={membership.examSteps} />
+      <p>{membership.examNote}</p>
+      <SourceList heading={sourcesHeading} sources={membership.sources} />
     </div>
   </section>
 

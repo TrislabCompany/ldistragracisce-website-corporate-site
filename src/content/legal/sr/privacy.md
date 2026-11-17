@@ -7,7 +7,7 @@ description: "Kako veb-stranica Lovačkog društva Istra Gračišče postupa sa 
 
 ## Rukovalac
 
-Rukovalac podacima o ličnosti je Lovska družina Istra Gračišče, Gračišče 40, 6272 Gračišče, Slovenija. Možete nam pisati na [ld.istra.gracisce@gmail.com](mailto:ld.istra.gracisce@gmail.com).
+Rukovalac podacima o ličnosti je Lovska družina Istra Gračišče, Trebeše 40, 6272 Gračišče, Slovenija. Možete nam pisati na [ld.istra.gracisce@gmail.com](mailto:ld.istra.gracisce@gmail.com).
 
 ## Kolačići
 

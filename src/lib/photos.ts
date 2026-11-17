@@ -1,11 +1,23 @@
 // Every photo of the site, imported once so Astro resizes them to AVIF at build.
 // Their alternative texts are per language in src/content/pages/<language>/site.yaml.
 //
-// Most of them are placeholders (drawn landscapes labelled "ZAČASNA SLIKA"),
-// to be replaced by photos of the real hunting ground: today's site first,
-// then stock photos whose licence needs no attribution (docs/brief.md). The
-// red deer is from today's site: to check before production where it was
-// taken and that the club may publish it.
+// Where each photo comes from:
+// - hunting-ground.jpg, band-karst.jpg: the Karst Rim (Kraški rob) above Črni
+//   Kal and from Zjat above Podpeč, next to the hunting ground; Wikimedia
+//   Commons, CC0 ("Karst Rim cliffs above Crni Kal 09.jpg", "View from Zjat of
+//   Karst Rim and Podpec tower 05.jpg").
+// - species-*.jpg except the red deer: stock photos from Wikimedia Commons,
+//   CC0, so no credit is needed: "Rehbock (April 2025).jpg",
+//   "Wildschwein + Frischlinge.jpg", "Feldhase (Mai 2024).jpg",
+//   "Rotfuchs (Mai 2025) 1.jpg", "Dachs Ohrdruf, Thüringen.jpg",
+//   "Perdix perdix1599.jpg", "Jagdfasan-Hahn (März 2025).jpg"; cropped to
+//   16:10 at 1440 px.
+// - species-red-deer.png: from today's site; to check before production where
+//   it was taken and that the club may publish it.
+// - hunting-lodge.jpg, lodge-interior.jpg: an illustration of the lodge drawn
+//   for this site (an Istrian stone house at dusk), until the club has photos.
+// - The others are placeholders (drawn landscapes labelled "ZAČASNA SLIKA"),
+//   to be replaced by photos of the real hunting ground (docs/brief.md).
 
 import about from "../assets/photos/about.jpg";
 import bandForest from "../assets/photos/band-forest.jpg";
@@ -54,3 +66,11 @@ export const speciesPhotos = {
 
 /** Widths a full-width photo is built in; the browser picks one. */
 export const wideWidths = [640, 960, 1280, 1600];
+
+/**
+ * AVIF quality per kind of photo, so a page with real photos stays inside the
+ * page-weight budget (scripts/check-page-weight.mjs counts the largest
+ * candidate of each image): a wide photo lies under text or fills a band, a
+ * card or species photo is shown at a third or half of the page.
+ */
+export const photoQuality = { wide: 30, card: 40 };

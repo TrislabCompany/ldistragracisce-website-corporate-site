@@ -1,8 +1,8 @@
 ---
-// The club's documents: title, then file type, size and language. An entry
-// without a file (href) is listed as a placeholder until the club supplies it.
+// The club's documents: title as a link to the file, then file type, size,
+// language and where the file comes from.
 interface Props {
-  documents: { title: string; meta: string; href?: string }[];
+  documents: { title: string; meta: string; href: string }[];
 }
 
 const { documents } = Astro.props;
@@ -12,7 +12,9 @@ const { documents } = Astro.props;
   {
     documents.map(({ title, meta, href }) => (
       <li>
-        {href ? <a href={href}>{title}</a> : <span>{title}</span>}
+        <a href={href} rel="noopener noreferrer">
+          {title}
+        </a>
         <span class="meta">{meta}</span>
       </li>
     ))

@@ -1,12 +1,23 @@
 ---
-// Numbered steps, such as how to report game damage.
+// Numbered steps, such as how to report game damage; a step may have a heading.
 interface Props {
-  steps: string[];
+  steps: (string | { heading: string; text: string })[];
 }
 
 const { steps } = Astro.props;
 ---
 
 <ol class="steps">
-  {steps.map((step) => <li>{step}</li>)}
+  {
+    steps.map((step) =>
+      typeof step === "string" ? (
+        <li>{step}</li>
+      ) : (
+        <li>
+          <h3>{step.heading}</h3>
+          <p>{step.text}</p>
+        </li>
+      ),
+    )
+  }
 </ol>
